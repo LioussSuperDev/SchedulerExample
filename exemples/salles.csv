@@ -1,0 +1,17 @@
+Identifiant salle;Nom salle;Type salle;Capacité salle;Disponibilité;Enseignants préférant la salle;Matière imposant la salle;Taille
+1;A017;cours;36;pleine;MAB;;moyenne
+2;B009;cours;24;partagée TC 2j par sem;;;petite
+3;A006;cours;18;partagée TC;FF;;petite
+4;A110;cours;50;pleine;FB;R1.08=RA;grande
+5;A118;info;20;pleine;IU;;petite
+6;A109;info;18;pleine;IU;;petite
+7;A119;cours;24;pleine;CF,AS,IU;;petite
+8;B202;info-sresri;20;partagée TC 3x1/2j par sem;MK;R3.EMS.12=PDS,SAE3.EMS.5=PDS;petite
+9;C202;info;24;pleine;;;grande
+10;C204;info;24;pleine;;;grande
+11;C210;info;18;partagée TC;;;petite
+12;Salle1-Odeum;cours;50;partagée TC;;;eval
+13;Salle2-Odeum;cours;50;partagée TC;;;eval
+14;Amphi1-Odeum;cours;100;partagée TC;;;eval
+15;Amphi2-Odeum;cours;400;partagée TC;;;eval
+;;;;;;;

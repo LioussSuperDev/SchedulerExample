@@ -1,0 +1,88 @@
+Année;Groupe;Type;Durée;Matière;Contenu;Enseignant;Type ens;Salle INFO;Evaluation;Charge;Date affectée;Créneau;Salles;ID
+BUT1;G1;TD;2;R2.01;Power BI, ArcGIS,;IU;T;Vrai;Faux;Faux;;;(info);2§3.1
+BUT1;G2;TD;2;R2.01;Power BI, ArcGIS,;IU;T;Vrai;Faux;Faux;;;(info);2§3.2
+BUT1;G1;TD;2;R2.02;;IU;T;Vrai;Faux;Faux;;;(info);2§3.3
+BUT1;G2;TD;2;R2.02;;IU;T;Vrai;Faux;Faux;;;(info);2§3.4
+BUT1;G1;TD;2;R2.03;;PDS;T;Vrai;Faux;Faux;;;(info);2§3.5
+BUT1;G2;TD;2;R2.03;;PDS;T;Vrai;Faux;Faux;;;(info);2§3.6
+BUT1;;CM;2;R2.08;;PDS;T;Faux;Faux;Faux;;;(cours-td);2§3.10
+BUT1;;CM;2;R2.04;R;PDS;T;Vrai;Faux;Faux;;;(info);2§3.7
+BUT1;G1;TD;2;R2.07;;TS;T;Faux;Faux;Faux;;;(cours-td);2§3.8
+BUT1;G2;TD;2;R2.07;;TS;T;Faux;Faux;Faux;;;(cours-td);2§3.9
+BUT1;G1;TP;2;R2.09;;MAB;V;Faux;Faux;Faux;;;(cours-td);2§3.11
+BUT1;G2;TP;2;R2.09;;MAB;V;Faux;Faux;Faux;;;(cours-td);2§3.12
+BUT1;G1;TD;2;R2.11;;CF;V;Faux;Faux;Faux;;;(cours-td);2§3.13
+BUT1;G2;TD;2;R2.11;;CF;V;Faux;Faux;Faux;;;(cours-td);2§3.14
+BUT1;G1;TD;2;R2.11;;AS;V;Faux;Faux;Faux;;;(cours-td);2§3.15
+BUT1;G2;TD;2;R2.11;;AS;V;Faux;Faux;Faux;;;(cours-td);2§3.16
+BUT2;;CM-co;2;R4.02;;SVP;T;Vrai;Faux;Faux;;;(info);2§3.17
+BUT2;EMS;TD;2;R4.02;;SVP;T;Vrai;Faux;Faux;;;(info);2§3.18
+BUT2;VCOD;TD;2;R4.02;;SVP;T;Vrai;Faux;Faux;;;(info);2§3.37
+BUT2;EMS;TD;2;R4.02;;SVP;T;Vrai;Faux;Faux;;;(info);2§3.19
+BUT2;VCOD;TD;2;R4.02;;SVP;T;Vrai;Faux;Faux;;;(info);2§3.38
+BUT2;EMS;TP;2;R4.02;;SVP;T;Vrai;Faux;Faux;;;(info);2§3.20
+BUT2;VCOD;TP;2;R4.02;;SVP;T;Vrai;Faux;Faux;;;(info);2§3.39
+BUT2;EMS;TD;2;R4.06;;CF;V;Faux;Faux;Faux;;;(cours-td);2§3.21
+BUT2;VCOD;TD;2;R4.06;;CF;V;Faux;Faux;Faux;;;(cours-td);2§3.40
+BUT2;EMS;TP;2;R4.EMS.08;;TS;T;Faux;Faux;Faux;;;(cours-td);2§3.22
+BUT2;;CM-co;2;SAE4-2 ;projet senso;SVP;T;Vrai;Faux;Faux;;;(info);2§3.23
+BUT2;EMS;TD;2;SAE4-2 ;projet senso;SVP;T;Vrai;Faux;Faux;;;(info);2§3.24
+BUT2;VCOD;TD;2;SAE4-2 ;;SVP;T;Vrai;Faux;Faux;;;(info);2§3.43
+BUT2;EMS;auto;2;SAE4-2 ;projet senso;SVP;T;Vrai;Faux;Faux;;;(info);2§3.26
+BUT2;VCOD;auto;2;SAE4-2 ;;SVP;T;Vrai;Faux;Faux;;;(info);2§3.45
+BUT2;EMS;auto;2;SAE4-2 ;projet senso;SVP;T;Vrai;Faux;Faux;;;(info);2§3.27
+BUT2;VCOD;auto;2;SAE4-2 ;;SVP;T;Vrai;Faux;Faux;;;(info);2§3.46
+BUT2;EMS;encad;2;SAE4-2 ;projet senso;SVP;T;Vrai;Faux;Faux;;;(cours-td);2§3.28
+BUT2;VCOD;encad;2;SAE4-2 ;;SVP;T;Vrai;Faux;Faux;;;(cours-td);2§3.47
+BUT2;EMS;TD;1;SAE4-EMS.1 ;;TS;T;Faux;Faux;Faux;;;(cours-td);2§3.29
+BUT2;EMS;auto;2;SAE4-EMS.1 ;;TS;T;Faux;Faux;Faux;;;(cours-td);2§3.32
+BUT2;EMS;auto;2;SAE4-EMS.1 ;;TS;T;Faux;Faux;Faux;;;(cours-td);2§3.33
+BUT2;EMS;encad;2;SAE4-EMS.1 ;;TS;T;Faux;Faux;Faux;;;(cours-td);2§3.34
+BUT2;EMS;encad;2;SAE4-EMS.1 ;;TS;T;Faux;Faux;Faux;;;(cours-td);2§3.35
+BUT2;EMS;auto;2;SAE4-EMS.1 ;;ATER;T;Faux;Faux;Faux;;;(cours-td);2§3.36
+BUT2;VCOD;TP;2;R4.VCOD.09;java script et application leaflet;PDS;T;Vrai;Faux;Faux;;;(info);2§3.41
+BUT2;VCOD;TP;2;R4.VCOD.09;java script et application leaflet;PDS;T;Vrai;Faux;Faux;;;(info);2§3.42
+BUT2;VCOD;TD;1;SAE4-VCOD 1;;MK;T;Vrai;Faux;Faux;;;(info);2§3.48
+BUT2;VCOD;TP;1;SAE4-VCOD 1;;MK;T;Vrai;Faux;Faux;;;(info);2§3.49
+BUT2;VCOD;encad;2;SAE4-VCOD 1;;MK;T;Vrai;Faux;Faux;;;(cours-td);2§3.52
+BUT2;VCOD;encad;2;SAE4-VCOD 1;;MK;T;Vrai;Faux;Faux;;;(cours-td);2§3.53
+BUT3;EMS;TD;2;R6.01;hadoop, comment se connecter à un serveur (mesurer les jobs);SP;T;Vrai;Faux;Faux;;;(info);2§3.54
+BUT3;VCOD;TD;2;R6.01;;SP;T;Vrai;Faux;Faux;;;(info);2§3.73
+BUT3;EMS;TD;1;R6.01;hadoop, comment se connecter à un serveur (mesurer les jobs);SP;T;Vrai;Faux;Faux;;;(info);2§3.55
+BUT3;VCOD;TD;1;R6.01;;SP;T;Vrai;Faux;Faux;;;(info);2§3.74
+BUT3;EMS;TP;2;R6.01;hadoop, comment se connecter à un serveur (mesurer les jobs);SP;T;Vrai;Faux;Faux;;;(info);2§3.56
+BUT3;VCOD;TP;2;R6.01;;SP;T;Vrai;Faux;Faux;;;(info);2§3.75
+BUT3;EMS;TP;2;R6.01;hadoop, comment se connecter à un serveur (mesurer les jobs);SP;T;Vrai;Faux;Faux;;;(info);2§3.57
+BUT3;VCOD;TP;2;R6.01;;SP;T;Vrai;Faux;Faux;;;(info);2§3.76
+BUT3;EMS;TP;2;R6.01;hadoop, comment se connecter à un serveur (mesurer les jobs);SP;T;Vrai;Faux;Faux;;;(info);2§3.58
+BUT3;EMS;TD;2;R6.03;;EA;V;Faux;Faux;Faux;;;(cours-td);2§3.59
+BUT3;VCOD;TD;2;R6.03;;EA;V;Faux;Faux;Faux;;;(cours-td);2§3.77
+BUT3;EMS;CM;1;R6.EMS.5;ML sur du texte;MK;T;Vrai;Faux;Faux;;;(info);2§3.60
+BUT3;EMS;TD;2;R6.EMS.5;ML sur du texte;MK;T;Vrai;Faux;Faux;;;(info);2§3.61
+BUT3;EMS;TP;1;R6.EMS.5;ML sur du texte;MK;T;Vrai;Faux;Faux;;;(info);2§3.62
+BUT3;EMS;TD;2;R6.EMS.6;qualité;FB;V;Faux;Vrai;Faux;;;(cours-exam);2§3.63
+BUT3;EMS;TD;2;R6.EMS.6;qualité;FB;V;Faux;Vrai;Faux;;;(cours-exam);2§3.64
+BUT3;EMS;TD;2;SAE6-EMS.1;etude de cas 1 ML;MK;T;Vrai;Faux;Faux;;;(info);2§3.65
+BUT3;EMS;auto;2;SAE6-EMS.1;etude de cas 1 ML;MK;T;Vrai;Faux;Faux;;;(info);2§3.66
+BUT3;EMS;auto;2;SAE6-EMS.1;etude de cas 1 ML;MK;T;Vrai;Faux;Faux;;;(info);2§3.67
+BUT3;EMS;auto;2;SAE6-EMS.1;etude de cas 1 ML;MK;T;Vrai;Faux;Faux;;;(info);2§3.68
+BUT3;EMS;TP;2;SAE6-EMS.1;etude de cas 2 sur les avions ou borne éléctrique...;SVP;T;Vrai;Faux;Faux;;;(info);2§3.69
+BUT3;EMS;auto;2;SAE6-EMS.1;etude de cas 2 sur les avions ou borne éléctrique...;SVP;T;Vrai;Faux;Faux;;;(info);2§3.71
+BUT3;EMS;encad;2;SAE6-EMS.1;etude de cas 2 sur les avions ou borne éléctrique...;SVP;T;Vrai;Faux;Faux;;;(cours-td);2§3.72
+BUT3;VCOD;TD;2;R6.VCOD.5;flux de données, temps réel;FD;V;Vrai;Faux;Faux;;;(info);2§3.78
+BUT3;VCOD;TD;2;R6.VCOD.5;flux de données, temps réel;FD;V;Vrai;Faux;Faux;;;(info);2§3.79
+BUT3;VCOD;TP;2;R6.VCOD.5;flux de données, temps réel;FD;V;Vrai;Faux;Faux;;;(info);2§3.80
+BUT3;VCOD;TP;2;R6.VCOD.5;flux de données, temps réel;FD;V;Vrai;Faux;Faux;;;(info);2§3.81
+BUT3;VCOD;TP;2;R6.VCOD.5;FME et applications serveurs et flux de données;LP;V;Vrai;Vrai;Vrai;;;(info-exam);2§3.82
+BUT3;VCOD;CM;2;R6.VCOD.6;QGIS;AC;V;Faux;Faux;Faux;;;(cours-td);2§3.83
+BUT3;VCOD;CM;2;R6.VCOD.6;QGIS;AC;V;Faux;Faux;Faux;;;(cours-td);2§3.84
+BUT3;VCOD;CM;2;R6.VCOD.6;QGIS;AC;V;Faux;Faux;Faux;;;(cours-td);2§3.85
+BUT3;VCOD;CM;2;R6.VCOD.6;QGIS;AC;V;Faux;Faux;Faux;;;(cours-td);2§3.86
+BUT3;VCOD;TD;2;SAE6-VCOD.1;suite projet LP avec hébergement sur serveur de l'UPVD;PDS;T;Vrai;Faux;Faux;;;(info);2§3.87
+BUT3;VCOD;TP;2;SAE6-VCOD.1;suite projet LP avec hébergement sur serveur de l'UPVD;PDS;T;Vrai;Faux;Faux;;;(info);2§3.88
+BUT3;VCOD;encad;2;SAE6-VCOD.1;suite projet LP avec hébergement sur serveur de l'UPVD;PDS;T;Vrai;Faux;Faux;;;(cours-td);2§3.90
+BUT3;VCOD;TP;2;SAE6-VCOD.1;suite projet LP avec hébergement sur serveur de l'UPVD;IU;T;Vrai;Faux;Faux;;;(info);2§3.91
+BUT1;;CM;4;Réunion;Conférence de l'IGN;admin;T;Faux;Faux;Faux;01/02/2024;AM-1;(cours-td);2§3.1%0
+BUT2;;CM-co;4;Réunion;Conférence de l'IGN;admin;T;Faux;Faux;Faux;01/02/2024;AM-1;(cours-td);2§3.1%1
+BUT3;;CM-co;4;Réunion;Conférence de l'IGN;admin;T;Faux;Faux;Faux;01/02/2024;AM-1;(cours-td);2§3.1%3
+
