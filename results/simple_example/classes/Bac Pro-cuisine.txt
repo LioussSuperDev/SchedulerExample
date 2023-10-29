@@ -1,12 +1,12 @@
 demi-journée 1 :::::::::::::::
-0.5h - Cours d'Algèbre [I417] (Martin DUPONT)
-1.0h - Cours d'Algèbre [I417] (Martin DUPONT)
-1.5h - Cours d'Algèbre [I417] (Martin DUPONT)
-2.0h - Cours d'Algèbre [I417] (Martin DUPONT)
-2.5h -
-3.0h -
-3.5h -
-4.0h -
+0.5h -
+1.0h -
+1.5h -
+2.0h -
+2.5h - Cours d'Algèbre [I417] (Martin DUPONT)
+3.0h - Cours d'Algèbre [I417] (Martin DUPONT)
+3.5h - Cours d'Algèbre [I417] (Martin DUPONT)
+4.0h - Cours d'Algèbre [I417] (Martin DUPONT)
 demi-journée 2 :::::::::::::::
 0.5h - Cours de Cuisine [I417] (Benoit 16)
 1.0h - Cours de Cuisine [I417] (Benoit 16)
@@ -22,6 +22,6 @@ demi-journée 3 :::::::::::::::
 1.5h -
 2.0h -
 2.5h -
-3.0h - Cours de Cuisine [I417] (Frank SINATRA)
+3.0h -
 3.5h -
-4.0h -
+4.0h - Cours de Cuisine [I417] (Frank SINATRA)

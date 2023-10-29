@@ -152,10 +152,12 @@ def generate_milp(cours, creneaux, salles, classes, verbose):
 
     # 5] Pour chaque cours co1,co2 qui ont le même prof, et tout créneau cr : cours_creneau(co1, cr) + cours_creneau(co2, cr) <= 1
     if verbose:
-        print("génération contrainte 5")    
+        print("génération contrainte 5")
+    c_done = []
     for co1 in cours:
+        c_done.append(co1)
         for co2 in cours:
-            if co1 != co2 and co1.prof == co2.prof:
+            if (not co2 in c_done) and co1.prof is co2.prof:
                 for cr in creneaux:
                     line_added = np.zeros(nb_var)
                     line_added[co1.numero*len(creneaux)+cr.numero] = 1
@@ -163,6 +165,7 @@ def generate_milp(cours, creneaux, salles, classes, verbose):
                     A.append(csr_matrix(line_added))
                     UB.append(1)
                     LB.append(-np.inf)
+        
 
     # 6.a] pour tout cours co, créneau cr,
     # durée_cours(co) * cours_commence_créneau(co, cr) - (somme [créneaux cr2 qui suivent le créneau cr sur la durée du cours co] cours_creneau(co, cr2)) <= 0
@@ -200,7 +203,7 @@ def generate_milp(cours, creneaux, salles, classes, verbose):
         for cr in creneaux:
             line_added = np.zeros(nb_var)
             for co in cours:
-                if co.classe == cl:
+                if co.classe is cl:
                     line_added[cr.numero+co.numero*len(creneaux)] = 1
             A.append(csr_matrix(line_added))
             UB.append(1)
@@ -245,18 +248,17 @@ def generate_milp(cours, creneaux, salles, classes, verbose):
                     UB.append(0)
                     LB.append(-np.inf)
 
-    # 11] Pour tout cours co, tout créneau cr, toute salle sl : cours_salle(co, sl)*taille(classe(co)) <= taille(sl)
+    # 11] Pour tout cours co, toute salle sl : cours_salle(co, sl)*taille(classe(co)) <= taille(sl)
     if verbose:
         print("génération contrainte 11")
     for co in cours:
-        for cr in creneaux:
-            for sl in salles:
-                if (not np.isinf(sl.effectifs)) and co.classe.effectifs > 0:
-                    line_added = np.zeros(nb_var)
-                    line_added[nb_var_cours_creneau + co.numero*len(salles)+sl.numero] = co.classe.effectifs
-                    A.append(csr_matrix(line_added))
-                    UB.append(sl.effectifs)
-                    LB.append(-np.inf)
+        for sl in salles:
+            if (not np.isinf(sl.effectifs)) and co.classe.effectifs > 0:
+                line_added = np.zeros(nb_var)
+                line_added[nb_var_cours_creneau + co.numero*len(salles)+sl.numero] = co.classe.effectifs
+                A.append(csr_matrix(line_added))
+                UB.append(sl.effectifs)
+                LB.append(-np.inf)
 
     # 12] cours_salle_creneau(co, sl, cr) = le cours est dans cette salle durant ce créneau (cours_creneau(co, cr) et cours_salle(co,sl) <=> cours_salle_creneau(co, sl, cr))
     # pour tout cours co, salle sl, créneau cr, cours_creneau(co, cr) + cours_salle(co, sl) - cours_salle_creneau(co, sl, cr) <= 1 (cours_creneau(co, cr) et cours_salle(co, sl) => cours_salle_creneau(co, sl, cr))
@@ -314,7 +316,7 @@ def generate_milp(cours, creneaux, salles, classes, verbose):
     return minimize,bounds,integrality,vstack(A),UB,LB,nb_var_cours_creneau,nb_var_cours_salle,nb_var_commence,nb_var_salle_affec
 
 def refresh_objects_with_result(res, cours, creneaux, salles):
-    if res.status != 0:
+    if not res.status in [0,1,4]:
         raise RuntimeError("Aucune solution trouvée pour ce problème !")
     i = 0
     #Affectations cours-creneaux
@@ -333,7 +335,7 @@ def refresh_objects_with_result(res, cours, creneaux, salles):
             i += 1
 
 #Affichage simple après execution de la PLNE
-def simple_print(demi_journees, profs, cours, salles, classes, afficher_profs, afficher_classes, afficher_salles, save_folder=None):
+def simple_print(demi_journees, profs, cours, salles, classes, afficher_profs, afficher_classes, afficher_salles, save_folder=None, scale=0.5):
     
     prof_folder = os.path.join(save_folder,"profs")
     classes_folder = os.path.join(save_folder,"classes")
@@ -364,15 +366,15 @@ def simple_print(demi_journees, profs, cours, salles, classes, afficher_profs, a
                             if cr in co.organisation.creneaux:
                                 found = True
                                 if cr in prof.contraintes_pref_pas_cours:
-                                    print(str((cr_n+1)/2)+"h ["+str(prof.contraintes_pref_pas_cours[cr])+"] -",co.nom,"["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"]","("+co.classe.niveau+" "+co.classe.spe+")")
+                                    print(str((cr_n+1)*scale)+"h ["+str(prof.contraintes_pref_pas_cours[cr])+"] -",co.nom,"["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"]","("+co.classe.niveau+" "+co.classe.spe+")")
                                 else:
-                                    print(str((cr_n+1)/2)+"h -",co.nom,"["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"] ("+co.classe.niveau+" "+co.classe.spe+")")
+                                    print(str((cr_n+1)*scale)+"h -",co.nom,"["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"] ("+co.classe.niveau+" "+co.classe.spe+")")
                         if cr in prof.contraintes_pas_cours:
-                            print(str((cr_n+1)/2)+"h [x] -")
+                            print(str((cr_n+1)*scale)+"h [x] -")
                         elif cr in prof.contraintes_pref_pas_cours and not found:
-                            print(str((cr_n+1)/2)+"h ["+str(prof.contraintes_pref_pas_cours[cr])+"] -")
+                            print(str((cr_n+1)*scale)+"h ["+str(prof.contraintes_pref_pas_cours[cr])+"] -")
                         elif not found:
-                            print(str((cr_n+1)/2)+"h -")
+                            print(str((cr_n+1)*scale)+"h -")
 
             #Write file
             if save_folder != None:
@@ -387,15 +389,15 @@ def simple_print(demi_journees, profs, cours, salles, classes, afficher_profs, a
                                 if cr in co.organisation.creneaux:
                                     found = True
                                     if cr in prof.contraintes_pref_pas_cours:
-                                        f.write(str((cr_n+1)/2)+"h ["+str(prof.contraintes_pref_pas_cours[cr])+"] - "+co.nom+" ["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"] ("+co.classe.niveau+" "+co.classe.spe+")\n")
+                                        f.write(str((cr_n+1)*scale)+"h ["+str(prof.contraintes_pref_pas_cours[cr])+"] - "+co.nom+" ["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"] ("+co.classe.niveau+" "+co.classe.spe+")\n")
                                     else:
-                                        f.write(str((cr_n+1)/2)+"h - "+co.nom+" ["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"] ("+co.classe.niveau+" "+co.classe.spe+")\n")
+                                        f.write(str((cr_n+1)*scale)+"h - "+co.nom+" ["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"] ("+co.classe.niveau+" "+co.classe.spe+")\n")
                             if cr in prof.contraintes_pas_cours:
-                                f.write(str((cr_n+1)/2)+"h [x] -\n")
+                                f.write(str((cr_n+1)*scale)+"h [x] -\n")
                             elif cr in prof.contraintes_pref_pas_cours and not found:
-                                f.write(str((cr_n+1)/2)+"h ["+str(prof.contraintes_pref_pas_cours[cr])+"] -\n")
+                                f.write(str((cr_n+1)*scale)+"h ["+str(prof.contraintes_pref_pas_cours[cr])+"] -\n")
                             elif not found:
-                                f.write(str((cr_n+1)/2)+"h -\n")
+                                f.write(str((cr_n+1)*scale)+"h -\n")
 
     #Affichage par classe
     if afficher_classes:
@@ -416,9 +418,9 @@ def simple_print(demi_journees, profs, cours, salles, classes, afficher_profs, a
                                 continue
                             if cr in co.organisation.creneaux:
                                 found = True
-                                print(str((cr_n+1)/2)+"h -",co.nom,"["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"] ("+co.prof.prenom,co.prof.nom+")")
+                                print(str((cr_n+1)*scale)+"h -",co.nom,"["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"] ("+co.prof.prenom,co.prof.nom+")")
                         if not found:
-                            print(str((cr_n+1)/2)+"h -")
+                            print(str((cr_n+1)*scale)+"h -")
 
             #Write file
             if save_folder != None:
@@ -432,9 +434,9 @@ def simple_print(demi_journees, profs, cours, salles, classes, afficher_profs, a
                                     continue
                                 if cr in co.organisation.creneaux:
                                     found = True
-                                    f.write(str((cr_n+1)/2)+"h - "+co.nom+" ["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"] ("+co.prof.prenom+" "+co.prof.nom+")\n")
+                                    f.write(str((cr_n+1)*scale)+"h - "+co.nom+" ["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"] ("+co.prof.prenom+" "+co.prof.nom+")\n")
                             if not found:
-                                f.write(str((cr_n+1)/2)+"h -\n")
+                                f.write(str((cr_n+1)*scale)+"h -\n")
 
 
     #Affichage par salle
@@ -455,9 +457,9 @@ def simple_print(demi_journees, profs, cours, salles, classes, afficher_profs, a
                                 continue
                             if cr in co.organisation.creneaux:
                                 found = True
-                                print(str((cr_n+1)/2)+"h -",co.nom,"["+co.prof.prenom,co.prof.nom+"]","("+co.classe.niveau+" "+co.classe.spe+")")
+                                print(str((cr_n+1)*scale)+"h -",co.nom,"["+co.prof.prenom,co.prof.nom+"]","("+co.classe.niveau+" "+co.classe.spe+")")
                         if not found:
-                            print(str((cr_n+1)/2)+"h -")
+                            print(str((cr_n+1)*scale)+"h -")
 
             #Write file
             if save_folder != None:
@@ -471,9 +473,9 @@ def simple_print(demi_journees, profs, cours, salles, classes, afficher_profs, a
                                     continue
                                 if cr in co.organisation.creneaux:
                                     found = True
-                                    f.write(str((cr_n+1)/2)+"h - "+co.nom+" ["+co.prof.prenom+" "+co.prof.nom+"] ("+co.classe.niveau+" "+co.classe.spe+")\n")
+                                    f.write(str((cr_n+1)*scale)+"h - "+co.nom+" ["+co.prof.prenom+" "+co.prof.nom+"] ("+co.classe.niveau+" "+co.classe.spe+")\n")
                             if not found:
-                                f.write(str((cr_n+1)/2)+"h -\n")
+                                f.write(str((cr_n+1)*scale)+"h -\n")
 
 
 def compute_plne(minimize,bounds,integrality,A,UB,LB, verbose=True):
@@ -483,10 +485,10 @@ def compute_plne(minimize,bounds,integrality,A,UB,LB, verbose=True):
         print("Nb variables : ",A.shape[1])
 
     constraints = LinearConstraint(A,ub=UB,lb=LB)
-    res = milp(c=minimize, bounds=bounds, constraints=constraints, integrality=integrality)
+    res = milp(c=minimize, bounds=bounds, constraints=constraints, integrality=integrality, options={"node_limit":20})
 
     if verbose:
-        if res.status != 0:
+        if not res.status in [0,1,4]:
             print("Impossible de trouver un résultat avec ces contraintes")
         else:
             print("Solution trouvée avec un score de",res.fun)

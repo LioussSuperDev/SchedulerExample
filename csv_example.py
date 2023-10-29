@@ -1,6 +1,7 @@
 import csv
 from toolbox import Professeur,Classe,Salle,Cours,Creneau
 from core import simple_print,build_compute_plne
+import math
 
 ######################################################
 ######################################################
@@ -117,7 +118,7 @@ for groupe in groupes:
 # REMPLISSAGE DES COURS ########################################
 ################################################################
 
-cours = {}
+cours = []
 
 with open(fichier_cours) as csvfile:
     spamreader = csv.reader(csvfile,delimiter=";")
@@ -128,9 +129,10 @@ with open(fichier_cours) as csvfile:
         groupe = row[1]
         type_m = row[2]
         # duree = int(row[3])*2
-        duree = int(row[3])
+        duree = int(math.ceil(float(row[3])))
         matiere = row[4].strip()
         contenu = row[5]
+        _id = row[14]
         prof = row[6]
         if groupe != "":
             groupe_id = annee + "." + groupe
@@ -146,9 +148,10 @@ with open(fichier_cours) as csvfile:
         c = Cours(type_m+" - "+matiere,real_prof,groupes[groupe_id],duree)
 
         if row[8] == "Vrai":
-            c.tags.append("info")
-
-        cours[matiere] = c
+            c.tags["info"] = True
+        c.tags["matiere"] = matiere
+        c.tags["_id"] = _id
+        cours.append(c)
 
 ################################################################
 # REMPLISSAGE DES SALLES #######################################
@@ -171,7 +174,7 @@ with open(fichier_salles) as csvfile:
         salle = Salle("","",nom,effectifs)
 
         #Contraintes salles info
-        for c in cours.values():
+        for c in cours:
             if "info" in c.tags:
                 c.contraintes_salle.append(salle)
 
@@ -192,8 +195,9 @@ with open(fichier_salles) as csvfile:
             matiere_imposee_salle = row[6].split(",")
             for matiere in matiere_imposee_salle:
                 m_name = matiere.split("=")[0]
-                if m_name in cours:
-                    cours[m_name].contraintes_salle.append(salle)
+                for c in cours:
+                    if c.tags["matiere"] == m_name:
+                        c.contraintes_salle.append(salle)
         salles.append(salle)
 
 ################################################################
@@ -206,11 +210,11 @@ for i,groupe in enumerate(classes):
 profs = list(profs.values())
 for i,prof in enumerate(profs):
     prof.numero = i
-cours = list(cours.values())
 for i,cour in enumerate(cours):
     cour.numero = i
 for i,salle in enumerate(salles):
     salle.numero = i
+
 #Génération des matrices pour la PLNE à partir de la modélisation
 ################################## CONVERSION EN MATRICES / EXECUTION DE LA PLNE / ON ACTUALISE NOS OBJETS AVEC LE RESULTAT ####################################################################
 print("taille groupes :",len(classes))
@@ -226,5 +230,4 @@ afficher_profs = True
 afficher_classes = True
 afficher_salles = True
 
-simple_print(demi_journees,profs,cours,salles,classes,afficher_profs,afficher_classes,afficher_salles,save_folder="./results/csv_example/week"+str(week_number))
-
+simple_print(demi_journees,profs,cours,salles,classes,afficher_profs,afficher_classes,afficher_salles,save_folder="./results/csv_example/week"+str(week_number),scale=1)

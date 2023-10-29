@@ -1,50 +1,50 @@
 demi-journée 1 :::::::::::::::
-0.5h - TD - R4.VCOD.09 [A017] ( PDS)
-1.0h - TD - R4.VCOD.09 [A017] ( PDS)
-1.5h -
-2.0h -
+1h -
+2h -
+3h -
+4h -
 demi-journée 2 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h - TD - R4.02 [C204] ( SVP)
+2h - TD - R4.02 [C204] ( SVP)
+3h - CM - SAE4-VCOD 1 [A109] ( MK)
+4h - CM - SAE4-VCOD 1 [A109] ( MK)
 demi-journée 3 :::::::::::::::
-0.5h - auto - SAE4-VCOD 1 [A110] ( MK)
-1.0h - auto - SAE4-VCOD 1 [A110] ( MK)
-1.5h -
-2.0h -
+1h -
+2h -
+3h - auto - SAE4-VCOD 1 [C204] ( MK)
+4h - auto - SAE4-VCOD 1 [C204] ( MK)
 demi-journée 4 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h - TD - R4.VCOD.09 [A017] ( PDS)
+2h - TD - R4.VCOD.09 [A017] ( PDS)
+3h - auto - SAE4-VCOD 1 [A109] ( MK)
+4h - auto - SAE4-VCOD 1 [A109] ( MK)
 demi-journée 5 :::::::::::::::
-0.5h - TD - R4.06 [A119] ( CF)
-1.0h - TD - R4.06 [A119] ( CF)
-1.5h -
-2.0h -
+1h -
+2h -
+3h - TD - R4.06 [A119] ( CF)
+4h - TD - R4.06 [A119] ( CF)
 demi-journée 6 :::::::::::::::
-0.5h -
-1.0h -
-1.5h - TD - R4.05 [A109] ( FA)
-2.0h - TD - R4.05 [A109] ( FA)
+1h - TD - R4.02 [C204] ( SVP)
+2h - TD - R4.02 [C204] ( SVP)
+3h - CM - R4.VCOD.09 [C204] ( PDS)
+4h - CM - R4.VCOD.09 [C204] ( PDS)
 demi-journée 7 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h -
+2h -
+3h - TP - R4.01 [B202] ( MK)
+4h - TP - R4.01 [B202] ( MK)
 demi-journée 8 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h - TD - R4.05 [A119] ( FA)
+2h - TD - R4.05 [A119] ( FA)
+3h - TD - R4.02 [A017] ( SVP)
+4h - TD - R4.02 [A017] ( SVP)
 demi-journée 9 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h -
+2h -
+3h -
+4h -
 demi-journée 10 :::::::::::::::
-0.5h - CM - R4.VCOD.08 [A118] ( SP)
-1.0h - CM - R4.VCOD.08 [A118] ( SP)
-1.5h - TD - R4.02 [A118] ( SVP)
-2.0h - TD - R4.02 [A118] ( SVP)
+1h - CM - R4.VCOD.08 [A110] ( SP)
+2h - CM - R4.VCOD.08 [A110] ( SP)
+3h - CM - R4.VCOD.08 [A119] ( SP)
+4h - CM - R4.VCOD.08 [A119] ( SP)

@@ -1,50 +1,50 @@
 demi-journée 1 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h - CM-co - SAE4-2 [A110] ( SVP)
+2h - CM-co - SAE4-2 [A110] ( SVP)
+3h - CM-co - R4.01 [A110] ( IU)
+4h - CM-co - R4.01 [A110] ( IU)
 demi-journée 2 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h -
+2h -
+3h -
+4h -
 demi-journée 3 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h - CM-co - R4.05 [A017] ( FA)
+2h - CM-co - R4.05 [A017] ( FA)
+3h -
+4h -
 demi-journée 4 :::::::::::::::
-0.5h -
-1.0h - CM-co - R4.01 [A110] ( IU)
-1.5h - CM-co - R4.01 [A110] ( IU)
-2.0h -
+1h -
+2h -
+3h -
+4h -
 demi-journée 5 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h - CM-co - R4.01 [A017] ( MK)
+2h - CM-co - R4.01 [A017] ( MK)
+3h -
+4h -
 demi-journée 6 :::::::::::::::
-0.5h - CM-co - SAE4-2 [A110] ( SVP)
-1.0h - CM-co - SAE4-2 [A110] ( SVP)
-1.5h -
-2.0h -
+1h -
+2h -
+3h -
+4h -
 demi-journée 7 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h - CM-co - R4.02 [A110] ( SVP)
+2h - CM-co - R4.02 [A110] ( SVP)
+3h -
+4h -
 demi-journée 8 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h -
+2h -
+3h -
+4h -
 demi-journée 9 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h -
+2h -
+3h -
+4h -
 demi-journée 10 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h -
+2h -
+3h -
+4h -

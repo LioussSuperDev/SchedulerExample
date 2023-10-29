@@ -54,7 +54,7 @@ class Cours:
         self.numero = -1
         self.organisation = None
         self.contrainte_dans_creneaux = [] #Si vide aucune contrainte, si contient des créneaux => ce cours ne peut être que durant ces créneaux
-        self.tags = []
+        self.tags = {}
 
     def set_organisation(self, creneaux, salle):
         self.organisation = self.Organisation(creneaux, salle)

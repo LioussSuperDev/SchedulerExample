@@ -1,50 +1,50 @@
 demi-journée 1 :::::::::::::::
-0.5h -
-1.0h -
-1.5h - TD - R6.03 [A110] ( EA)
-2.0h - TD - R6.03 [A110] ( EA)
+1h - TD - R6.03 [C204] ( EA)
+2h - TD - R6.03 [C204] ( EA)
+3h - TD - R6.VCOD.5 [A109] ( LP)
+4h - TD - R6.VCOD.5 [A109] ( LP)
 demi-journée 2 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h -
+2h -
+3h -
+4h -
 demi-journée 3 :::::::::::::::
-0.5h - encad - SAE6-VCOD.1 [A118] ( IU)
-1.0h - encad - SAE6-VCOD.1 [A118] ( IU)
-1.5h -
-2.0h -
+1h - TD - R6.VCOD.5 [A109] ( LP)
+2h - TD - R6.VCOD.5 [A109] ( LP)
+3h -
+4h -
 demi-journée 4 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h - encad - SAE6-VCOD.1 [A109] ( IU)
+2h - encad - SAE6-VCOD.1 [A109] ( IU)
+3h -
+4h -
 demi-journée 5 :::::::::::::::
-0.5h -
-1.0h -
-1.5h - TP - R6.VCOD.5 [A017] ( LP)
-2.0h - TP - R6.VCOD.5 [A017] ( LP)
+1h -
+2h -
+3h - encad - SAE6-VCOD.1 [A017] ( PDS)
+4h - encad - SAE6-VCOD.1 [A017] ( PDS)
 demi-journée 6 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h -
+2h -
+3h -
+4h -
 demi-journée 7 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h - TP - SAE6-VCOD.1 [C204] ( PDS)
+2h - TP - SAE6-VCOD.1 [C204] ( PDS)
+3h - TP - R6.VCOD.5 [A119] ( LP)
+4h - TP - R6.VCOD.5 [A119] ( LP)
 demi-journée 8 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h - TP - R6.VCOD.5 [C202] ( LP)
+2h - TP - R6.VCOD.5 [C202] ( LP)
+3h -
+4h -
 demi-journée 9 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h -
+2h -
+3h -
+4h -
 demi-journée 10 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h -
+2h -
+3h - TD - SAE6-VCOD.1 [A109] ( IU)
+4h - TD - SAE6-VCOD.1 [A109] ( IU)

@@ -1,27 +1,27 @@
 demi-journée 1 :::::::::::::::
-0.5h - Cours d'Algèbre [I417] (Bac Pro cuisine)
-1.0h - Cours d'Algèbre [I417] (Bac Pro cuisine)
-1.5h - Cours d'Algèbre [I417] (Bac Pro cuisine)
-2.0h - Cours d'Algèbre [I417] (Bac Pro cuisine)
-2.5h -
-3.0h -
-3.5h -
-4.0h -
+0.5h - Cours de Stats [I415] (L1 maths)
+1.0h - Cours de Stats [I415] (L1 maths)
+1.5h - Cours de Stats [I415] (L1 maths)
+2.0h - Cours de Stats [I415] (L1 maths)
+2.5h - Cours d'Algèbre [I417] (Bac Pro cuisine)
+3.0h - Cours d'Algèbre [I417] (Bac Pro cuisine)
+3.5h - Cours d'Algèbre [I417] (Bac Pro cuisine)
+4.0h - Cours d'Algèbre [I417] (Bac Pro cuisine)
 demi-journée 2 :::::::::::::::
-0.5h -
-1.0h -
+0.5h - Cours d'Algèbre [I415] (L1 maths)
+1.0h - Cours d'Algèbre [I415] (L1 maths)
 1.5h - Cours d'Algèbre [I415] (L1 maths)
 2.0h - Cours d'Algèbre [I415] (L1 maths)
 2.5h - Cours d'Algèbre [I415] (L1 maths)
 3.0h - Cours d'Algèbre [I415] (L1 maths)
-3.5h - Cours d'Algèbre [I415] (L1 maths)
-4.0h - Cours d'Algèbre [I415] (L1 maths)
+3.5h -
+4.0h -
 demi-journée 3 :::::::::::::::
 0.5h -
-1.0h - Cours de Stats [I416] (L1 maths)
-1.5h - Cours de Stats [I416] (L1 maths)
-2.0h - Cours de Stats [I416] (L1 maths)
-2.5h - Cours de Stats [I416] (L1 maths)
+1.0h -
+1.5h -
+2.0h -
+2.5h -
 3.0h -
 3.5h -
 4.0h -

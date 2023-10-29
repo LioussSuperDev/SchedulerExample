@@ -1,50 +1,50 @@
 demi-journée 1 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h - TP - R2.07 [C202] (BUT1 G1)
+2h - TP - R2.07 [C202] (BUT1 G1)
+3h -
+4h -
 demi-journée 2 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h -
+2h -
+3h -
+4h -
 demi-journée 3 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h -
+2h -
+3h -
+4h -
 demi-journée 4 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h -
+2h -
+3h - CM - SAE4-EMS.1 [C204] (BUT2 EMS)
+4h - CM - SAE4-EMS.1 [C204] (BUT2 EMS)
 demi-journée 5 :::::::::::::::
-0.5h [5000] -
-1.0h [5000] -
-1.5h [x] -
-2.0h [x] -
+1h [5000] -
+2h [5000] -
+3h [x] -
+4h [x] -
 demi-journée 6 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h - TP - R2.07 [A118] (BUT1 G2)
+2h - TP - R2.07 [A118] (BUT1 G2)
+3h -
+4h -
 demi-journée 7 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h -
+2h -
+3h -
+4h -
 demi-journée 8 :::::::::::::::
-0.5h - TP - R2.07 [A118] (BUT1 G2)
-1.0h - TP - R2.07 [A118] (BUT1 G2)
-1.5h - CM - R4.EMS.08 [A017] (BUT2 EMS)
-2.0h - CM - R4.EMS.08 [A017] (BUT2 EMS)
+1h -
+2h -
+3h - CM - R4.EMS.08 [C204] (BUT2 EMS)
+4h - CM - R4.EMS.08 [C204] (BUT2 EMS)
 demi-journée 9 :::::::::::::::
-0.5h [x] -
-1.0h [x] -
-1.5h [x] -
-2.0h [x] -
+1h [x] -
+2h [x] -
+3h [x] -
+4h [x] -
 demi-journée 10 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h -
+2h -
+3h -
+4h -

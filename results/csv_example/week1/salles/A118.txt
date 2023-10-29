@@ -1,50 +1,50 @@
 demi-journée 1 :::::::::::::::
-0.5h - TD - R2.02 [ IU] (BUT1 G2)
-1.0h - TD - R2.02 [ IU] (BUT1 G2)
-1.5h -
-2.0h -
+1h - TP - R2.10 [ AG] (BUT1 G2)
+2h - TP - R2.10 [ AG] (BUT1 G2)
+3h - TP - R2.10 [ AG] (BUT1 G2)
+4h - TP - R2.10 [ AG] (BUT1 G2)
 demi-journée 2 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h - TD - SAE4-EMS.1 [ ATER] (BUT2 EMS)
+2h - TD - SAE4-EMS.1 [ ATER] (BUT2 EMS)
+3h - TP - R2.03 [ PDS] (BUT1 G2)
+4h - TP - R2.03 [ PDS] (BUT1 G2)
 demi-journée 3 :::::::::::::::
-0.5h - encad - SAE6-VCOD.1 [ IU] (BUT3 VCOD)
-1.0h - encad - SAE6-VCOD.1 [ IU] (BUT3 VCOD)
-1.5h -
-2.0h -
+1h -
+2h -
+3h - TD - R2.01 [ AC] (BUT1 G2)
+4h - TD - R2.01 [ AC] (BUT1 G2)
 demi-journée 4 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h -
+2h -
+3h -
+4h -
 demi-journée 5 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h -
+2h -
+3h -
+4h -
 demi-journée 6 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h - TP - R2.07 [ TS] (BUT1 G2)
+2h - TP - R2.07 [ TS] (BUT1 G2)
+3h -
+4h -
 demi-journée 7 :::::::::::::::
-0.5h -
-1.0h - TD - R2.01 [ IU] (BUT1 G2)
-1.5h - TD - R2.01 [ IU] (BUT1 G2)
-2.0h -
+1h -
+2h -
+3h - TD - R2.01 [ IU] (BUT1 G2)
+4h - TD - R2.01 [ IU] (BUT1 G2)
 demi-journée 8 :::::::::::::::
-0.5h - TP - R2.07 [ TS] (BUT1 G2)
-1.0h - TP - R2.07 [ TS] (BUT1 G2)
-1.5h -
-2.0h -
+1h - TD - R4.02 [ SVP] (BUT2 EMS)
+2h - TD - R4.02 [ SVP] (BUT2 EMS)
+3h -
+4h -
 demi-journée 9 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h -
+2h -
+3h -
+4h -
 demi-journée 10 :::::::::::::::
-0.5h - CM - R4.VCOD.08 [ SP] (BUT2 VCOD)
-1.0h - CM - R4.VCOD.08 [ SP] (BUT2 VCOD)
-1.5h - TD - R4.02 [ SVP] (BUT2 VCOD)
-2.0h - TD - R4.02 [ SVP] (BUT2 VCOD)
+1h - TD - R2.02 [ IU] (BUT1 G2)
+2h - TD - R2.02 [ IU] (BUT1 G2)
+3h -
+4h -

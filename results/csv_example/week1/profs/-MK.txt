@@ -1,50 +1,50 @@
 demi-journée 1 :::::::::::::::
-0.5h [5000] -
-1.0h [5000] -
-1.5h [5000] -
-2.0h [5000] -
+1h [5000] -
+2h [5000] -
+3h [5000] -
+4h [5000] -
 demi-journée 2 :::::::::::::::
-0.5h [5000] -
-1.0h [5000] -
-1.5h [1000] -
-2.0h [1000] -
+1h [5000] -
+2h [5000] -
+3h [1000] - CM - SAE4-VCOD 1 [A109] (BUT2 VCOD)
+4h [1000] - CM - SAE4-VCOD 1 [A109] (BUT2 VCOD)
 demi-journée 3 :::::::::::::::
-0.5h - auto - SAE4-VCOD 1 [A110] (BUT2 VCOD)
-1.0h - auto - SAE4-VCOD 1 [A110] (BUT2 VCOD)
-1.5h - CM - R6.EMS.5 [A017] (BUT3 EMS)
-2.0h - CM - R6.EMS.5 [A017] (BUT3 EMS)
+1h - CM - R6.EMS.5 [A110] (BUT3 EMS)
+2h - CM - R6.EMS.5 [A110] (BUT3 EMS)
+3h - auto - SAE4-VCOD 1 [C204] (BUT2 VCOD)
+4h - auto - SAE4-VCOD 1 [C204] (BUT2 VCOD)
 demi-journée 4 :::::::::::::::
-0.5h [5000] -
-1.0h [5000] -
-1.5h [1000] -
-2.0h [1000] -
+1h [5000] -
+2h [5000] -
+3h [1000] - auto - SAE4-VCOD 1 [A109] (BUT2 VCOD)
+4h [1000] - auto - SAE4-VCOD 1 [A109] (BUT2 VCOD)
 demi-journée 5 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h - CM-co - R4.01 [A017] (BUT2 )
+2h - CM-co - R4.01 [A017] (BUT2 )
+3h - TP - R4.01 [B202] (BUT2 EMS)
+4h - TP - R4.01 [B202] (BUT2 EMS)
 demi-journée 6 :::::::::::::::
-0.5h [5000] -
-1.0h [5000] -
-1.5h [1000] -
-2.0h [1000] -
+1h [5000] -
+2h [5000] -
+3h [1000] -
+4h [1000] -
 demi-journée 7 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
+1h - encad - SAE6-EMS.1 [C202] (BUT3 EMS)
+2h - encad - SAE6-EMS.1 [C202] (BUT3 EMS)
+3h - TP - R4.01 [B202] (BUT2 VCOD)
+4h - TP - R4.01 [B202] (BUT2 VCOD)
 demi-journée 8 :::::::::::::::
-0.5h [5000] -
-1.0h [5000] -
-1.5h [1000] -
-2.0h [1000] -
+1h [5000] -
+2h [5000] -
+3h [1000] -
+4h [1000] -
 demi-journée 9 :::::::::::::::
-0.5h [x] -
-1.0h [x] -
-1.5h [x] -
-2.0h [x] -
+1h [x] -
+2h [x] -
+3h [x] -
+4h [x] -
 demi-journée 10 :::::::::::::::
-0.5h [x] -
-1.0h [x] -
-1.5h [x] -
-2.0h [x] -
+1h [x] -
+2h [x] -
+3h [x] -
+4h [x] -
