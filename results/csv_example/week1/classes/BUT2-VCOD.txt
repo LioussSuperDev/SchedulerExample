@@ -1,0 +1,50 @@
+demi-journée 1 :::::::::::::::
+0.5h - TD - R4.VCOD.09 [A017] ( PDS)
+1.0h - TD - R4.VCOD.09 [A017] ( PDS)
+1.5h -
+2.0h -
+demi-journée 2 :::::::::::::::
+0.5h -
+1.0h -
+1.5h -
+2.0h -
+demi-journée 3 :::::::::::::::
+0.5h - auto - SAE4-VCOD 1 [A110] ( MK)
+1.0h - auto - SAE4-VCOD 1 [A110] ( MK)
+1.5h -
+2.0h -
+demi-journée 4 :::::::::::::::
+0.5h -
+1.0h -
+1.5h -
+2.0h -
+demi-journée 5 :::::::::::::::
+0.5h - TD - R4.06 [A119] ( CF)
+1.0h - TD - R4.06 [A119] ( CF)
+1.5h -
+2.0h -
+demi-journée 6 :::::::::::::::
+0.5h -
+1.0h -
+1.5h - TD - R4.05 [A109] ( FA)
+2.0h - TD - R4.05 [A109] ( FA)
+demi-journée 7 :::::::::::::::
+0.5h -
+1.0h -
+1.5h -
+2.0h -
+demi-journée 8 :::::::::::::::
+0.5h -
+1.0h -
+1.5h -
+2.0h -
+demi-journée 9 :::::::::::::::
+0.5h -
+1.0h -
+1.5h -
+2.0h -
+demi-journée 10 :::::::::::::::
+0.5h - CM - R4.VCOD.08 [A118] ( SP)
+1.0h - CM - R4.VCOD.08 [A118] ( SP)
+1.5h - TD - R4.02 [A118] ( SVP)
+2.0h - TD - R4.02 [A118] ( SVP)

@@ -1,0 +1,50 @@
+demi-journée 1 :::::::::::::::
+0.5h -
+1.0h -
+1.5h -
+2.0h -
+demi-journée 2 :::::::::::::::
+0.5h -
+1.0h -
+1.5h -
+2.0h -
+demi-journée 3 :::::::::::::::
+0.5h -
+1.0h -
+1.5h - encad - SAE4-EMS.1 [ ATER] (BUT2 EMS)
+2.0h - encad - SAE4-EMS.1 [ ATER] (BUT2 EMS)
+demi-journée 4 :::::::::::::::
+0.5h -
+1.0h -
+1.5h -
+2.0h -
+demi-journée 5 :::::::::::::::
+0.5h -
+1.0h -
+1.5h -
+2.0h -
+demi-journée 6 :::::::::::::::
+0.5h -
+1.0h -
+1.5h - TD - R4.05 [ FA] (BUT2 VCOD)
+2.0h - TD - R4.05 [ FA] (BUT2 VCOD)
+demi-journée 7 :::::::::::::::
+0.5h -
+1.0h -
+1.5h - encad - SAE6-EMS.1 [ SVP] (BUT3 EMS)
+2.0h - encad - SAE6-EMS.1 [ SVP] (BUT3 EMS)
+demi-journée 8 :::::::::::::::
+0.5h -
+1.0h -
+1.5h -
+2.0h -
+demi-journée 9 :::::::::::::::
+0.5h -
+1.0h -
+1.5h -
+2.0h -
+demi-journée 10 :::::::::::::::
+0.5h -
+1.0h -
+1.5h -
+2.0h -

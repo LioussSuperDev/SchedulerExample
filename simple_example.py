@@ -1,14 +1,9 @@
-from scipy.optimize import LinearConstraint
-from scipy.optimize import milp
-import numpy as np
 from toolbox import Professeur,Classe,Salle,Cours,Creneau
-from core import generate_milp
+from core import simple_print,build_compute_plne
 
 #8 créneaux par demi-journée
 duree_demi_journee = 8
 nombre_demi_journees = 3
-
-######################################################## ON CREE UN EXEMPLE ##########################################################################################
 
 #définition de 3 demi-journées et remplissage des créneaux
 demi_journees = []
@@ -67,9 +62,9 @@ for i,sl in enumerate(salles):
 #définition des classes
 L1info = Classe("L1","info")
 L1maths = Classe("L1","maths")
-L1maths.mutex.append(L1info)
 BTSinfo = Classe("BTS","info")
 BacProCuisine = Classe("Bac Pro","cuisine")
+BTSinfo.mutex.append(BacProCuisine)
 classes = [L1info, L1maths, BTSinfo, BacProCuisine]
 
 #définition des cours
@@ -77,28 +72,23 @@ c1 = Cours("Cours de Python", discala, L1info, 4)
 c2 = Cours("Cours de Stats", dupont, L1maths, 4)
 c3 = Cours("Cours d'Algèbre", dupont, L1maths, 6)
 c4 = Cours("Cours de Musique", smith, L1info, 2)
-c4.contraintes_pas_salle.append(I415)
-c4.contraintes_pas_salle.append(I417)
+c4.contraintes_salle.append(I416)
 
 c5 = Cours("Cours de Cuisine", benoit16, BacProCuisine, 6)
-c5.contraintes_pas_salle.append(I415)
-c5.contraintes_pas_salle.append(I416)
+c5.contraintes_salle.append(I417)
 
 c6 = Cours("Cours de Maths", christ, BTSinfo, 2)
 c7 = Cours("Cours de Musique", sinatra, BTSinfo, 4)
-c7.contraintes_pas_salle.append(I415)
-c7.contraintes_pas_salle.append(I417)
+c7.contraintes_salle.append(I416)
 
 c8 = Cours("Cours de Cuisine", sinatra, BacProCuisine, 1)
-c8.contraintes_pas_salle.append(I415)
-c8.contraintes_pas_salle.append(I416)
+c8.contraintes_salle.append(I417)
 
 c9 = Cours("Cours de Python", discala, L1info, 3)
 c10 = Cours("Cours de Théâtre", smith, BTSinfo, 4)
 
 c11 = Cours("Cours de Musique", sinatra, L1maths, 2)
-c11.contraintes_pas_salle.append(I415)
-c11.contraintes_pas_salle.append(I417)
+c11.contraintes_salle.append(I416)
 
 c12 = Cours("Cours de C#", discala, L1info, 4)
 c13 = Cours("Cours d'Algèbre", dupont, BacProCuisine, 4)
@@ -107,112 +97,15 @@ for i,cr in enumerate(cours):
     cr.numero = i
 
 #Génération des matrices pour la PLNE à partir de la modélisation
-minimize,bounds,integrality,A,UB,LB,nb_var_cours_creneau,nb_var_cours_salle,nb_var_commence,nb_var_penalites = generate_milp(cours, creneaux, salles, classes)
+################################## CONVERSION EN MATRICES / EXECUTION DE LA PLNE / ON ACTUALISE NOS OBJETS AVEC LE RESULTAT ####################################################################
 
-#############################################################################################
+res = build_compute_plne(cours, creneaux, salles, classes)
 
-print("Nb contraintes : ",len(A))
-print("Nb variables : ",len(A[0]))
-
-
-
-constraints = LinearConstraint(A,ub=UB,lb=LB)
-res = milp(c=minimize, bounds=bounds, constraints=constraints, integrality=integrality)
-
-if res.status != 0:
-    print("Impossible de trouver un résultat avec ces contraintes")
-    exit(1)
-else:
-    print("Solution trouvée avec un score de",res.fun)
-
-################################# ON ACTUALISE NOS OBJETS AVEC LE RESULTAT #################################################
-
-i = 0
-#Affectations cours-creneaux
-for co in cours:
-    creneaux_co = []
-    for cr in creneaux:
-        if res.x[i]:
-            creneaux_co.append(cr)
-        i += 1
-    co.set_organisation(creneaux_co,None)
-#Affectations cours-salles
-for co in cours:
-    for sl in salles:
-        if res.x[i]:
-            co.organisation.salle = sl
-        i += 1
-
-################################# AFFICHAGE #################################################
+################################# AFFICHAGE ####################################################################################################################################################
 
 afficher_profs = True
 afficher_classes = True
 afficher_salles = True
 
-#Affichage par prof
-if afficher_profs:
-    for prof in profs:
-        print()
-        print("==================================================")
-        print()
-        print("Emploi du temps de",prof.prenom,prof.nom)
-        for dj_n,dj in enumerate(demi_journees):
-            print("demi-journée",dj_n+1," :::::::::::::::")
-            for cr_n,cr in enumerate(dj):
-                found = False
-                for co in cours:
-                    if co.prof != prof:
-                        continue
-                    if cr in co.organisation.creneaux:
-                        found = True
-                        if cr in prof.contraintes_pref_pas_cours:
-                            print(str((cr_n+1)/2)+"h [2] -",co.nom,"["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"]","("+co.classe.niveau+" "+co.classe.spe+")")
-                        else:
-                            print(str((cr_n+1)/2)+"h -",co.nom,"["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"]","("+co.classe.niveau+" "+co.classe.spe+")")
-                if cr in prof.contraintes_pas_cours:
-                    print(str((cr_n+1)/2)+"h [x] -")
-                elif cr in prof.contraintes_pref_pas_cours and not found:
-                    print(str((cr_n+1)/2)+"h [2] -")
-                elif not found:
-                    print(str((cr_n+1)/2)+"h -")
+simple_print(demi_journees,profs,cours,salles,classes,afficher_profs,afficher_classes,afficher_salles,save_folder="./results/simple_example")
 
-#Affichage par classe
-if afficher_classes:
-    for cl in classes:
-        print()
-        print("==================================================")
-        print()
-        print("Emploi du temps de",cl.niveau,cl.spe)
-        for dj_n,dj in enumerate(demi_journees):
-            print("demi-journée",dj_n+1," :::::::::::::::")
-            for cr_n,cr in enumerate(dj):
-                found = False
-                for co in cours:
-                    if co.classe != cl:
-                        continue
-                    if cr in co.organisation.creneaux:
-                        found = True
-                        print(str((cr_n+1)/2)+"h -",co.nom,"["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"]","("+co.prof.prenom,co.prof.nom+")")
-                if not found:
-                    print(str((cr_n+1)/2)+"h -")
-
-
-#Affichage par salle
-if afficher_salles:
-    for sl in salles:
-        print()
-        print("==================================================")
-        print()
-        print("Emploi du temps de",sl.batiment+str(sl.etage)+str(sl.salle))
-        for dj_n,dj in enumerate(demi_journees):
-            print("demi-journée",dj_n+1," :::::::::::::::")
-            for cr_n,cr in enumerate(dj):
-                found = False
-                for co in cours:
-                    if co.organisation.salle != sl:
-                        continue
-                    if cr in co.organisation.creneaux:
-                        found = True
-                        print(str((cr_n+1)/2)+"h -",co.nom,"["+co.prof.prenom,co.prof.nom+"]","("+co.classe.niveau+" "+co.classe.spe+")")
-                if not found:
-                    print(str((cr_n+1)/2)+"h -")

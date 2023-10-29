@@ -1,0 +1,54 @@
+demi-journée 1 :::::::::::::::
+0.5h -
+1.0h -
+1.5h - TP - R2.03 [ PDS] (BUT1 G2)
+1.5h - TD - R6.03 [ EA] (BUT3 VCOD)
+2.0h - TD - R6.03 [ EA] (BUT3 VCOD)
+demi-journée 2 :::::::::::::::
+0.5h -
+1.0h -
+1.5h - TP - R2.03 [ PDS] (BUT1 G2)
+2.0h - TP - R2.03 [ PDS] (BUT1 G2)
+demi-journée 3 :::::::::::::::
+0.5h - auto - SAE4-VCOD 1 [ MK] (BUT2 VCOD)
+1.0h - auto - SAE4-VCOD 1 [ MK] (BUT2 VCOD)
+1.5h -
+2.0h -
+demi-journée 4 :::::::::::::::
+0.5h -
+1.0h - CM-co - R4.01 [ IU] (BUT2 )
+1.5h - CM-co - R4.01 [ IU] (BUT2 )
+2.0h -
+demi-journée 5 :::::::::::::::
+0.5h -
+1.0h - TD - R6.EMS.6 [ FB] (BUT3 EMS)
+1.5h - TD - R6.EMS.6 [ FB] (BUT3 EMS)
+2.0h -
+demi-journée 6 :::::::::::::::
+0.5h - TP - R2.03 [ PDS] (BUT1 G2)
+0.5h - CM - R2.08 [ PDS] (BUT1 )
+0.5h - CM-co - SAE4-2 [ SVP] (BUT2 )
+1.0h - CM-co - SAE4-2 [ SVP] (BUT2 )
+1.5h -
+2.0h -
+demi-journée 7 :::::::::::::::
+0.5h -
+1.0h -
+1.5h -
+2.0h -
+demi-journée 8 :::::::::::::::
+0.5h -
+1.0h -
+1.5h -
+2.0h -
+demi-journée 9 :::::::::::::::
+0.5h -
+1.0h -
+1.5h -
+2.0h -
+demi-journée 10 :::::::::::::::
+0.5h -
+1.0h - CM - R2.08 [ PDS] (BUT1 )
+1.5h - TP - R2.03 [ PDS] (BUT1 G2)
+1.5h - CM - R2.08 [ PDS] (BUT1 )
+2.0h - TP - R2.03 [ PDS] (BUT1 G2)
