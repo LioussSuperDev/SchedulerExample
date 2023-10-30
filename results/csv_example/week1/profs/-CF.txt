@@ -19,15 +19,15 @@ demi-journée 4 :::::::::::::::
 3h [x] -
 4h [x] -
 demi-journée 5 :::::::::::::::
-1h - TD - R2.11 [A119] (BUT1 G2)
-2h - TD - R2.11 [A119] (BUT1 G2)
-3h - TD - R4.06 [A119] (BUT2 VCOD)
-4h - TD - R4.06 [A119] (BUT2 VCOD)
+1h - TD - R4.06 [A119] (BUT2 EMS)
+2h - TD - R4.06 [A119] (BUT2 EMS)
+3h - TD - R2.11 [A119] (BUT1 G2)
+4h - TD - R2.11 [A119] (BUT1 G2)
 demi-journée 6 :::::::::::::::
-1h [5000] - TD - R2.11 [A119] (BUT1 G1)
-2h [5000] - TD - R2.11 [A119] (BUT1 G1)
-3h [5000] - TD - R4.06 [A119] (BUT2 EMS)
-4h [5000] - TD - R4.06 [A119] (BUT2 EMS)
+1h [10000] - TD - R4.06 [A119] (BUT2 VCOD)
+2h [10000] - TD - R4.06 [A119] (BUT2 VCOD)
+3h [10000] - TD - R2.11 [A119] (BUT1 G1)
+4h [10000] - TD - R2.11 [A119] (BUT1 G1)
 demi-journée 7 :::::::::::::::
 1h [x] -
 2h [x] -

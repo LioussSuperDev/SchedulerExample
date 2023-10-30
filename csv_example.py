@@ -2,6 +2,7 @@ import csv
 from toolbox import Professeur,Classe,Salle,Cours,Creneau
 from core import simple_print,build_compute_plne
 import math
+from datetime import date as dt
 
 ######################################################
 ######################################################
@@ -12,12 +13,15 @@ import math
 duree_demi_journee = 4
 nombre_demi_journees = 10
 
-penalite_prof_1 = 5000
+penalite_prof_1 = 10000
 penalite_prof_2 = 1000
 
 penalite_salle_partagee = 10
 penalite_salle_eval = 100
 bonus_prof_salle = 10
+
+penalite_demi_journee_travaillee = 1
+penalite_journee_travaillee = 10
 
 week_number = 1
 
@@ -29,8 +33,18 @@ fichier_effectifs = "./exemples/week"+str(week_number)+"/effectifs.csv"
 ######################################################
 ######################################################
 ######################################################
-######################################################
+################# FONCTIONS DATES ####################
 
+def date_to_creneau(date, creneau, demi_journees):
+    is_afternoon = "PM" in creneau
+    demi_journee = dt.strftime(date, "%d-%m-%Y").weekday()*2 + is_afternoon
+    creneau_idx = int(creneau.split("-")[1])
+    return demi_journees[demi_journee][creneau_idx]
+
+######################################################
+######################################################
+######################################################
+######################################################
 
 ##############################################################
 # REMPLISSAGE DES CRENEAUX ###################################
@@ -107,7 +121,7 @@ with open(fichier_effectifs) as csvfile:
         if not groupe_id in groupes:
             groupes[groupe_id] = Classe(annee,groupe,effectifs)
 
-#on mets les relations classe entière-demi groupe
+#on met les relations classe entière-demi groupe
 for groupe in groupes:
     if groupes[groupe].spe == "":
         for groupe2 in groupes:
@@ -133,6 +147,10 @@ with open(fichier_cours) as csvfile:
         matiere = row[4].strip()
         contenu = row[5]
         _id = row[14]
+
+        date = row[11]
+        creneau = row[12]
+
         prof = row[6]
         if groupe != "":
             groupe_id = annee + "." + groupe
@@ -140,12 +158,15 @@ with open(fichier_cours) as csvfile:
             groupe_id = annee
 
         groupe = groupes[groupe_id]
-        if prof == "admin":
+        if prof == "admin" or type_m == "auto":
             real_prof = None
         else:
             real_prof = profs[prof]
         
         c = Cours(type_m+" - "+matiere,real_prof,groupes[groupe_id],duree)
+
+        if date != "" and creneau != "":
+            c.contrainte_dans_creneaux.append(date_to_creneau(date, creneau, demi_journees))
 
         if row[8] == "Vrai":
             c.tags["info"] = True
@@ -168,8 +189,6 @@ with open(fichier_salles) as csvfile:
         effectifs = int(row[3])
         type_salle = row[4]
         is_info = (row[2] == "info")
-
-
 
         salle = Salle("","",nom,effectifs)
 
@@ -198,6 +217,7 @@ with open(fichier_salles) as csvfile:
                 for c in cours:
                     if c.tags["matiere"] == m_name:
                         c.contraintes_salle.append(salle)
+
         salles.append(salle)
 
 ################################################################
@@ -222,7 +242,7 @@ print("taille profs :",len(profs))
 print("taille cours :",len(cours))
 print("taille salles :",len(salles))
 print("taille creneaux :",len(creneaux))
-res = build_compute_plne(cours, creneaux, salles, classes, verbose=True)
+res = build_compute_plne(cours, creneaux, salles, classes, profs, demi_journees=demi_journees, penalite_demi_journee_travaillee=penalite_demi_journee_travaillee, penalite_journee_travaillee=penalite_journee_travaillee, verbose=True)
 
 ################################# AFFICHAGE ####################################################################################################################################################
 

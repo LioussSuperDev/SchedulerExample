@@ -1,50 +1,50 @@
 demi-journée 1 :::::::::::::::
-1h [5000] -
-2h [5000] -
+1h [10000] -
+2h [10000] -
 3h -
 4h -
 demi-journée 2 :::::::::::::::
-1h - TD - SAE4-EMS.1 [A118] (BUT2 EMS)
-2h - TD - SAE4-EMS.1 [A118] (BUT2 EMS)
+1h -
+2h -
 3h -
-4h - TD - SAE4-EMS.1 [C202] (BUT2 EMS)
+4h -
 demi-journée 3 :::::::::::::::
-1h [5000] -
-2h [5000] -
+1h [10000] -
+2h [10000] -
 3h -
 4h -
 demi-journée 4 :::::::::::::::
-1h - auto - SAE4-EMS.1 [C204] (BUT2 EMS)
-2h - auto - SAE4-EMS.1 [C204] (BUT2 EMS)
+1h - TD - SAE4-EMS.1 [A110] (BUT2 EMS)
+2h - TD - SAE4-EMS.1 [A110] (BUT2 EMS)
 3h -
 4h -
 demi-journée 5 :::::::::::::::
-1h [5000] -
-2h [5000] -
+1h [10000] -
+2h [10000] -
 3h -
 4h -
 demi-journée 6 :::::::::::::::
-1h -
-2h -
+1h - encad - SAE4-EMS.1 [C204] (BUT2 EMS)
+2h - encad - SAE4-EMS.1 [C204] (BUT2 EMS)
 3h -
 4h -
 demi-journée 7 :::::::::::::::
-1h [5000] -
-2h [5000] -
-3h -
-4h -
+1h [10000] -
+2h [10000] -
+3h - auto - SAE4-EMS.1 [C204] (BUT2 EMS)
+4h - auto - SAE4-EMS.1 [C204] (BUT2 EMS)
 demi-journée 8 :::::::::::::::
-1h -
+1h - TD - SAE4-EMS.1 [A110] (BUT2 EMS)
 2h -
-3h -
-4h -
+3h - TD - SAE4-EMS.1 [C204] (BUT2 EMS)
+4h - TD - SAE4-EMS.1 [C204] (BUT2 EMS)
 demi-journée 9 :::::::::::::::
 1h [x] -
 2h [x] -
 3h [x] -
 4h [x] -
 demi-journée 10 :::::::::::::::
-1h - encad - SAE4-EMS.1 [A109] (BUT2 EMS)
-2h - encad - SAE4-EMS.1 [A109] (BUT2 EMS)
-3h - TD - SAE4-EMS.1 [C202] (BUT2 EMS)
-4h - TD - SAE4-EMS.1 [C202] (BUT2 EMS)
+1h -
+2h -
+3h -
+4h -

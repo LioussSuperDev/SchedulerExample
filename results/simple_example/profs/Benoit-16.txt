@@ -8,14 +8,14 @@ demi-journée 1 :::::::::::::::
 3.5h -
 4.0h -
 demi-journée 2 :::::::::::::::
-0.5h - Cours de Cuisine [I417] (Bac Pro cuisine)
-1.0h - Cours de Cuisine [I417] (Bac Pro cuisine)
+0.5h -
+1.0h -
 1.5h - Cours de Cuisine [I417] (Bac Pro cuisine)
 2.0h - Cours de Cuisine [I417] (Bac Pro cuisine)
 2.5h - Cours de Cuisine [I417] (Bac Pro cuisine)
 3.0h - Cours de Cuisine [I417] (Bac Pro cuisine)
-3.5h -
-4.0h -
+3.5h - Cours de Cuisine [I417] (Bac Pro cuisine)
+4.0h - Cours de Cuisine [I417] (Bac Pro cuisine)
 demi-journée 3 :::::::::::::::
 0.5h -
 1.0h -

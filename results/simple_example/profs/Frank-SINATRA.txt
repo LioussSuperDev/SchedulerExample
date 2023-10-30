@@ -1,8 +1,8 @@
 demi-journée 1 :::::::::::::::
-0.5h - Cours de Musique [I416] (BTS info)
-1.0h - Cours de Musique [I416] (BTS info)
-1.5h - Cours de Musique [I416] (BTS info)
-2.0h - Cours de Musique [I416] (BTS info)
+0.5h -
+1.0h -
+1.5h -
+2.0h -
 2.5h -
 3.0h -
 3.5h -
@@ -17,11 +17,11 @@ demi-journée 2 :::::::::::::::
 3.5h [x] -
 4.0h [x] -
 demi-journée 3 :::::::::::::::
-0.5h -
-1.0h -
-1.5h -
-2.0h -
-2.5h - Cours de Musique [I416] (L1 maths)
-3.0h - Cours de Musique [I416] (L1 maths)
-3.5h -
-4.0h - Cours de Cuisine [I417] (Bac Pro cuisine)
+0.5h - Cours de Musique [I416] (BTS info)
+1.0h - Cours de Musique [I416] (BTS info)
+1.5h - Cours de Musique [I416] (BTS info)
+2.0h - Cours de Musique [I416] (BTS info)
+2.5h -
+3.0h - Cours de Cuisine [I417] (Bac Pro cuisine)
+3.5h - Cours de Musique [I416] (L1 maths)
+4.0h - Cours de Musique [I416] (L1 maths)

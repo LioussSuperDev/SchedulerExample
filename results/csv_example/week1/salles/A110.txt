@@ -1,23 +1,23 @@
 demi-journée 1 :::::::::::::::
-1h - CM-co - SAE4-2 [ SVP] (BUT2 )
-2h - CM-co - SAE4-2 [ SVP] (BUT2 )
-3h - CM-co - R4.01 [ IU] (BUT2 )
-4h - CM-co - R4.01 [ IU] (BUT2 )
+1h - CM-co - R4.02 [ SVP] (BUT2 )
+2h - CM-co - R4.02 [ SVP] (BUT2 )
+3h - TD - R6.EMS.6 [ FB] (BUT3 EMS)
+4h - TD - R6.EMS.6 [ FB] (BUT3 EMS)
 demi-journée 2 :::::::::::::::
 1h - TD - R6.EMS.6 [ FB] (BUT3 EMS)
 2h - TD - R6.EMS.6 [ FB] (BUT3 EMS)
-3h -
-4h -
+3h - TD - R6.EMS.6 [ FB] (BUT3 EMS)
+4h - TD - R6.EMS.6 [ FB] (BUT3 EMS)
 demi-journée 3 :::::::::::::::
-1h - CM - R6.EMS.5 [ MK] (BUT3 EMS)
-2h - CM - R6.EMS.5 [ MK] (BUT3 EMS)
-3h - TD - R4.02 [ SVP] (BUT2 EMS)
-4h - TD - R4.02 [ SVP] (BUT2 EMS)
+1h - encad - SAE6-EMS.1 [ MK] (BUT3 EMS)
+2h - encad - SAE6-EMS.1 [ MK] (BUT3 EMS)
+3h - TD - R6.EMS.6 [ FB] (BUT3 EMS)
+4h - TD - R6.EMS.6 [ FB] (BUT3 EMS)
 demi-journée 4 :::::::::::::::
-1h - TD - R6.EMS.6 [ FB] (BUT3 EMS)
-2h - TD - R6.EMS.6 [ FB] (BUT3 EMS)
-3h - CM-co - R6.04 [ AC] (BUT3 )
-4h - CM-co - R6.04 [ AC] (BUT3 )
+1h - TD - SAE4-EMS.1 [ ATER] (BUT2 EMS)
+2h - TD - SAE4-EMS.1 [ ATER] (BUT2 EMS)
+3h - CM - R2.10 [ AC] (BUT1 )
+4h - CM - R2.10 [ AC] (BUT1 )
 demi-journée 5 :::::::::::::::
 1h - TD - R6.EMS.6 [ FB] (BUT3 EMS)
 2h - TD - R6.EMS.6 [ FB] (BUT3 EMS)
@@ -26,18 +26,18 @@ demi-journée 5 :::::::::::::::
 demi-journée 6 :::::::::::::::
 1h - TD - R6.EMS.6 [ FB] (BUT3 EMS)
 2h - TD - R6.EMS.6 [ FB] (BUT3 EMS)
-3h - CM - R2.10 [ AC] (BUT1 )
-4h - CM - R2.10 [ AC] (BUT1 )
+3h - TD - R6.EMS.6 [ FB] (BUT3 EMS)
+4h - TD - R6.EMS.6 [ FB] (BUT3 EMS)
 demi-journée 7 :::::::::::::::
-1h - CM-co - R4.02 [ SVP] (BUT2 )
-2h - CM-co - R4.02 [ SVP] (BUT2 )
-3h - TD - R6.EMS.6 [ FB] (BUT3 EMS)
-4h - TD - R6.EMS.6 [ FB] (BUT3 EMS)
+1h - TD - SAE6-EMS.1 [ SVP] (BUT3 EMS)
+2h - TD - SAE6-EMS.1 [ SVP] (BUT3 EMS)
+3h -
+4h -
 demi-journée 8 :::::::::::::::
-1h - TD - R6.EMS.6 [ FB] (BUT3 EMS)
-2h - TD - R6.EMS.6 [ FB] (BUT3 EMS)
-3h - TD - R6.EMS.6 [ FB] (BUT3 EMS)
-4h - TD - R6.EMS.6 [ FB] (BUT3 EMS)
+1h - TD - SAE4-EMS.1 [ ATER] (BUT2 EMS)
+2h -
+3h - CM - R2.08 [ PDS] (BUT1 )
+4h - CM - R2.08 [ PDS] (BUT1 )
 demi-journée 9 :::::::::::::::
 1h -
 2h -
@@ -46,5 +46,5 @@ demi-journée 9 :::::::::::::::
 demi-journée 10 :::::::::::::::
 1h - CM - R4.VCOD.08 [ SP] (BUT2 VCOD)
 2h - CM - R4.VCOD.08 [ SP] (BUT2 VCOD)
-3h - CM - R2.08 [ PDS] (BUT1 )
-4h - CM - R2.08 [ PDS] (BUT1 )
+3h -
+4h -

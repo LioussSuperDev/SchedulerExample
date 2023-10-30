@@ -1,13 +1,13 @@
 demi-journée 1 :::::::::::::::
-1h - TD - R6.03 [C204] (BUT3 VCOD)
-2h - TD - R6.03 [C204] (BUT3 VCOD)
-3h - TD - R6.03 [C204] (BUT3 EMS)
-4h - TD - R6.03 [C204] (BUT3 EMS)
+1h - TD - R6.03 [C202] (BUT3 EMS)
+2h - TD - R6.03 [C202] (BUT3 EMS)
+3h - TD - R6.03 [A119] (BUT3 VCOD)
+4h - TD - R6.03 [A119] (BUT3 VCOD)
 demi-journée 2 :::::::::::::::
-1h [5000] -
-2h [5000] -
-3h [5000] -
-4h [5000] -
+1h [10000] -
+2h [10000] -
+3h [10000] -
+4h [10000] -
 demi-journée 3 :::::::::::::::
 1h [x] -
 2h [x] -

@@ -46,5 +46,5 @@ demi-journée 9 :::::::::::::::
 demi-journée 10 :::::::::::::::
 1h - CM - R4.VCOD.08 [A110] (BUT2 VCOD)
 2h - CM - R4.VCOD.08 [A110] (BUT2 VCOD)
-3h - CM - R4.VCOD.08 [A119] (BUT2 VCOD)
-4h - CM - R4.VCOD.08 [A119] (BUT2 VCOD)
+3h - CM - R4.VCOD.08 [A109] (BUT2 VCOD)
+4h - CM - R4.VCOD.08 [A109] (BUT2 VCOD)

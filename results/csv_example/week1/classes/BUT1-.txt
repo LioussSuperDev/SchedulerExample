@@ -16,8 +16,8 @@ demi-journée 3 :::::::::::::::
 demi-journée 4 :::::::::::::::
 1h -
 2h -
-3h -
-4h -
+3h - CM - R2.10 [A110] ( AC)
+4h - CM - R2.10 [A110] ( AC)
 demi-journée 5 :::::::::::::::
 1h -
 2h -
@@ -26,8 +26,8 @@ demi-journée 5 :::::::::::::::
 demi-journée 6 :::::::::::::::
 1h -
 2h -
-3h - CM - R2.10 [A110] ( AC)
-4h - CM - R2.10 [A110] ( AC)
+3h -
+4h -
 demi-journée 7 :::::::::::::::
 1h -
 2h -
@@ -36,8 +36,8 @@ demi-journée 7 :::::::::::::::
 demi-journée 8 :::::::::::::::
 1h -
 2h -
-3h -
-4h -
+3h - CM - R2.08 [A110] ( PDS)
+4h - CM - R2.08 [A110] ( PDS)
 demi-journée 9 :::::::::::::::
 1h -
 2h -
@@ -46,5 +46,5 @@ demi-journée 9 :::::::::::::::
 demi-journée 10 :::::::::::::::
 1h -
 2h -
-3h - CM - R2.08 [A110] ( PDS)
-4h - CM - R2.08 [A110] ( PDS)
+3h -
+4h -

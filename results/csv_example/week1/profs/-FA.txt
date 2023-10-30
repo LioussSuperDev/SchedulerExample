@@ -1,16 +1,16 @@
 demi-journée 1 :::::::::::::::
-1h [5000] -
-2h [5000] -
-3h [5000] -
-4h [5000] -
+1h [10000] -
+2h [10000] -
+3h [10000] -
+4h [10000] -
 demi-journée 2 :::::::::::::::
-1h [5000] -
-2h [5000] -
-3h [5000] -
-4h [5000] -
+1h [10000] -
+2h [10000] -
+3h [10000] -
+4h [10000] -
 demi-journée 3 :::::::::::::::
-1h - CM-co - R4.05 [A017] (BUT2 )
-2h - CM-co - R4.05 [A017] (BUT2 )
+1h - TD - R4.05 [A109] (BUT2 EMS)
+2h - TD - R4.05 [A109] (BUT2 EMS)
 3h -
 4h -
 demi-journée 4 :::::::::::::::
@@ -24,18 +24,18 @@ demi-journée 5 :::::::::::::::
 3h -
 4h -
 demi-journée 6 :::::::::::::::
-1h - TD - R4.05 [C202] (BUT2 EMS)
-2h - TD - R4.05 [C202] (BUT2 EMS)
-3h -
-4h -
-demi-journée 7 :::::::::::::::
 1h -
 2h -
+3h - CM-co - R4.05 [A017] (BUT2 )
+4h - CM-co - R4.05 [A017] (BUT2 )
+demi-journée 7 :::::::::::::::
+1h - TD - R4.05 [A017] (BUT2 VCOD)
+2h - TD - R4.05 [A017] (BUT2 VCOD)
 3h -
 4h -
 demi-journée 8 :::::::::::::::
-1h - TD - R4.05 [A119] (BUT2 VCOD)
-2h - TD - R4.05 [A119] (BUT2 VCOD)
+1h -
+2h -
 3h -
 4h -
 demi-journée 9 :::::::::::::::

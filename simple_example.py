@@ -49,6 +49,8 @@ for i in range(8):
     sinatra.contraintes_pas_cours.append(demi_journees[1][i]) #pas cours la deuxième demi-journée
 
 profs = [discala, dupont, smith, benoit16, christ, sinatra]
+for i,prof in enumerate(profs):
+    prof.numero = i
 
 #Creation des salles
 I415 = Salle("I", 4, 15)
@@ -99,7 +101,7 @@ for i,cr in enumerate(cours):
 #Génération des matrices pour la PLNE à partir de la modélisation
 ################################## CONVERSION EN MATRICES / EXECUTION DE LA PLNE / ON ACTUALISE NOS OBJETS AVEC LE RESULTAT ####################################################################
 
-res = build_compute_plne(cours, creneaux, salles, classes)
+res = build_compute_plne(cours, creneaux, salles, classes, profs, demi_journees=demi_journees, penalite_demi_journee_travaillee=1,)
 
 ################################# AFFICHAGE ####################################################################################################################################################
 

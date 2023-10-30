@@ -1,48 +1,48 @@
 demi-journée 1 :::::::::::::::
 1h -
 2h -
-3h -
-4h -
+3h - CM-co - SAE4-2 [ SVP] (BUT2 )
+4h - CM-co - SAE4-2 [ SVP] (BUT2 )
 demi-journée 2 :::::::::::::::
-1h -
-2h -
+1h - TD - R4.02 [ SVP] (BUT2 VCOD)
+2h - TD - R4.02 [ SVP] (BUT2 VCOD)
 3h -
 4h -
 demi-journée 3 :::::::::::::::
-1h - CM-co - R4.05 [ FA] (BUT2 )
-2h - CM-co - R4.05 [ FA] (BUT2 )
+1h -
+2h -
 3h -
 4h -
 demi-journée 4 :::::::::::::::
-1h - TD - R4.VCOD.09 [ PDS] (BUT2 VCOD)
-2h - TD - R4.VCOD.09 [ PDS] (BUT2 VCOD)
-3h -
-4h -
+1h - CM-co - R6.04 [ AC] (BUT3 )
+2h - CM-co - R6.04 [ AC] (BUT3 )
+3h - CM-co - R4.01 [ IU] (BUT2 )
+4h - CM-co - R4.01 [ IU] (BUT2 )
 demi-journée 5 :::::::::::::::
-1h - CM-co - R4.01 [ MK] (BUT2 )
-2h - CM-co - R4.01 [ MK] (BUT2 )
-3h - encad - SAE6-VCOD.1 [ PDS] (BUT3 VCOD)
-4h - encad - SAE6-VCOD.1 [ PDS] (BUT3 VCOD)
+1h -
+2h -
+3h - CM-co - R4.01 [ MK] (BUT2 )
+4h - CM-co - R4.01 [ MK] (BUT2 )
 demi-journée 6 :::::::::::::::
 1h -
 2h -
-3h -
-4h -
+3h - CM-co - R4.05 [ FA] (BUT2 )
+4h - CM-co - R4.05 [ FA] (BUT2 )
 demi-journée 7 :::::::::::::::
-1h -
-2h -
+1h - TD - R4.05 [ FA] (BUT2 VCOD)
+2h - TD - R4.05 [ FA] (BUT2 VCOD)
 3h -
 4h -
 demi-journée 8 :::::::::::::::
 1h -
 2h -
-3h - TD - R4.02 [ SVP] (BUT2 VCOD)
-4h - TD - R4.02 [ SVP] (BUT2 VCOD)
+3h -
+4h -
 demi-journée 9 :::::::::::::::
-1h - TD - R2.09 [ MAB] (BUT1 G1)
-2h - TD - R2.09 [ MAB] (BUT1 G1)
-3h - TD - R2.09 [ MAB] (BUT1 G2)
-4h - TD - R2.09 [ MAB] (BUT1 G2)
+1h - TD - R2.09 [ MAB] (BUT1 G2)
+2h - TD - R2.09 [ MAB] (BUT1 G2)
+3h - TD - R2.09 [ MAB] (BUT1 G1)
+4h - TD - R2.09 [ MAB] (BUT1 G1)
 demi-journée 10 :::::::::::::::
 1h -
 2h -

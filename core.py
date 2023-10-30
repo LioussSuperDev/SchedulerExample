@@ -18,6 +18,7 @@ from time import time
 #### VARIABLES ####
 #cours_créneau(co, cr) signifie que le cours co a lieu durant le créneau cr
 #cours_salle(co, sl) signifie que le cours co a lieu dans la salle sl
+#cours_demi_journee(pr, dj) signifie que le prof a cours durant une demi-journée
 
 #### CONTRAINTES ####
 # 1] certains cours ne peuvent pas avoir lieu sur certains crénaux (disponibilité du prof)
@@ -31,7 +32,8 @@ from time import time
 # 9] les classes qui ne peuvent pas avoir cours en même temps n'ont pas cours en même temps
 # 10] les cours qui ne peuvent être que sur certains créneaux sont placé sur ces créneaux
 # 11] la taille de la salle de cours est > taille de la classe qui y a cours
-# 12] cours_salle_creneau(co, sl, cr) = le cours est dans cette salle durant ce créneau
+# 12] cours_salle_creneau(co, sl, cr) est à 1 si le cours est dans cette salle durant ce créneau
+# 13] cours_demi_journee(pr, dj) est à 1 si le prof a cours dans la demi-journée
 
 #### PENALITÉS ####
 # A] certains cours donnent une pénalité de 2 point si ils ont lieu durant un créneau
@@ -57,16 +59,19 @@ from time import time
 # 9] Pour chaque cours co1,co2 qui sont mutex, et tout créneau cr : cours_creneau(co1, cr) + cours_creneau(co2, cr) <= 1
 # 10] Pour chaque cours co qui est contraint par des créneaux, pour tout créneau cr, si cr n'est pas dans les contraintes alors cours_creneau(co, cr) <= 0
 # 11] Pour tout cours co, tout créneau cr, toute salle sl : cours_salle(co, sl)*taille(classe(co)) <= taille(sl)
-
+# 12] Pour tout cours co, salle sl, créneau cr, cours_creneau(co, cr) + cours_salle(co, sl) - cours_salle_creneau(co, sl, cr) <= 1 (cours_creneau(co, cr) et cours_salle(co, sl) => cours_salle_creneau(co, sl, cr))
+# 13] Pour toutes les demi-journées dj, pour tous les profs pj, pour tous les créneaux cr dans dj, tous les cours co dans COURS du prof, cours_creneau(co, cr)) <= cours_demi_journee(pr, dj)
 ######################################################## ON CREE NOTRE MODELISATION OBJET EN PYTHON ##########################################################################################
 
 ######################################################## PLNE EN PYTHON ##########################################################################################
-def generate_milp(cours, creneaux, salles, classes, verbose):
+def generate_milp(cours, creneaux, salles, classes, profs, demi_journees=None, verbose=False, penalite_demi_journee_travaillee=1, penalite_journee_travaillee=10):
     integrality = []
     nb_var_cours_creneau = 0
     nb_var_cours_salle = 0
     nb_var_commence = 0
     nb_var_salle_affec = 0
+    nb_var_cours_demijournee = 0
+    nb_var_cours_journee = 0
     #Rappel des variables
     #cours_créneau(co, cr) signifie que le cours co a lieu durant le créneau cr
     if verbose:
@@ -91,7 +96,33 @@ def generate_milp(cours, creneaux, salles, classes, verbose):
             for co in cours:
                 integrality.append(1)
                 nb_var_salle_affec += 1
+
     nb_var = nb_var_cours_creneau+nb_var_cours_salle+nb_var_commence+nb_var_salle_affec
+
+    #cours_demi_journee(pr, dj) = le prof a cours durant la demijournee dj
+    if demi_journees != None:
+        demi_journees = [(i,dj) for i,dj in enumerate(demi_journees)]
+        for pr in profs:
+            for dj in demi_journees:
+                integrality.append(1)
+                nb_var_cours_demijournee += 1
+        nb_var += nb_var_cours_demijournee
+
+        journees = []
+        for i,dj in enumerate(demi_journees):
+            if i%2 == 0:
+                journees.append([dj])
+            else:
+                journees[-1].append(dj)
+            
+    #cours_journee(pr, dj) = le prof a cours durant la journee dj
+        for pr in profs:
+            for dj in journees:
+                integrality.append(1)
+                nb_var_cours_journee += 1
+        nb_var += nb_var_cours_journee
+
+    
     if verbose:
         print("génération des limites")
     bounds = Bounds(np.zeros(nb_var), np.ones(nb_var))
@@ -120,7 +151,7 @@ def generate_milp(cours, creneaux, salles, classes, verbose):
         print("génération contrainte 2")
     for co in cours:
         for cr in creneaux:
-            if cr in co.prof.contraintes_pas_cours:
+            if co.prof != None and cr in co.prof.contraintes_pas_cours:
                 line_added = np.zeros(nb_var)
                 line_added[co.numero*len(creneaux)+cr.numero] = 1
                 A.append(csr_matrix(line_added))
@@ -157,7 +188,7 @@ def generate_milp(cours, creneaux, salles, classes, verbose):
     for co1 in cours:
         c_done.append(co1)
         for co2 in cours:
-            if (not co2 in c_done) and co1.prof is co2.prof:
+            if (co1.prof != None) and (co2.prof != None) and (not co2 in c_done) and co1.prof is co2.prof:
                 for cr in creneaux:
                     line_added = np.zeros(nb_var)
                     line_added[co1.numero*len(creneaux)+cr.numero] = 1
@@ -260,7 +291,7 @@ def generate_milp(cours, creneaux, salles, classes, verbose):
                 UB.append(sl.effectifs)
                 LB.append(-np.inf)
 
-    # 12] cours_salle_creneau(co, sl, cr) = le cours est dans cette salle durant ce créneau (cours_creneau(co, cr) et cours_salle(co,sl) <=> cours_salle_creneau(co, sl, cr))
+    # 12] cours_salle_creneau(co, sl, cr) doit être 1 si jamais il y a le cours co dans le créneau cr dans la salle sl
     # pour tout cours co, salle sl, créneau cr, cours_creneau(co, cr) + cours_salle(co, sl) - cours_salle_creneau(co, sl, cr) <= 1 (cours_creneau(co, cr) et cours_salle(co, sl) => cours_salle_creneau(co, sl, cr))
     if verbose:
         print("génération contrainte 12")
@@ -269,25 +300,41 @@ def generate_milp(cours, creneaux, salles, classes, verbose):
             for sl in salles:
                 line_added = np.zeros(nb_var)
                 line_added[co.numero*len(creneaux)+cr.numero] = 1
-                line_added[nb_var_cours_creneau + nb_var_cours_salle + nb_var_commence + co.numero*len(salles)*len(creneaux) + sl.numero*len(creneaux) + cr.numero] = -1
-                A.append(csr_matrix(line_added))
-                UB.append(np.inf)
-                LB.append(0)
-
-                line_added = np.zeros(nb_var)
-                line_added[nb_var_cours_creneau + co.numero*len(salles)+sl.numero] = 1
-                line_added[nb_var_cours_creneau + nb_var_cours_salle + nb_var_commence + co.numero*len(salles)*len(creneaux) + sl.numero*len(creneaux) + cr.numero] = -1
-                A.append(csr_matrix(line_added))
-                UB.append(np.inf)
-                LB.append(0)
-
-                line_added = np.zeros(nb_var)
-                line_added[co.numero*len(creneaux)+cr.numero] = 1
                 line_added[nb_var_cours_creneau + co.numero*len(salles)+sl.numero] = 1
                 line_added[nb_var_cours_creneau + nb_var_cours_salle + nb_var_commence + co.numero*len(salles)*len(creneaux) + sl.numero*len(creneaux) + cr.numero] = -1
                 A.append(csr_matrix(line_added))
                 UB.append(1)
                 LB.append(-np.inf)
+
+    # 13a] Pour toutes les demi-journées dj, pour tous les profs pj, pour tous les créneaux cr dans dj, tous les cours co dans COURS du prof, cours_creneau(co, cr) - cours_demi_journee(pr, dj) <= 0
+    if verbose:
+        print("génération contrainte 13a")
+    if demi_journees != None:
+        for i,dj in demi_journees:
+            for pr in profs:
+                for cr in dj:
+                    for co in cours:
+                        if co.prof is pr:
+                            line_added = np.zeros(nb_var)
+                            line_added[co.numero*len(creneaux)+cr.numero] = 1
+                            line_added[nb_var_cours_creneau+nb_var_cours_salle+nb_var_commence+nb_var_salle_affec + pr.numero * len(demi_journees) + i] = -1
+                            A.append(csr_matrix(line_added))
+                            UB.append(0)
+                            LB.append(-np.inf)
+
+    # 13b] Pour toutes les journees j, pour tous les profs pj, pour toutes les demi-journées dans dj, cours_demi_journee(pr, dj) - cours_journee(pr, dj) <= 0 
+    if verbose:
+        print("génération contrainte 13b")
+    if demi_journees != None:
+        for pr in profs:
+            for j_index,j in enumerate(journees):
+                for dj_index,dj in j:
+                    line_added = np.zeros(nb_var)
+                    line_added[nb_var_cours_creneau+nb_var_cours_salle+nb_var_commence+nb_var_salle_affec + pr.numero * len(demi_journees) + dj_index] = 1
+                    line_added[nb_var_cours_creneau+nb_var_cours_salle+nb_var_commence+nb_var_salle_affec + nb_var_cours_demijournee + pr.numero * len(journees) + j_index] = -1
+                    A.append(csr_matrix(line_added))
+                    UB.append(0)
+                    LB.append(-np.inf)
 
     #Objectif
     minimize = np.zeros(nb_var)
@@ -299,21 +346,28 @@ def generate_milp(cours, creneaux, salles, classes, verbose):
     
     #pénalité préférences pas cours prof
     for co in cours:
-        for cr in co.prof.contraintes_pref_pas_cours:
-            minimize[co.numero*len(creneaux)+cr.numero] += co.prof.contraintes_pref_pas_cours[cr]
+        if co.prof != None:
+            for cr in co.prof.contraintes_pref_pas_cours:
+                minimize[co.numero*len(creneaux)+cr.numero] += co.prof.contraintes_pref_pas_cours[cr]
 
     #B] pénalité cours dans mauvaise salle
     for co in cours:
         for sl in salles:
             minimize[nb_var_cours_creneau + co.numero*len(salles)+sl.numero] += sl.penalite_salle
 
-    #B] bonus si prof a cours dans une salle qu'il aime
+    #C] bonus si prof a cours dans une salle qu'il aime
     #pénalité
     for co in cours:
-        for sl in co.prof.bonus_salle:
-            minimize[nb_var_cours_creneau + co.numero*len(salles)+sl.numero] -= co.prof.bonus_salle[sl]
+        if co.prof != None:
+            for sl in co.prof.bonus_salle:
+                minimize[nb_var_cours_creneau + co.numero*len(salles)+sl.numero] -= co.prof.bonus_salle[sl]
 
-    return minimize,bounds,integrality,vstack(A),UB,LB,nb_var_cours_creneau,nb_var_cours_salle,nb_var_commence,nb_var_salle_affec
+    #D] pénalité du nombre de demi-journées et journées travaillées par les profs
+    if demi_journees != None:
+        minimize[nb_var_cours_creneau+nb_var_cours_salle+nb_var_commence+nb_var_salle_affec:nb_var_cours_creneau+nb_var_cours_salle+nb_var_commence+nb_var_salle_affec+nb_var_cours_demijournee] = penalite_demi_journee_travaillee
+        minimize[nb_var_cours_creneau+nb_var_cours_salle+nb_var_commence+nb_var_salle_affec+nb_var_cours_demijournee:] = penalite_journee_travaillee
+
+    return minimize,bounds,integrality,vstack(A),UB,LB,nb_var_cours_creneau,nb_var_cours_salle,nb_var_commence,nb_var_salle_affec,nb_var_cours_demijournee,nb_var_cours_journee
 
 def refresh_objects_with_result(res, cours, creneaux, salles):
     if not res.status in [0,1,4]:
@@ -323,14 +377,14 @@ def refresh_objects_with_result(res, cours, creneaux, salles):
     for co in cours:
         creneaux_co = []
         for cr in creneaux:
-            if res.x[i]:
+            if res.x[i] > 0.5:
                 creneaux_co.append(cr)
             i += 1
         co.set_organisation(creneaux_co,None)
     #Affectations cours-salles
     for co in cours:
         for sl in salles:
-            if res.x[i]:
+            if res.x[i] > 0.5:
                 co.organisation.salle = sl
             i += 1
 
@@ -361,7 +415,7 @@ def simple_print(demi_journees, profs, cours, salles, classes, afficher_profs, a
                     for cr_n,cr in enumerate(dj):
                         found = False
                         for co in cours:
-                            if co.prof != prof:
+                            if not co.prof is prof:
                                 continue
                             if cr in co.organisation.creneaux:
                                 found = True
@@ -384,7 +438,7 @@ def simple_print(demi_journees, profs, cours, salles, classes, afficher_profs, a
                         for cr_n,cr in enumerate(dj):
                             found = False
                             for co in cours:
-                                if co.prof != prof:
+                                if not co.prof is prof:
                                     continue
                                 if cr in co.organisation.creneaux:
                                     found = True
@@ -414,11 +468,14 @@ def simple_print(demi_journees, profs, cours, salles, classes, afficher_profs, a
                     for cr_n,cr in enumerate(dj):
                         found = False
                         for co in cours:
-                            if co.classe != cl:
+                            if not co.classe is cl:
                                 continue
                             if cr in co.organisation.creneaux:
                                 found = True
-                                print(str((cr_n+1)*scale)+"h -",co.nom,"["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"] ("+co.prof.prenom,co.prof.nom+")")
+                                if co.prof != None:
+                                    print(str((cr_n+1)*scale)+"h -",co.nom,"["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"] ("+co.prof.prenom,co.prof.nom+")")
+                                else:
+                                    print(str((cr_n+1)*scale)+"h -",co.nom,"["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"]")
                         if not found:
                             print(str((cr_n+1)*scale)+"h -")
 
@@ -430,11 +487,15 @@ def simple_print(demi_journees, profs, cours, salles, classes, afficher_profs, a
                         for cr_n,cr in enumerate(dj):
                             found = False
                             for co in cours:
-                                if co.classe != cl:
+                                if not co.classe is cl:
                                     continue
                                 if cr in co.organisation.creneaux:
                                     found = True
-                                    f.write(str((cr_n+1)*scale)+"h - "+co.nom+" ["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"] ("+co.prof.prenom+" "+co.prof.nom+")\n")
+
+                                    if co.prof != None:
+                                        f.write(str((cr_n+1)*scale)+"h - "+co.nom+" ["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"] ("+co.prof.prenom+" "+co.prof.nom+")\n")
+                                    else:
+                                        f.write(str((cr_n+1)*scale)+"h - "+co.nom+" ["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"]\n")
                             if not found:
                                 f.write(str((cr_n+1)*scale)+"h -\n")
 
@@ -453,11 +514,14 @@ def simple_print(demi_journees, profs, cours, salles, classes, afficher_profs, a
                     for cr_n,cr in enumerate(dj):
                         found = False
                         for co in cours:
-                            if co.organisation.salle != sl:
+                            if not co.organisation.salle is sl:
                                 continue
                             if cr in co.organisation.creneaux:
                                 found = True
-                                print(str((cr_n+1)*scale)+"h -",co.nom,"["+co.prof.prenom,co.prof.nom+"]","("+co.classe.niveau+" "+co.classe.spe+")")
+                                if co.prof != None:
+                                    print(str((cr_n+1)*scale)+"h -",co.nom,"["+co.prof.prenom,co.prof.nom+"]","("+co.classe.niveau+" "+co.classe.spe+")")
+                                else:
+                                    print(str((cr_n+1)*scale)+"h -",co.nom,"("+co.classe.niveau+" "+co.classe.spe+")")
                         if not found:
                             print(str((cr_n+1)*scale)+"h -")
 
@@ -469,11 +533,14 @@ def simple_print(demi_journees, profs, cours, salles, classes, afficher_profs, a
                         for cr_n,cr in enumerate(dj):
                             found = False
                             for co in cours:
-                                if co.organisation.salle != sl:
+                                if not co.organisation.salle is sl:
                                     continue
                                 if cr in co.organisation.creneaux:
                                     found = True
-                                    f.write(str((cr_n+1)*scale)+"h - "+co.nom+" ["+co.prof.prenom+" "+co.prof.nom+"] ("+co.classe.niveau+" "+co.classe.spe+")\n")
+                                    if co.prof != None:
+                                        f.write(str((cr_n+1)*scale)+"h - "+co.nom+" ["+co.prof.prenom+" "+co.prof.nom+"] ("+co.classe.niveau+" "+co.classe.spe+")\n")
+                                    else:
+                                        f.write(str((cr_n+1)*scale)+"h - "+co.nom+" ("+co.classe.niveau+" "+co.classe.spe+")\n")
                             if not found:
                                 f.write(str((cr_n+1)*scale)+"h -\n")
 
@@ -495,9 +562,9 @@ def compute_plne(minimize,bounds,integrality,A,UB,LB, verbose=True):
 
     return res
 
-def build_compute_plne(cours, creneaux, salles, classes, verbose=True):
+def build_compute_plne(cours, creneaux, salles, classes, profs, demi_journees=None, penalite_demi_journee_travaillee=1, penalite_journee_travaillee=10, verbose=True):
     t1 = time()
-    minimize,bounds,integrality,A,UB,LB,nb_var_cours_creneau,nb_var_cours_salle,nb_var_commence,nb_var_salle_affec = generate_milp(cours, creneaux, salles, classes, verbose=verbose)
+    minimize,bounds,integrality,A,UB,LB,nb_var_cours_creneau,nb_var_cours_salle,nb_var_commence,nb_var_salle_affec,nb_var_cours_demijournee,nb_var_cours_journee = generate_milp(cours, creneaux, salles, classes, profs, demi_journees=demi_journees, penalite_demi_journee_travaillee=penalite_demi_journee_travaillee, penalite_journee_travaillee=penalite_journee_travaillee, verbose=verbose)
     t2 = time()
     if verbose:
         print(str(int(t2-t1)),"secondes écoulées pour la génération des contraintes")
@@ -506,5 +573,6 @@ def build_compute_plne(cours, creneaux, salles, classes, verbose=True):
     if verbose:
         print(str(int(t3-t2)),"secondes écoulées pour la résolution du problème")
         print(str(int(t3-t1)),"secondes écoulées au total")
+    
     refresh_objects_with_result(res,cours,creneaux,salles)
     return res
