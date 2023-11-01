@@ -8,20 +8,20 @@ demi-journée 1 :::::::::::::::
 3.5h [x] -
 4.0h [x] -
 demi-journée 2 :::::::::::::::
-0.5h [2] -
+0.5h [2] - Cours de Python [I416] (L1 info)
 1.0h [2] - Cours de Python [I416] (L1 info)
 1.5h [2] - Cours de Python [I416] (L1 info)
-2.0h [2] - Cours de Python [I416] (L1 info)
+2.0h [2] -
 2.5h [x] -
 3.0h [x] -
 3.5h [x] -
 4.0h [x] -
 demi-journée 3 :::::::::::::::
-0.5h - Cours de C# [I415] (L1 info)
-1.0h - Cours de C# [I415] (L1 info)
-1.5h - Cours de C# [I415] (L1 info)
-2.0h - Cours de C# [I415] (L1 info)
-2.5h - Cours de Python [I415] (L1 info)
-3.0h - Cours de Python [I415] (L1 info)
-3.5h - Cours de Python [I415] (L1 info)
-4.0h - Cours de Python [I415] (L1 info)
+0.5h - Cours de Python [I415] (L1 info)
+1.0h - Cours de Python [I415] (L1 info)
+1.5h - Cours de Python [I415] (L1 info)
+2.0h - Cours de Python [I415] (L1 info)
+2.5h - Cours de C# [I415] (L1 info)
+3.0h - Cours de C# [I415] (L1 info)
+3.5h - Cours de C# [I415] (L1 info)
+4.0h - Cours de C# [I415] (L1 info)

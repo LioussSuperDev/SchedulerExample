@@ -1,5 +1,5 @@
 import numpy as np
-
+import os
 #classe de chaîne créneau
 class Creneau:
     def __init__(self, precedent):
@@ -67,3 +67,160 @@ class Professeur:
         self.contraintes_pas_cours = [] #Contraintes des créneaux durant lesquelles ce prof ne peut pas venir
         self.contraintes_pref_pas_cours = {} #Dictionnaire (Contraintes des créneaux durant lesquelles ce prof ne veut pas venir => pénalité)
         self.bonus_salle = {} #Dictionnaire (Salle dans lequel le prof a cours => bonus)
+
+
+#Affichage simple après execution de la PLNE
+def simple_print(demi_journees, profs, cours, salles, classes, afficher_profs, afficher_classes, afficher_salles, save_folder=None, scale=0.5):
+    
+    prof_folder = os.path.join(save_folder,"profs")
+    classes_folder = os.path.join(save_folder,"classes")
+    salles_folder = os.path.join(save_folder,"salles")
+    if save_folder != None:
+        os.makedirs(save_folder, exist_ok=True)
+        os.makedirs(prof_folder, exist_ok=True)
+        os.makedirs(classes_folder, exist_ok=True)
+        os.makedirs(salles_folder, exist_ok=True)
+    
+    #Affichage par prof
+    if afficher_profs:
+        for prof in profs:
+
+            #Write STDOUT
+            if save_folder == None:
+                print()
+                print("==================================================")
+                print()
+                print("Emploi du temps de",prof.prenom,prof.nom)
+                for dj_n,dj in enumerate(demi_journees):
+                    print("demi-journée",dj_n+1,":::::::::::::::")
+                    for cr_n,cr in enumerate(dj):
+                        found = False
+                        for co in cours:
+                            if not co.prof is prof:
+                                continue
+                            if cr in co.organisation.creneaux:
+                                found = True
+                                if cr in prof.contraintes_pref_pas_cours:
+                                    print(str((cr_n+1)*scale)+"h ["+str(prof.contraintes_pref_pas_cours[cr])+"] -",co.nom,"["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"]","("+co.classe.niveau+" "+co.classe.spe+")")
+                                else:
+                                    print(str((cr_n+1)*scale)+"h -",co.nom,"["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"] ("+co.classe.niveau+" "+co.classe.spe+")")
+                        if cr in prof.contraintes_pas_cours:
+                            print(str((cr_n+1)*scale)+"h [x] -")
+                        elif cr in prof.contraintes_pref_pas_cours and not found:
+                            print(str((cr_n+1)*scale)+"h ["+str(prof.contraintes_pref_pas_cours[cr])+"] -")
+                        elif not found:
+                            print(str((cr_n+1)*scale)+"h -")
+
+            #Write file
+            if save_folder != None:
+                with open(os.path.join(prof_folder,prof.prenom+"-"+prof.nom+".txt"),"w+") as f:
+                    for dj_n,dj in enumerate(demi_journees):
+                        f.write("demi-journée "+str(dj_n+1)+" :::::::::::::::\n")
+                        for cr_n,cr in enumerate(dj):
+                            found = False
+                            for co in cours:
+                                if not co.prof is prof:
+                                    continue
+                                if cr in co.organisation.creneaux:
+                                    found = True
+                                    if cr in prof.contraintes_pref_pas_cours:
+                                        f.write(str((cr_n+1)*scale)+"h ["+str(prof.contraintes_pref_pas_cours[cr])+"] - "+co.nom+" ["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"] ("+co.classe.niveau+" "+co.classe.spe+")\n")
+                                    else:
+                                        f.write(str((cr_n+1)*scale)+"h - "+co.nom+" ["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"] ("+co.classe.niveau+" "+co.classe.spe+")\n")
+                            if cr in prof.contraintes_pas_cours:
+                                f.write(str((cr_n+1)*scale)+"h [x] -\n")
+                            elif cr in prof.contraintes_pref_pas_cours and not found:
+                                f.write(str((cr_n+1)*scale)+"h ["+str(prof.contraintes_pref_pas_cours[cr])+"] -\n")
+                            elif not found:
+                                f.write(str((cr_n+1)*scale)+"h -\n")
+
+    #Affichage par classe
+    if afficher_classes:
+        for cl in classes:
+
+            #Write STDOUT
+            if save_folder == None:
+                print()
+                print("==================================================")
+                print()
+                print("Emploi du temps de",cl.niveau,cl.spe)
+                for dj_n,dj in enumerate(demi_journees):
+                    print("demi-journée",dj_n+1,":::::::::::::::")
+                    for cr_n,cr in enumerate(dj):
+                        found = False
+                        for co in cours:
+                            if not co.classe is cl:
+                                continue
+                            if cr in co.organisation.creneaux:
+                                found = True
+                                if co.prof != None:
+                                    print(str((cr_n+1)*scale)+"h -",co.nom,"["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"] ("+co.prof.prenom,co.prof.nom+")")
+                                else:
+                                    print(str((cr_n+1)*scale)+"h -",co.nom,"["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"]")
+                        if not found:
+                            print(str((cr_n+1)*scale)+"h -")
+
+            #Write file
+            if save_folder != None:
+                with open(os.path.join(classes_folder,cl.niveau+"-"+cl.spe+".txt"),"w+") as f:
+                    for dj_n,dj in enumerate(demi_journees):
+                        f.write("demi-journée "+str(dj_n+1)+" :::::::::::::::\n")
+                        for cr_n,cr in enumerate(dj):
+                            found = False
+                            for co in cours:
+                                if not co.classe is cl:
+                                    continue
+                                if cr in co.organisation.creneaux:
+                                    found = True
+
+                                    if co.prof != None:
+                                        f.write(str((cr_n+1)*scale)+"h - "+co.nom+" ["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"] ("+co.prof.prenom+" "+co.prof.nom+")\n")
+                                    else:
+                                        f.write(str((cr_n+1)*scale)+"h - "+co.nom+" ["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"]\n")
+                            if not found:
+                                f.write(str((cr_n+1)*scale)+"h -\n")
+
+
+    #Affichage par salle
+    if afficher_salles:
+        for sl in salles:
+            if save_folder == None:
+                #Write STDOUT
+                print()
+                print("==================================================")
+                print()
+                print("Emploi du temps de",sl.batiment+str(sl.etage)+str(sl.salle))
+                for dj_n,dj in enumerate(demi_journees):
+                    print("demi-journée",dj_n+1," :::::::::::::::")
+                    for cr_n,cr in enumerate(dj):
+                        found = False
+                        for co in cours:
+                            if not co.organisation.salle is sl:
+                                continue
+                            if cr in co.organisation.creneaux:
+                                found = True
+                                if co.prof != None:
+                                    print(str((cr_n+1)*scale)+"h -",co.nom,"["+co.prof.prenom,co.prof.nom+"]","("+co.classe.niveau+" "+co.classe.spe+")")
+                                else:
+                                    print(str((cr_n+1)*scale)+"h -",co.nom,"("+co.classe.niveau+" "+co.classe.spe+")")
+                        if not found:
+                            print(str((cr_n+1)*scale)+"h -")
+
+            #Write file
+            if save_folder != None:
+                with open(os.path.join(salles_folder,sl.batiment+str(sl.etage)+str(sl.salle)+".txt"),"w+") as f:
+                    for dj_n,dj in enumerate(demi_journees):
+                        f.write("demi-journée "+str(dj_n+1)+" :::::::::::::::\n")
+                        for cr_n,cr in enumerate(dj):
+                            found = False
+                            for co in cours:
+                                if not co.organisation.salle is sl:
+                                    continue
+                                if cr in co.organisation.creneaux:
+                                    found = True
+                                    if co.prof != None:
+                                        f.write(str((cr_n+1)*scale)+"h - "+co.nom+" ["+co.prof.prenom+" "+co.prof.nom+"] ("+co.classe.niveau+" "+co.classe.spe+")\n")
+                                    else:
+                                        f.write(str((cr_n+1)*scale)+"h - "+co.nom+" ("+co.classe.niveau+" "+co.classe.spe+")\n")
+                            if not found:
+                                f.write(str((cr_n+1)*scale)+"h -\n")

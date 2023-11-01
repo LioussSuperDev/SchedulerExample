@@ -1,26 +1,26 @@
 demi-journée 1 :::::::::::::::
 1h -
 2h -
-3h -
-4h -
+3h - TD - R4.02 [A119] ( SVP)
+4h - TD - R4.02 [A119] ( SVP)
 demi-journée 2 :::::::::::::::
-1h - TD - R4.02 [A017] ( SVP)
-2h - TD - R4.02 [A017] ( SVP)
-3h - TD - R4.02 [A109] ( SVP)
-4h - TD - R4.02 [A109] ( SVP)
-demi-journée 3 :::::::::::::::
 1h - TD - R4.02 [C204] ( SVP)
 2h - TD - R4.02 [C204] ( SVP)
-3h - auto - SAE4-VCOD 1 [A118] ( MK)
-4h - auto - SAE4-VCOD 1 [A118] ( MK)
-demi-journée 4 :::::::::::::::
-1h - CM - R4.VCOD.09 [A119] ( PDS)
-2h - CM - R4.VCOD.09 [A119] ( PDS)
+3h - auto - SAE4-VCOD 1 [C202]
+4h - auto - SAE4-VCOD 1 [C202]
+demi-journée 3 :::::::::::::::
+1h - CM - SAE4-VCOD 1 [B202] ( MK)
+2h - CM - SAE4-VCOD 1 [B202] ( MK)
 3h -
 4h -
+demi-journée 4 :::::::::::::::
+1h -
+2h -
+3h - TD - R4.VCOD.09 [A109] ( PDS)
+4h - TD - R4.VCOD.09 [A109] ( PDS)
 demi-journée 5 :::::::::::::::
-1h - CM - SAE4-VCOD 1 [A109] ( MK)
-2h - CM - SAE4-VCOD 1 [A109] ( MK)
+1h - CM - R4.VCOD.09 [C202] ( PDS)
+2h - CM - R4.VCOD.09 [C202] ( PDS)
 3h -
 4h -
 demi-journée 6 :::::::::::::::
@@ -29,22 +29,22 @@ demi-journée 6 :::::::::::::::
 3h -
 4h -
 demi-journée 7 :::::::::::::::
-1h - TD - R4.05 [A017] ( FA)
-2h - TD - R4.05 [A017] ( FA)
-3h - auto - SAE4-VCOD 1 [A109] ( MK)
-4h - auto - SAE4-VCOD 1 [A109] ( MK)
+1h - TP - R4.01 [C204] ( MK)
+2h - TP - R4.01 [C204] ( MK)
+3h -
+4h -
 demi-journée 8 :::::::::::::::
-1h - TD - R4.VCOD.09 [A109] ( PDS)
-2h - TD - R4.VCOD.09 [A109] ( PDS)
-3h - TP - R4.01 [A119] ( MK)
-4h - TP - R4.01 [A119] ( MK)
+1h - TD - R4.05 [A119] ( FA)
+2h - TD - R4.05 [A119] ( FA)
+3h - TD - R4.02 [C202] ( SVP)
+4h - TD - R4.02 [C202] ( SVP)
 demi-journée 9 :::::::::::::::
 1h -
 2h -
-3h -
-4h -
+3h - auto - SAE4-VCOD 1 [A110]
+4h - auto - SAE4-VCOD 1 [A110]
 demi-journée 10 :::::::::::::::
-1h - CM - R4.VCOD.08 [A110] ( SP)
-2h - CM - R4.VCOD.08 [A110] ( SP)
-3h - CM - R4.VCOD.08 [A109] ( SP)
-4h - CM - R4.VCOD.08 [A109] ( SP)
+1h - CM - R4.VCOD.08 [C202] ( SP)
+2h - CM - R4.VCOD.08 [C202] ( SP)
+3h - CM - R4.VCOD.08 [C202] ( SP)
+4h - CM - R4.VCOD.08 [C202] ( SP)

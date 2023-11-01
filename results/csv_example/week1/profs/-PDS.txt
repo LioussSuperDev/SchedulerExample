@@ -1,26 +1,26 @@
 demi-journée 1 :::::::::::::::
-1h -
-2h -
+1h - TP - R2.03 [A110] (BUT1 G1)
+2h - TP - R2.03 [A110] (BUT1 G1)
 3h -
 4h -
 demi-journée 2 :::::::::::::::
-1h -
-2h -
+1h - TP - R2.03 [A119] (BUT1 G2)
+2h - TP - R2.03 [A119] (BUT1 G2)
 3h -
 4h -
 demi-journée 3 :::::::::::::::
-1h - encad - SAE6-VCOD.1 [A118] (BUT3 VCOD)
-2h - encad - SAE6-VCOD.1 [A118] (BUT3 VCOD)
-3h - TP - SAE6-VCOD.1 [A109] (BUT3 VCOD)
-4h - TP - SAE6-VCOD.1 [A109] (BUT3 VCOD)
-demi-journée 4 :::::::::::::::
-1h - CM - R4.VCOD.09 [A119] (BUT2 VCOD)
-2h - CM - R4.VCOD.09 [A119] (BUT2 VCOD)
-3h -
-4h -
-demi-journée 5 :::::::::::::::
 1h -
 2h -
+3h -
+4h -
+demi-journée 4 :::::::::::::::
+1h -
+2h -
+3h - TD - R4.VCOD.09 [A109] (BUT2 VCOD)
+4h - TD - R4.VCOD.09 [A109] (BUT2 VCOD)
+demi-journée 5 :::::::::::::::
+1h - CM - R4.VCOD.09 [C202] (BUT2 VCOD)
+2h - CM - R4.VCOD.09 [C202] (BUT2 VCOD)
 3h -
 4h -
 demi-journée 6 :::::::::::::::
@@ -29,22 +29,22 @@ demi-journée 6 :::::::::::::::
 3h -
 4h -
 demi-journée 7 :::::::::::::::
-1h - TP - R2.03 [C204] (BUT1 G1)
-2h - TP - R2.03 [C204] (BUT1 G1)
-3h - TP - R2.03 [C202] (BUT1 G2)
-4h - TP - R2.03 [C202] (BUT1 G2)
+1h - encad - SAE6-VCOD.1 [A017] (BUT3 VCOD)
+2h - encad - SAE6-VCOD.1 [A017] (BUT3 VCOD)
+3h -
+4h -
 demi-journée 8 :::::::::::::::
-1h - TD - R4.VCOD.09 [A109] (BUT2 VCOD)
-2h - TD - R4.VCOD.09 [A109] (BUT2 VCOD)
-3h - CM - R2.08 [A110] (BUT1 )
-4h - CM - R2.08 [A110] (BUT1 )
+1h -
+2h -
+3h -
+4h -
 demi-journée 9 :::::::::::::::
 1h [x] -
 2h [x] -
 3h [x] -
 4h [x] -
 demi-journée 10 :::::::::::::::
-1h -
-2h -
-3h -
-4h -
+1h - CM - R2.08 [A110] (BUT1 )
+2h - CM - R2.08 [A110] (BUT1 )
+3h - TP - SAE6-VCOD.1 [A110] (BUT3 VCOD)
+4h - TP - SAE6-VCOD.1 [A110] (BUT3 VCOD)

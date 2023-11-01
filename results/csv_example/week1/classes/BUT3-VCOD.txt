@@ -1,43 +1,43 @@
 demi-journée 1 :::::::::::::::
+1h - TP - R6.VCOD.5 [A118] ( LP)
+2h - TP - R6.VCOD.5 [A118] ( LP)
+3h - TD - R6.03 [C204] ( EA)
+4h - TD - R6.03 [C204] ( EA)
+demi-journée 2 :::::::::::::::
 1h -
 2h -
-3h - TD - R6.03 [A119] ( EA)
-4h - TD - R6.03 [A119] ( EA)
-demi-journée 2 :::::::::::::::
+3h -
+4h -
+demi-journée 3 :::::::::::::::
+1h - encad - SAE6-VCOD.1 [A109] ( IU)
+2h - encad - SAE6-VCOD.1 [A109] ( IU)
+3h -
+4h -
+demi-journée 4 :::::::::::::::
+1h -
+2h -
+3h -
+4h -
+demi-journée 5 :::::::::::::::
+1h -
+2h -
+3h - TD - R6.VCOD.5 [C204] ( LP)
+4h - TD - R6.VCOD.5 [C204] ( LP)
+demi-journée 6 :::::::::::::::
+1h -
+2h -
+3h - TD - R6.VCOD.5 [A109] ( LP)
+4h - TD - R6.VCOD.5 [A109] ( LP)
+demi-journée 7 :::::::::::::::
+1h - encad - SAE6-VCOD.1 [A017] ( PDS)
+2h - encad - SAE6-VCOD.1 [A017] ( PDS)
+3h - TP - R6.VCOD.5 [C204] ( LP)
+4h - TP - R6.VCOD.5 [C204] ( LP)
+demi-journée 8 :::::::::::::::
 1h -
 2h -
 3h - TD - SAE6-VCOD.1 [A119] ( IU)
 4h - TD - SAE6-VCOD.1 [A119] ( IU)
-demi-journée 3 :::::::::::::::
-1h - encad - SAE6-VCOD.1 [A118] ( PDS)
-2h - encad - SAE6-VCOD.1 [A118] ( PDS)
-3h - TP - SAE6-VCOD.1 [A109] ( PDS)
-4h - TP - SAE6-VCOD.1 [A109] ( PDS)
-demi-journée 4 :::::::::::::::
-1h -
-2h -
-3h - TD - R6.VCOD.5 [C202] ( LP)
-4h - TD - R6.VCOD.5 [C202] ( LP)
-demi-journée 5 :::::::::::::::
-1h - TP - R6.VCOD.5 [A118] ( LP)
-2h - TP - R6.VCOD.5 [A118] ( LP)
-3h - TD - R6.VCOD.5 [A109] ( LP)
-4h - TD - R6.VCOD.5 [A109] ( LP)
-demi-journée 6 :::::::::::::::
-1h - TP - R6.VCOD.5 [A109] ( LP)
-2h - TP - R6.VCOD.5 [A109] ( LP)
-3h -
-4h -
-demi-journée 7 :::::::::::::::
-1h -
-2h -
-3h -
-4h -
-demi-journée 8 :::::::::::::::
-1h -
-2h -
-3h - encad - SAE6-VCOD.1 [A109] ( IU)
-4h - encad - SAE6-VCOD.1 [A109] ( IU)
 demi-journée 9 :::::::::::::::
 1h -
 2h -
@@ -46,5 +46,5 @@ demi-journée 9 :::::::::::::::
 demi-journée 10 :::::::::::::::
 1h -
 2h -
-3h -
-4h -
+3h - TP - SAE6-VCOD.1 [A110] ( PDS)
+4h - TP - SAE6-VCOD.1 [A110] ( PDS)

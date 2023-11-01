@@ -1,50 +1,50 @@
 demi-journée 1 :::::::::::::::
-1h - CM-co - R4.02 [A110] (BUT2 )
-2h - CM-co - R4.02 [A110] (BUT2 )
-3h - CM-co - SAE4-2 [A017] (BUT2 )
-4h - CM-co - SAE4-2 [A017] (BUT2 )
-demi-journée 2 :::::::::::::::
-1h - TD - R4.02 [A017] (BUT2 VCOD)
-2h - TD - R4.02 [A017] (BUT2 VCOD)
-3h - TD - R4.02 [A109] (BUT2 VCOD)
-4h - TD - R4.02 [A109] (BUT2 VCOD)
-demi-journée 3 :::::::::::::::
-1h - TD - R4.02 [C204] (BUT2 VCOD)
-2h - TD - R4.02 [C204] (BUT2 VCOD)
-3h - TD - R4.02 [A119] (BUT2 EMS)
-4h - TD - R4.02 [A119] (BUT2 EMS)
-demi-journée 4 :::::::::::::::
-1h -
-2h [10000] -
-3h [10000] -
-4h [10000] -
-demi-journée 5 :::::::::::::::
-1h [1000] -
-2h [1000] -
-3h [1000] -
-4h -
-demi-journée 6 :::::::::::::::
 1h -
 2h -
-3h [1000] -
-4h [1000] -
+3h - TD - R4.02 [A119] (BUT2 VCOD)
+4h - TD - R4.02 [A119] (BUT2 VCOD)
+demi-journée 2 :::::::::::::::
+1h - TD - R4.02 [C204] (BUT2 VCOD)
+2h - TD - R4.02 [C204] (BUT2 VCOD)
+3h - TP - SAE6-EMS.1 [A119] (BUT3 EMS)
+4h - TP - SAE6-EMS.1 [A119] (BUT3 EMS)
+demi-journée 3 :::::::::::::::
+1h - TD - SAE6-EMS.1 [A118] (BUT3 EMS)
+2h - TD - SAE6-EMS.1 [A118] (BUT3 EMS)
+3h - CM-co - SAE4-2 [A017] (BUT2 )
+4h - CM-co - SAE4-2 [A017] (BUT2 )
+demi-journée 4 :::::::::::::::
+1h -
+2h [100000] -
+3h [100000] -
+4h [100000] -
+demi-journée 5 :::::::::::::::
+1h [10000] -
+2h [10000] -
+3h [10000] -
+4h -
+demi-journée 6 :::::::::::::::
+1h - TD - R4.02 [A118] (BUT2 EMS)
+2h - TD - R4.02 [A118] (BUT2 EMS)
+3h [10000] -
+4h [10000] -
 demi-journée 7 :::::::::::::::
-1h - TD - SAE6-EMS.1 [A110] (BUT3 EMS)
-2h - TD - SAE6-EMS.1 [A110] (BUT3 EMS)
-3h - auto - SAE6-EMS.1 [A119] (BUT3 EMS)
-4h - auto - SAE6-EMS.1 [A119] (BUT3 EMS)
+1h -
+2h -
+3h - CM-co - R4.02 [A110] (BUT2 )
+4h - CM-co - R4.02 [A110] (BUT2 )
 demi-journée 8 :::::::::::::::
-1h - TP - SAE6-EMS.1 [C204] (BUT3 EMS)
-2h - TP - SAE6-EMS.1 [C204] (BUT3 EMS)
-3h - encad - SAE6-EMS.1 [C202] (BUT3 EMS)
-4h - encad - SAE6-EMS.1 [C202] (BUT3 EMS)
+1h - encad - SAE6-EMS.1 [C204] (BUT3 EMS)
+2h - encad - SAE6-EMS.1 [C204] (BUT3 EMS)
+3h - TD - R4.02 [C202] (BUT2 VCOD)
+4h - TD - R4.02 [C202] (BUT2 VCOD)
 demi-journée 9 :::::::::::::::
 1h [x] -
 2h [x] -
 3h [x] -
 4h [x] -
 demi-journée 10 :::::::::::::::
-1h - TD - R4.02 [A109] (BUT2 EMS)
-2h - TD - R4.02 [A109] (BUT2 EMS)
-3h - TD - R4.02 [C202] (BUT2 EMS)
-4h - TD - R4.02 [C202] (BUT2 EMS)
+1h - TD - R4.02 [A118] (BUT2 EMS)
+2h - TD - R4.02 [A118] (BUT2 EMS)
+3h - TD - R4.02 [A109] (BUT2 EMS)
+4h - TD - R4.02 [A109] (BUT2 EMS)

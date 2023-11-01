@@ -22,6 +22,6 @@ demi-journée 3 :::::::::::::::
 1.5h -
 2.0h -
 2.5h -
-3.0h -
+3.0h - Cours de Maths [I417] (BTS info)
 3.5h - Cours de Maths [I417] (BTS info)
-4.0h - Cours de Maths [I417] (BTS info)
+4.0h -

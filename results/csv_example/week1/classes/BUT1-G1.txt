@@ -1,41 +1,41 @@
 demi-journée 1 :::::::::::::::
-1h - TP - R2.10 [C204] ( AG)
-2h - TP - R2.10 [C204] ( AG)
-3h - TP - R2.07 [A118] ( TS)
-4h - TP - R2.07 [A118] ( TS)
+1h - TP - R2.03 [A110] ( PDS)
+2h - TP - R2.03 [A110] ( PDS)
+3h - TP - R2.10 [A017] ( AG)
+4h - TP - R2.10 [A017] ( AG)
 demi-journée 2 :::::::::::::::
 1h - TP - R2.10 [C202] ( AG)
 2h - TP - R2.10 [C202] ( AG)
 3h -
 4h -
 demi-journée 3 :::::::::::::::
-1h - TP - R2.10 [A119] ( AG)
-2h - TP - R2.10 [A119] ( AG)
-3h - TD - R2.01 [C202] ( AC)
-4h - TD - R2.01 [C202] ( AC)
+1h - TP - R2.10 [A017] ( AG)
+2h - TP - R2.10 [A017] ( AG)
+3h - TD - R2.01 [A119] ( AC)
+4h - TD - R2.01 [A119] ( AC)
 demi-journée 4 :::::::::::::::
 1h -
 2h -
 3h -
 4h -
 demi-journée 5 :::::::::::::::
-1h -
-2h -
+1h - TD - R2.11 [A119] ( CF)
+2h - TD - R2.11 [A119] ( CF)
 3h -
 4h -
 demi-journée 6 :::::::::::::::
 1h -
 2h -
-3h - TD - R2.11 [A119] ( CF)
-4h - TD - R2.11 [A119] ( CF)
+3h -
+4h -
 demi-journée 7 :::::::::::::::
-1h - TP - R2.03 [C204] ( PDS)
-2h - TP - R2.03 [C204] ( PDS)
-3h - TD - R2.01 [A118] ( IU)
-4h - TD - R2.01 [A118] ( IU)
+1h - TD - R2.01 [A119] ( IU)
+2h - TD - R2.01 [A119] ( IU)
+3h - TP - R2.07 [A119] ( TS)
+4h - TP - R2.07 [A119] ( TS)
 demi-journée 8 :::::::::::::::
-1h - TD - R2.02 [A118] ( IU)
-2h - TD - R2.02 [A118] ( IU)
+1h -
+2h -
 3h -
 4h -
 demi-journée 9 :::::::::::::::
@@ -46,5 +46,5 @@ demi-journée 9 :::::::::::::::
 demi-journée 10 :::::::::::::::
 1h -
 2h -
-3h -
-4h -
+3h - TD - R2.02 [A119] ( IU)
+4h - TD - R2.02 [A119] ( IU)

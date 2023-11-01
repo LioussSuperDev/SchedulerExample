@@ -1,50 +1,50 @@
 demi-journée 1 :::::::::::::::
 1h -
 2h -
+3h - TD - SAE4-EMS.1 [A118] ( ATER)
+4h - TD - SAE4-EMS.1 [A118] ( ATER)
+demi-journée 2 :::::::::::::::
+1h -
+2h -
+3h - TD - SAE4-EMS.1 [A110] ( ATER)
+4h - TD - SAE4-EMS.1 [A110] ( ATER)
+demi-journée 3 :::::::::::::::
+1h - CM - R4.EMS.08 [A119] ( TS)
+2h - CM - R4.EMS.08 [A119] ( TS)
 3h -
 4h -
-demi-journée 2 :::::::::::::::
-1h - CM - R4.EMS.08 [C204] ( TS)
-2h - CM - R4.EMS.08 [C204] ( TS)
-3h - CM - SAE4-EMS.1 [C204] ( TS)
-4h - CM - SAE4-EMS.1 [C204] ( TS)
-demi-journée 3 :::::::::::::::
-1h - TD - R4.05 [A109] ( FA)
-2h - TD - R4.05 [A109] ( FA)
-3h - TD - R4.02 [A119] ( SVP)
-4h - TD - R4.02 [A119] ( SVP)
 demi-journée 4 :::::::::::::::
-1h - TD - SAE4-EMS.1 [A110] ( ATER)
-2h - TD - SAE4-EMS.1 [A110] ( ATER)
-3h -
+1h -
+2h -
+3h - TD - SAE4-EMS.1 [A119] ( ATER)
 4h -
 demi-journée 5 :::::::::::::::
-1h - TD - R4.06 [A119] ( CF)
-2h - TD - R4.06 [A119] ( CF)
+1h - TP - R4.01 [A109] ( MK)
+2h - TP - R4.01 [A109] ( MK)
 3h -
 4h -
 demi-journée 6 :::::::::::::::
-1h - encad - SAE4-EMS.1 [C204] ( ATER)
-2h - encad - SAE4-EMS.1 [C204] ( ATER)
+1h - TD - R4.02 [A118] ( SVP)
+2h - TD - R4.02 [A118] ( SVP)
+3h - TD - R4.06 [A119] ( CF)
+4h - TD - R4.06 [A119] ( CF)
+demi-journée 7 :::::::::::::::
+1h - CM - SAE4-EMS.1 [A109] ( TS)
+2h - CM - SAE4-EMS.1 [A109] ( TS)
 3h -
 4h -
-demi-journée 7 :::::::::::::::
-1h - TP - R4.01 [B202] ( MK)
-2h - TP - R4.01 [B202] ( MK)
-3h - auto - SAE4-EMS.1 [C204] ( ATER)
-4h - auto - SAE4-EMS.1 [C204] ( ATER)
 demi-journée 8 :::::::::::::::
-1h - TD - SAE4-EMS.1 [A110] ( ATER)
-2h -
-3h - TD - SAE4-EMS.1 [C204] ( ATER)
-4h - TD - SAE4-EMS.1 [C204] ( ATER)
+1h - encad - SAE4-EMS.1 [A109] ( ATER)
+2h - encad - SAE4-EMS.1 [A109] ( ATER)
+3h - TD - R4.05 [A109] ( FA)
+4h - TD - R4.05 [A109] ( FA)
 demi-journée 9 :::::::::::::::
-1h -
-2h -
+1h - auto - SAE4-EMS.1 [C204]
+2h - auto - SAE4-EMS.1 [C204]
 3h -
 4h -
 demi-journée 10 :::::::::::::::
-1h - TD - R4.02 [A109] ( SVP)
-2h - TD - R4.02 [A109] ( SVP)
-3h - TD - R4.02 [C202] ( SVP)
-4h - TD - R4.02 [C202] ( SVP)
+1h - TD - R4.02 [A118] ( SVP)
+2h - TD - R4.02 [A118] ( SVP)
+3h - TD - R4.02 [A109] ( SVP)
+4h - TD - R4.02 [A109] ( SVP)

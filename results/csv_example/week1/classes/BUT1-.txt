@@ -36,15 +36,15 @@ demi-journée 7 :::::::::::::::
 demi-journée 8 :::::::::::::::
 1h -
 2h -
-3h - CM - R2.08 [A110] ( PDS)
-4h - CM - R2.08 [A110] ( PDS)
+3h -
+4h -
 demi-journée 9 :::::::::::::::
 1h -
 2h -
 3h -
 4h -
 demi-journée 10 :::::::::::::::
-1h -
-2h -
+1h - CM - R2.08 [A110] ( PDS)
+2h - CM - R2.08 [A110] ( PDS)
 3h -
 4h -
