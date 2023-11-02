@@ -31,6 +31,8 @@ fichier_cours = "./exemples/week"+str(week_number)+"/cours.csv"
 fichier_salles = "./exemples/week"+str(week_number)+"/salles.csv"
 fichier_effectifs = "./exemples/week"+str(week_number)+"/effectifs.csv"
 
+max_time = 600 #Temps à attendre avant de couper le solver après avoir trouvé une première solution
+
 ######################################################
 ######################################################
 ######################################################
@@ -261,7 +263,7 @@ print("taille profs :",len(profs))
 print("taille cours :",len(cours))
 print("taille salles :",len(salles))
 print("taille creneaux :",len(creneaux))
-res = build_compute_plne(cours, creneaux, salles, classes, profs, demi_journees=demi_journees, penalite_cours_creneau_seul=penalite_cours_creneau_seul, penalite_journee_travaillee=penalite_journee_travaillee, verbose=True, max_time=1)
+res = build_compute_plne(cours, creneaux, salles, classes, profs, demi_journees=demi_journees, penalite_cours_creneau_seul=penalite_cours_creneau_seul, penalite_journee_travaillee=penalite_journee_travaillee, verbose=True, max_time=max_time)
 
 ################################# AFFICHAGE ####################################################################################################################################################
 
