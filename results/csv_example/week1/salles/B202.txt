@@ -9,8 +9,8 @@ demi-journée 2 :::::::::::::::
 3h -
 4h -
 demi-journée 3 :::::::::::::::
-1h - CM - SAE4-VCOD 1 [ MK] (BUT2 VCOD)
-2h - CM - SAE4-VCOD 1 [ MK] (BUT2 VCOD)
+1h - encad - SAE6-EMS.1 [ MK] (BUT3 EMS)
+2h - encad - SAE6-EMS.1 [ MK] (BUT3 EMS)
 3h -
 4h -
 demi-journée 4 :::::::::::::::
@@ -29,10 +29,10 @@ demi-journée 6 :::::::::::::::
 3h -
 4h -
 demi-journée 7 :::::::::::::::
-1h -
-2h -
-3h - CM - R6.EMS.5 [ MK] (BUT3 EMS)
-4h - CM - R6.EMS.5 [ MK] (BUT3 EMS)
+1h - TP - R4.01 [ MK] (BUT2 EMS)
+2h - TP - R4.01 [ MK] (BUT2 EMS)
+3h -
+4h -
 demi-journée 8 :::::::::::::::
 1h -
 2h -

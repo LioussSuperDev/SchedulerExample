@@ -1,50 +1,50 @@
 demi-journée 1 :::::::::::::::
-1h -
-2h -
-3h - TD - R4.02 [A119] ( SVP)
-4h - TD - R4.02 [A119] ( SVP)
+1h - TD - R4.VCOD.09 [A017] ( PDS)
+2h - TD - R4.VCOD.09 [A017] ( PDS)
+3h - TD - R4.02 [A109] ( SVP)
+4h - TD - R4.02 [A109] ( SVP)
 demi-journée 2 :::::::::::::::
-1h - TD - R4.02 [C204] ( SVP)
-2h - TD - R4.02 [C204] ( SVP)
-3h - auto - SAE4-VCOD 1 [C202]
-4h - auto - SAE4-VCOD 1 [C202]
+1h - CM - R4.VCOD.09 [C202] ( PDS)
+2h - CM - R4.VCOD.09 [C202] ( PDS)
+3h - auto - SAE4-VCOD 1 [A017]
+4h - auto - SAE4-VCOD 1 [A017]
 demi-journée 3 :::::::::::::::
-1h - CM - SAE4-VCOD 1 [B202] ( MK)
-2h - CM - SAE4-VCOD 1 [B202] ( MK)
-3h -
-4h -
+1h - TD - R4.02 [A017] ( SVP)
+2h - TD - R4.02 [A017] ( SVP)
+3h - TD - R4.05 [A110] ( FA)
+4h - TD - R4.05 [A110] ( FA)
 demi-journée 4 :::::::::::::::
 1h -
 2h -
-3h - TD - R4.VCOD.09 [A109] ( PDS)
-4h - TD - R4.VCOD.09 [A109] ( PDS)
+3h -
+4h -
 demi-journée 5 :::::::::::::::
-1h - CM - R4.VCOD.09 [C202] ( PDS)
-2h - CM - R4.VCOD.09 [C202] ( PDS)
+1h - TP - R4.01 [C202] ( MK)
+2h - TP - R4.01 [C202] ( MK)
 3h -
 4h -
 demi-journée 6 :::::::::::::::
-1h - TD - R4.06 [A119] ( CF)
-2h - TD - R4.06 [A119] ( CF)
-3h -
-4h -
-demi-journée 7 :::::::::::::::
-1h - TP - R4.01 [C204] ( MK)
-2h - TP - R4.01 [C204] ( MK)
-3h -
-4h -
-demi-journée 8 :::::::::::::::
-1h - TD - R4.05 [A119] ( FA)
-2h - TD - R4.05 [A119] ( FA)
-3h - TD - R4.02 [C202] ( SVP)
-4h - TD - R4.02 [C202] ( SVP)
-demi-journée 9 :::::::::::::::
 1h -
 2h -
-3h - auto - SAE4-VCOD 1 [A110]
-4h - auto - SAE4-VCOD 1 [A110]
+3h - TD - R4.06 [A119] ( CF)
+4h - TD - R4.06 [A119] ( CF)
+demi-journée 7 :::::::::::::::
+1h - TD - R4.02 [C202] ( SVP)
+2h - TD - R4.02 [C202] ( SVP)
+3h - CM - SAE4-VCOD 1 [A118] ( MK)
+4h - CM - SAE4-VCOD 1 [A118] ( MK)
+demi-journée 8 :::::::::::::::
+1h -
+2h -
+3h -
+4h -
+demi-journée 9 :::::::::::::::
+1h - auto - SAE4-VCOD 1 [C204]
+2h - auto - SAE4-VCOD 1 [C204]
+3h -
+4h -
 demi-journée 10 :::::::::::::::
-1h - CM - R4.VCOD.08 [C202] ( SP)
-2h - CM - R4.VCOD.08 [C202] ( SP)
-3h - CM - R4.VCOD.08 [C202] ( SP)
-4h - CM - R4.VCOD.08 [C202] ( SP)
+1h - CM - R4.VCOD.08 [C204] ( SP)
+2h - CM - R4.VCOD.08 [C204] ( SP)
+3h - CM - R4.VCOD.08 [A017] ( SP)
+4h - CM - R4.VCOD.08 [A017] ( SP)

@@ -2,32 +2,32 @@ demi-journée 1 :::::::::::::::
 1h -
 2h -
 3h -
-4h -
+4h - TD - SAE4-EMS.1 [ TS] (BUT2 EMS)
 demi-journée 2 :::::::::::::::
 1h -
 2h -
-3h - TD - R6.01 [ SP] (BUT3 EMS)
-4h - TD - R6.01 [ SP] (BUT3 EMS)
+3h - TP - R4.VCOD.09 [ PDS] (BUT2 VCOD)
+4h - TP - R4.VCOD.09 [ PDS] (BUT2 VCOD)
 demi-journée 3 :::::::::::::::
-1h - TD - SAE6-EMS.1 [ MK] (BUT3 EMS)
+1h - TP - R6.EMS.5 [ MK] (BUT3 EMS)
 2h - TD - SAE6-EMS.1 [ MK] (BUT3 EMS)
-3h - encad - SAE4-EMS.1 [ TS] (BUT2 EMS)
-4h - encad - SAE4-EMS.1 [ TS] (BUT2 EMS)
-demi-journée 4 :::::::::::::::
-1h - TP - R6.01 [ SP] (BUT3 EMS)
-2h - TP - R6.01 [ SP] (BUT3 EMS)
-3h - TD - R6.EMS.5 [ MK] (BUT3 EMS)
-4h - TD - R6.EMS.5 [ MK] (BUT3 EMS)
-demi-journée 5 :::::::::::::::
-1h - TP - SAE6-VCOD.1 [ PDS] (BUT3 VCOD)
-2h - TP - SAE6-VCOD.1 [ PDS] (BUT3 VCOD)
-3h - TD - SAE4-VCOD 1 [ MK] (BUT2 VCOD)
+3h - TD - SAE6-EMS.1 [ MK] (BUT3 EMS)
 4h -
+demi-journée 4 :::::::::::::::
+1h -
+2h -
+3h -
+4h -
+demi-journée 5 :::::::::::::::
+1h - TD - R4.02 [ SVP] (BUT2 EMS)
+2h - TD - R4.02 [ SVP] (BUT2 EMS)
+3h - TD - R6.EMS.6 [ FB] (BUT3 EMS)
+4h - TD - R6.EMS.6 [ FB] (BUT3 EMS)
 demi-journée 6 :::::::::::::::
-1h - encad - SAE6-VCOD.1 [ PDS] (BUT3 VCOD)
-2h - encad - SAE6-VCOD.1 [ PDS] (BUT3 VCOD)
-3h - TD - SAE4-2 [ SVP] (BUT2 EMS)
-4h - TD - SAE4-2 [ SVP] (BUT2 EMS)
+1h - TP - R4.02 [ SVP] (BUT2 EMS)
+2h - TP - R4.02 [ SVP] (BUT2 EMS)
+3h - encad - SAE6-VCOD.1 [ PDS] (BUT3 VCOD)
+4h - encad - SAE6-VCOD.1 [ PDS] (BUT3 VCOD)
 demi-journée 7 :::::::::::::::
 1h -
 2h -
@@ -36,15 +36,15 @@ demi-journée 7 :::::::::::::::
 demi-journée 8 :::::::::::::::
 1h -
 2h -
-3h - TP - R4.VCOD.09 [ PDS] (BUT2 VCOD)
-4h - TP - R4.VCOD.09 [ PDS] (BUT2 VCOD)
+3h -
+4h -
 demi-journée 9 :::::::::::::::
 1h -
 2h -
-3h -
-4h -
+3h - TP - R6.VCOD.5 [ LP] (BUT3 VCOD)
+4h - TP - R6.VCOD.5 [ LP] (BUT3 VCOD)
 demi-journée 10 :::::::::::::::
-1h - auto - SAE6-EMS.1 (BUT3 EMS)
-2h - auto - SAE6-EMS.1 (BUT3 EMS)
-3h -
-4h -
+1h - TD - R6.01 [ SP] (BUT3 VCOD)
+2h - TD - R6.01 [ SP] (BUT3 VCOD)
+3h - encad - SAE6-EMS.1 [ SVP] (BUT3 EMS)
+4h - encad - SAE6-EMS.1 [ SVP] (BUT3 EMS)

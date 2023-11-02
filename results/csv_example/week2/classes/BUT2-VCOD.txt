@@ -1,50 +1,50 @@
 demi-journée 1 :::::::::::::::
-1h - TD - R4.02 [C204] ( SVP)
-2h - TD - R4.02 [C204] ( SVP)
-3h -
-4h -
+1h - TP - R4.VCOD.09 [C204] ( PDS)
+2h - TP - R4.VCOD.09 [C204] ( PDS)
+3h - encad - SAE4-2 [A110] ( SVP)
+4h - encad - SAE4-2 [A110] ( SVP)
 demi-journée 2 :::::::::::::::
+1h - TD - R4.02 [C202] ( SVP)
+2h - TD - R4.02 [C202] ( SVP)
+3h - TP - R4.VCOD.09 [A109] ( PDS)
+4h - TP - R4.VCOD.09 [A109] ( PDS)
+demi-journée 3 :::::::::::::::
 1h -
 2h -
-3h -
-4h -
-demi-journée 3 :::::::::::::::
-1h - auto - SAE4-2 [C204]
-2h - auto - SAE4-2 [C204]
-3h - encad - SAE4-VCOD 1 [C202] ( MK)
-4h - encad - SAE4-VCOD 1 [C202] ( MK)
+3h - TP - R4.02 [C202] ( SVP)
+4h - TP - R4.02 [C202] ( SVP)
 demi-journée 4 :::::::::::::::
 1h -
-2h - TP - R4.VCOD.09 [C202] ( PDS)
-3h - TP - R4.VCOD.09 [C202] ( PDS)
-4h -
+2h -
+3h - encad - SAE4-VCOD 1 [B202] ( MK)
+4h - encad - SAE4-VCOD 1 [B202] ( MK)
 demi-journée 5 :::::::::::::::
 1h - encad - SAE4-VCOD 1 [A118] ( MK)
 2h - encad - SAE4-VCOD 1 [A118] ( MK)
-3h - TD - SAE4-VCOD 1 [A109] ( MK)
-4h - TP - SAE4-VCOD 1 [B202] ( MK)
+3h - TP - SAE4-VCOD 1 [A118] ( MK)
+4h - TD - SAE4-VCOD 1 [A017] ( MK)
 demi-journée 6 :::::::::::::::
-1h - TP - R4.02 [A017] ( SVP)
-2h - TP - R4.02 [A017] ( SVP)
-3h - TD - R4.06 [A119] ( CF)
-4h - TD - R4.06 [A119] ( CF)
+1h - TD - R4.06 [A119] ( CF)
+2h - TD - R4.06 [A119] ( CF)
+3h - TD - R4.02 [C204] ( SVP)
+4h - TD - R4.02 [C204] ( SVP)
 demi-journée 7 :::::::::::::::
 1h -
 2h -
 3h -
 4h -
 demi-journée 8 :::::::::::::::
-1h - TD - SAE4-2 [C202] ( SVP)
-2h - TD - SAE4-2 [C202] ( SVP)
-3h - TP - R4.VCOD.09 [A109] ( PDS)
-4h - TP - R4.VCOD.09 [A109] ( PDS)
-demi-journée 9 :::::::::::::::
-1h - auto - SAE4-2 [A118]
-2h - auto - SAE4-2 [A118]
+1h - TD - SAE4-2 [A017] ( SVP)
+2h - TD - SAE4-2 [A017] ( SVP)
 3h -
 4h -
+demi-journée 9 :::::::::::::::
+1h -
+2h - auto - SAE4-2 [C204]
+3h - auto - SAE4-2 [C204]
+4h -
 demi-journée 10 :::::::::::::::
-1h - encad - SAE4-2 [A119] ( SVP)
-2h - encad - SAE4-2 [A119] ( SVP)
-3h - TD - R4.02 [C204] ( SVP)
-4h - TD - R4.02 [C204] ( SVP)
+1h - auto - SAE4-2 [C204]
+2h - auto - SAE4-2 [C204]
+3h -
+4h -

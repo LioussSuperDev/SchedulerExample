@@ -1,7 +1,5 @@
 
 import numpy as np
-from toolbox import Professeur,Classe,Salle
-import os
 from time import time
 from mip import Model, MINIMIZE, CBC, INTEGER, OptimizationStatus, xsum
 
@@ -17,7 +15,6 @@ def generate_milp(cours, creneaux, salles, classes, profs, demi_journees=None, v
     nb_var_cours_seul = 0
 
     model = Model(sense=MINIMIZE, solver_name=CBC)
-    model.emphasis = 1
 
     cours_creneau = {}
     cours_salle = {}
@@ -51,15 +48,15 @@ def generate_milp(cours, creneaux, salles, classes, profs, demi_journees=None, v
 
     nb_var = nb_var_cours_creneau+nb_var_cours_salle+nb_var_commence+nb_var_salle_affec
 
-    #creneau_seul(pr, cr) = le prof préfère ne pas avoir cours dans le créneau car il est seul
+    #creneau_seul(co, cr) = si le cours commence au créneau cr il n'a pas de voisin
     if demi_journees != None:
         demi_journees = [(i,dj) for i,dj in enumerate(demi_journees)]
         
         
         if penalite_cours_creneau_seul != 0:
-            for pr in profs:
+            for co in cours:
                 for cr in creneaux:
-                    creneau_seul[(pr,cr)] = model.add_var(name="creneau_seul("+str(pr.numero)+","+str(cr.numero)+")", var_type=INTEGER,lb=0,ub=1)
+                    creneau_seul[(co,cr)] = model.add_var(name="creneau_seul("+str(co.numero)+","+str(cr.numero)+")", var_type=INTEGER,lb=0,ub=1)
                     nb_var_cours_seul += 1
             nb_var += nb_var_cours_seul
 
@@ -90,9 +87,8 @@ def generate_milp(cours, creneaux, salles, classes, profs, demi_journees=None, v
     if verbose:
         print("génération contrainte 2")
     for co in cours:
-        for cr in creneaux:
-            if co.prof != None and cr in co.prof.contraintes_pas_cours:
-                model += cours_creneau[(co,cr)] <= 0
+        if co.prof != None and len(co.prof.contraintes_pas_cours) > 0:
+            model += xsum(cours_creneau[(co,cr)] for cr in co.prof.contraintes_pas_cours) <= 0
 
     # 3] Pour tous les cours co : (somme [cr dans CRENEAUX] cours_créneau(co, cr)) = durée_cours(co)
     if verbose:
@@ -162,9 +158,7 @@ def generate_milp(cours, creneaux, salles, classes, profs, demi_journees=None, v
         print("génération contrainte 10")
     for co in cours:
         if len(co.contrainte_dans_creneaux) > 0:
-            for cr in creneaux:
-                if not cr in co.contrainte_dans_creneaux:
-                    model += cours_creneau[(co,cr)] <= 0
+            model += xsum(cours_creneau[(co,cr)] for cr in creneaux if not cr in co.contrainte_dans_creneaux) <= 0
 
     # 11] Pour tout cours co, toute salle sl : cours_salle(co, sl)*taille(classe(co)) <= taille(sl)
     if verbose:
@@ -196,48 +190,30 @@ def generate_milp(cours, creneaux, salles, classes, profs, demi_journees=None, v
                                 model += cours_creneau[(co,cr)] - cours_journee[(pr,i)] <= 0
 
 
-    # 13b] Pour tous les créneaux cr, pour tous les profs pr : (somme[co in Cours du Prof] cours_creneau(co,cr-1)) + (somme[co in Cours du Prof] cours_creneau(co,cr+1)) + 2*creneau_a_eviter(pr,cr) >= 2  
+    # 13b] Pour tous les profs pr, pour tous les cours co de pr, pour tous les créneaux, (somme[co1 dans COURS de p] cours_creneau(co1,cr-1)) + (somme[co1 dans COURS de p] cours_creneau(co1,cr+duree(co))) + cours_seul(co,cr) >= 1
 
     if penalite_cours_creneau_seul != 0 and demi_journees != None:
         if verbose:
             print("génération contrainte 13b.v2")
-        for cr in creneaux:
-            for i,dj in demi_journees:
-                if cr in dj:
-                    demi_journee_cr = i
-            for pr in profs:
-                var_added = []
-                creneau_a_eviter = 2
-                done1=False
-                if len(creneaux) > cr.numero+1:
-                    cr_suivant = creneaux[cr.numero+1]
-                    for i,dj in demi_journees:
-                        if cr_suivant in dj:
-                            demi_journee_cr_suivant = i
-                    if (demi_journee_cr_suivant == demi_journee_cr) or (demi_journee_cr_suivant == demi_journee_cr+1 and demi_journee_cr%2 == 0):
-                        done1 = True
-                        for co in cours:
-                            if co.prof is pr:
-                                var_added.append(cours_creneau[(co,cr_suivant)])
-                done2=False
-                if 0 <= cr.numero-1:
-                    cr_precedent = creneaux[cr.numero-1]
-                    for i,dj in demi_journees:
-                        if cr_precedent in dj:
-                            demi_journee_cr_precedent = i
-                    if (demi_journee_cr_precedent == demi_journee_cr) or (demi_journee_cr_precedent == demi_journee_cr-1 and demi_journee_cr%2 == 1):
-                        done2 = True
-                        for co in cours:
-                            if co.prof is pr:
-                                var_added.append(cours_creneau[(co,cr_precedent)])
-
-                if (not done1) or (not done2):
-                    creneau_a_eviter = 1
-
-                if (not done1) or (not done2):
-                    model += xsum(var_added) + creneau_a_eviter * creneau_seul[(pr,cr)] >= 1
-                else:
-                    model += xsum(var_added) + creneau_a_eviter * creneau_seul[(pr,cr)] >= 2
+        for pr in profs:
+            for co in cours:
+                if co.prof is pr:
+                    for j in journees:
+                        first_creneau_numero = j[0][1][0].numero
+                        last_creneau_numero = j[-1][1][-1].numero
+                        for dj_index,dj in j:
+                            for cr in dj:
+                                if cr.numero != first_creneau_numero:
+                                    sum_before = xsum(cours_creneau[(co1,creneaux[cr.numero-1])] for co1 in cours if co1.prof is pr)
+                                if cr.numero + co.duree - 1 < last_creneau_numero:
+                                    sum_after = xsum(cours_creneau[(co1,creneaux[cr.numero+co.duree])] for co1 in cours if co1.prof is pr)
+                                if cr.numero == first_creneau_numero:
+                                    model += sum_after + creneau_seul[(co,cr)] - cours_commence_creneau[(co,cr)] >= 0
+                                elif cr.numero + co.duree + 1 >= last_creneau_numero:
+                                    model += sum_before + creneau_seul[(co,cr)] - cours_commence_creneau[(co,cr)] >= 0
+                                else:
+                                    model += sum_after + sum_before + creneau_seul[(co,cr)] - cours_commence_creneau[(co,cr)] >= 0
+                        
 
     #Objectif
 
@@ -325,10 +301,12 @@ def build_compute_plne(cours, creneaux, salles, classes, profs, demi_journees=No
 
 def compute_plne(model, max_time=None, verbose=True):
     
+    model.emphasis = 3
+    model.preprocess = 0
     if max_time == None:
         status = model.optimize()
     else:
-        status = model.optimize(max_seconds=max_time)
+        status = model.optimize(max_seconds_same_incumbent=max_time)
         
 
     if verbose:

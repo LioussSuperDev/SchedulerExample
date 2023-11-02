@@ -9,15 +9,15 @@ demi-journée 2 :::::::::::::::
 3h [x] -
 4h [x] -
 demi-journée 3 :::::::::::::::
+1h - CM - R6.VCOD.6 [A118] (BUT3 VCOD)
+2h - CM - R6.VCOD.6 [A118] (BUT3 VCOD)
+3h - CM - R6.VCOD.6 [A119] (BUT3 VCOD)
+4h - CM - R6.VCOD.6 [A119] (BUT3 VCOD)
+demi-journée 4 :::::::::::::::
 1h - CM - R6.VCOD.6 [A119] (BUT3 VCOD)
 2h - CM - R6.VCOD.6 [A119] (BUT3 VCOD)
-3h - CM - R6.VCOD.6 [A110] (BUT3 VCOD)
-4h - CM - R6.VCOD.6 [A110] (BUT3 VCOD)
-demi-journée 4 :::::::::::::::
-1h - CM - R6.VCOD.6 [A110] (BUT3 VCOD)
-2h - CM - R6.VCOD.6 [A110] (BUT3 VCOD)
-3h - CM - R6.VCOD.6 [C204] (BUT3 VCOD)
-4h - CM - R6.VCOD.6 [C204] (BUT3 VCOD)
+3h - CM - R6.VCOD.6 [C202] (BUT3 VCOD)
+4h - CM - R6.VCOD.6 [C202] (BUT3 VCOD)
 demi-journée 5 :::::::::::::::
 1h [100000] -
 2h [100000] -

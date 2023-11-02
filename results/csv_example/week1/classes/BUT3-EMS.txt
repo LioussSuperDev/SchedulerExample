@@ -1,18 +1,18 @@
 demi-journée 1 :::::::::::::::
-1h - TD - R6.03 [A119] ( EA)
-2h - TD - R6.03 [A119] ( EA)
-3h - TD - R6.EMS.6 [A110] ( FB)
-4h - TD - R6.EMS.6 [A110] ( FB)
+1h - TP - SAE6-EMS.1 [A109] ( SVP)
+2h - TP - SAE6-EMS.1 [A109] ( SVP)
+3h - TD - R6.03 [A017] ( EA)
+4h - TD - R6.03 [A017] ( EA)
 demi-journée 2 :::::::::::::::
-1h - TD - R6.EMS.6 [A110] ( FB)
-2h - TD - R6.EMS.6 [A110] ( FB)
-3h - TP - SAE6-EMS.1 [A119] ( SVP)
-4h - TP - SAE6-EMS.1 [A119] ( SVP)
+1h - encad - SAE6-EMS.1 [A119] ( SVP)
+2h - encad - SAE6-EMS.1 [A119] ( SVP)
+3h - TD - SAE6-EMS.1 [A109] ( SVP)
+4h - TD - SAE6-EMS.1 [A109] ( SVP)
 demi-journée 3 :::::::::::::::
-1h - TD - SAE6-EMS.1 [A118] ( SVP)
-2h - TD - SAE6-EMS.1 [A118] ( SVP)
-3h - encad - SAE6-EMS.1 [A110] ( MK)
-4h - encad - SAE6-EMS.1 [A110] ( MK)
+1h - encad - SAE6-EMS.1 [B202] ( MK)
+2h - encad - SAE6-EMS.1 [B202] ( MK)
+3h - CM - R6.EMS.5 [A119] ( MK)
+4h - CM - R6.EMS.5 [A119] ( MK)
 demi-journée 4 :::::::::::::::
 1h -
 2h -
@@ -31,18 +31,18 @@ demi-journée 6 :::::::::::::::
 demi-journée 7 :::::::::::::::
 1h - TD - R6.EMS.6 [A110] ( FB)
 2h - TD - R6.EMS.6 [A110] ( FB)
-3h - CM - R6.EMS.5 [B202] ( MK)
-4h - CM - R6.EMS.5 [B202] ( MK)
+3h - TD - R6.EMS.6 [A110] ( FB)
+4h - TD - R6.EMS.6 [A110] ( FB)
 demi-journée 8 :::::::::::::::
-1h - encad - SAE6-EMS.1 [C204] ( SVP)
-2h - encad - SAE6-EMS.1 [C204] ( SVP)
+1h - TD - R6.EMS.6 [A109] ( FB)
+2h - TD - R6.EMS.6 [A109] ( FB)
 3h - TD - R6.EMS.6 [A110] ( FB)
 4h - TD - R6.EMS.6 [A110] ( FB)
 demi-journée 9 :::::::::::::::
-1h -
-2h -
-3h - auto - SAE6-EMS.1 [C202]
-4h - auto - SAE6-EMS.1 [C202]
+1h - auto - SAE6-EMS.1 [A109]
+2h - auto - SAE6-EMS.1 [A109]
+3h -
+4h -
 demi-journée 10 :::::::::::::::
 1h -
 2h -

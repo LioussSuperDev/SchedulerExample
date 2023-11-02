@@ -1,8 +1,8 @@
 demi-journée 1 :::::::::::::::
-0.5h - Cours de Théâtre [I415] (BTS info)
-1.0h - Cours de Théâtre [I415] (BTS info)
-1.5h - Cours de Théâtre [I415] (BTS info)
-2.0h - Cours de Théâtre [I415] (BTS info)
+0.5h - Cours de Théâtre [I416] (BTS info)
+1.0h - Cours de Théâtre [I416] (BTS info)
+1.5h - Cours de Théâtre [I416] (BTS info)
+2.0h - Cours de Théâtre [I416] (BTS info)
 2.5h - Cours de Musique [I416] (L1 info)
 3.0h - Cours de Musique [I416] (L1 info)
 3.5h -

@@ -1,26 +1,26 @@
 demi-journée 1 :::::::::::::::
-1h [100000] -
-2h [100000] -
+1h [100000000] -
+2h [100000000] -
 3h - TD - SAE4-EMS.1 [A118] (BUT2 EMS)
 4h - TD - SAE4-EMS.1 [A118] (BUT2 EMS)
 demi-journée 2 :::::::::::::::
-1h -
-2h -
-3h - TD - SAE4-EMS.1 [A110] (BUT2 EMS)
-4h - TD - SAE4-EMS.1 [A110] (BUT2 EMS)
+1h - TD - SAE4-EMS.1 [A109] (BUT2 EMS)
+2h - TD - SAE4-EMS.1 [A109] (BUT2 EMS)
+3h -
+4h -
 demi-journée 3 :::::::::::::::
-1h [100000] -
-2h [100000] -
+1h [100000000] -
+2h [100000000] -
 3h -
 4h -
 demi-journée 4 :::::::::::::::
 1h -
 2h -
-3h - TD - SAE4-EMS.1 [A119] (BUT2 EMS)
+3h -
 4h -
 demi-journée 5 :::::::::::::::
-1h [100000] -
-2h [100000] -
+1h [100000000] -
+2h [100000000] -
 3h -
 4h -
 demi-journée 6 :::::::::::::::
@@ -29,13 +29,13 @@ demi-journée 6 :::::::::::::::
 3h -
 4h -
 demi-journée 7 :::::::::::::::
-1h [100000] -
-2h [100000] -
+1h [100000000] -
+2h [100000000] -
 3h -
 4h -
 demi-journée 8 :::::::::::::::
-1h - encad - SAE4-EMS.1 [A109] (BUT2 EMS)
-2h - encad - SAE4-EMS.1 [A109] (BUT2 EMS)
+1h -
+2h -
 3h -
 4h -
 demi-journée 9 :::::::::::::::
@@ -44,7 +44,7 @@ demi-journée 9 :::::::::::::::
 3h [x] -
 4h [x] -
 demi-journée 10 :::::::::::::::
-1h -
-2h -
-3h -
+1h - TD - SAE4-EMS.1 [A119] (BUT2 EMS)
+2h - encad - SAE4-EMS.1 [A109] (BUT2 EMS)
+3h - encad - SAE4-EMS.1 [A109] (BUT2 EMS)
 4h -

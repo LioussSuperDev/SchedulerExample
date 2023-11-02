@@ -9,8 +9,8 @@ demi-journée 2 :::::::::::::::
 3h -
 4h -
 demi-journée 3 :::::::::::::::
-1h - CM - R2.08 [A110] ( PDS)
-2h - CM - R2.08 [A110] ( PDS)
+1h -
+2h -
 3h -
 4h -
 demi-journée 4 :::::::::::::::
@@ -30,14 +30,14 @@ demi-journée 6 :::::::::::::::
 4h -
 demi-journée 7 :::::::::::::::
 1h -
-2h - CM - Réunion [A110]
-3h - CM - Réunion [A110]
-4h - CM - Réunion [A110]
+2h - CM - Réunion [Salle1-Odeum]
+3h - CM - Réunion [Salle1-Odeum]
+4h - CM - Réunion [Salle1-Odeum]
 demi-journée 8 :::::::::::::::
 1h -
 2h -
-3h -
-4h -
+3h - CM - R2.08 [A110] ( PDS)
+4h - CM - R2.08 [A110] ( PDS)
 demi-journée 9 :::::::::::::::
 1h -
 2h -

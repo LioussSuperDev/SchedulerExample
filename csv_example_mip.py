@@ -2,8 +2,7 @@ import csv
 from toolbox import Professeur,Classe,Salle,Cours,Creneau,simple_print
 from core_mip import build_compute_plne
 import math
-from datetime import date as dt
-from datetime import datetime as dtt
+from datetime import datetime as dtt,timedelta
 
 ######################################################
 ######################################################
@@ -14,17 +13,18 @@ from datetime import datetime as dtt
 duree_demi_journee = 4
 nombre_demi_journees = 10
 
-penalite_prof_1 = 100000
-penalite_prof_2 = 10000
+penalite_prof_1 = 100000000
+penalite_prof_2 = 1000000
 
 penalite_salle_partagee = 1
 penalite_salle_eval = 100
 bonus_prof_salle = 1
 
 penalite_cours_creneau_seul = 1
-penalite_journee_travaillee = 100
+penalite_journee_travaillee = 20
 
-week_number = 1
+week_number = 2
+date_lundi = "22/01/2024"
 
 fichier_contraintes = "./exemples/week"+str(week_number)+"/contraintes.csv"
 fichier_cours = "./exemples/week"+str(week_number)+"/cours.csv"
@@ -53,6 +53,13 @@ def date_to_creneaux(date, creneau, demi_journees, duree):
             creneaux.append(demi_journees[demi_journee][creneau_idx])
     return creneaux
 
+def creneau_to_date(monday_date_string, creneau):
+    day = (dtt.strptime(monday_date_string, "%d/%m/%Y") + timedelta(days=creneau.numero//8)).strftime("%d/%m/%Y")
+    cr = "PM-" if creneau.numero%8 >= 4 else "AM-"
+    cr += str((creneau.numero%4)+1)+"a"
+    return day,cr
+
+
 ######################################################
 ######################################################
 ######################################################
@@ -79,7 +86,7 @@ for dj in demi_journees:
         creneaux.append(cr)
         cr.numero = i
         i += 1
-
+print(creneau_to_date(date_lundi,creneaux[10]))
 ##############################################################
 # REMPLISSAGE DES PROFS ######################################
 ##############################################################
@@ -254,7 +261,7 @@ print("taille profs :",len(profs))
 print("taille cours :",len(cours))
 print("taille salles :",len(salles))
 print("taille creneaux :",len(creneaux))
-res = build_compute_plne(cours, creneaux, salles, classes, profs, demi_journees=demi_journees, penalite_cours_creneau_seul=penalite_cours_creneau_seul, penalite_journee_travaillee=penalite_journee_travaillee, verbose=True, max_time=7200)
+res = build_compute_plne(cours, creneaux, salles, classes, profs, demi_journees=demi_journees, penalite_cours_creneau_seul=penalite_cours_creneau_seul, penalite_journee_travaillee=penalite_journee_travaillee, verbose=True, max_time=1)
 
 ################################# AFFICHAGE ####################################################################################################################################################
 
@@ -262,4 +269,26 @@ afficher_profs = True
 afficher_classes = True
 afficher_salles = True
 
-#simple_print(demi_journees,profs,cours,salles,classes,afficher_profs,afficher_classes,afficher_salles,save_folder="./results/csv_example/week"+str(week_number),scale=1)
+simple_print(demi_journees,profs,cours,salles,classes,afficher_profs,afficher_classes,afficher_salles,save_folder="./results/csv_example/week"+str(week_number),scale=1)
+
+#Création format standardisé
+with open(fichier_cours) as csvfileread:
+    spamreader = csv.reader(csvfileread,delimiter=";")
+    with open("./results/csv_example/week"+str(week_number)+"/cours.csv", "w+") as csvfilewrite:
+        writer = csv.writer(csvfilewrite, delimiter=',')
+        rows = []
+        for i,row in enumerate(spamreader):
+            if i != 0:
+                for cour in cours:
+                    if cour.tags["_id"] == row[-1]:
+                        sl = cour.organisation.salle
+                        creneau = None
+                        for cr in cour.organisation.creneaux:
+                            if creneau == None or cr.numero < creneau.numero:
+                                creneau = cr
+                        row[-2] = sl.batiment+str(sl.etage)+str(sl.salle)
+                        date,creneau = creneau_to_date(date_lundi, creneau)
+                        row[-3] = creneau
+                        row[-4] = date
+
+            writer.writerow(row)

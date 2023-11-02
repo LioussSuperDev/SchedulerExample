@@ -8,20 +8,20 @@ demi-journée 1 :::::::::::::::
 3.5h -
 4.0h -
 demi-journée 2 :::::::::::::::
-0.5h - Cours de Python [I416] (Pascal DI SCALA)
-1.0h - Cours de Python [I416] (Pascal DI SCALA)
-1.5h - Cours de Python [I416] (Pascal DI SCALA)
-2.0h -
+0.5h -
+1.0h - Cours de Python [I415] (Pascal DI SCALA)
+1.5h - Cours de Python [I415] (Pascal DI SCALA)
+2.0h - Cours de Python [I415] (Pascal DI SCALA)
 2.5h -
 3.0h -
 3.5h -
 4.0h -
 demi-journée 3 :::::::::::::::
-0.5h - Cours de Python [I415] (Pascal DI SCALA)
-1.0h - Cours de Python [I415] (Pascal DI SCALA)
-1.5h - Cours de Python [I415] (Pascal DI SCALA)
-2.0h - Cours de Python [I415] (Pascal DI SCALA)
-2.5h - Cours de C# [I415] (Pascal DI SCALA)
-3.0h - Cours de C# [I415] (Pascal DI SCALA)
-3.5h - Cours de C# [I415] (Pascal DI SCALA)
-4.0h - Cours de C# [I415] (Pascal DI SCALA)
+0.5h - Cours de C# [I415] (Pascal DI SCALA)
+1.0h - Cours de C# [I415] (Pascal DI SCALA)
+1.5h - Cours de C# [I415] (Pascal DI SCALA)
+2.0h - Cours de C# [I415] (Pascal DI SCALA)
+2.5h - Cours de Python [I415] (Pascal DI SCALA)
+3.0h - Cours de Python [I415] (Pascal DI SCALA)
+3.5h - Cours de Python [I415] (Pascal DI SCALA)
+4.0h - Cours de Python [I415] (Pascal DI SCALA)

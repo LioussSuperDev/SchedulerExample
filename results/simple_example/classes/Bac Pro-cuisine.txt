@@ -3,10 +3,10 @@ demi-journée 1 :::::::::::::::
 1.0h -
 1.5h -
 2.0h -
-2.5h - Cours d'Algèbre [I417] (Martin DUPONT)
-3.0h - Cours d'Algèbre [I417] (Martin DUPONT)
-3.5h - Cours d'Algèbre [I417] (Martin DUPONT)
-4.0h - Cours d'Algèbre [I417] (Martin DUPONT)
+2.5h - Cours d'Algèbre [I415] (Martin DUPONT)
+3.0h - Cours d'Algèbre [I415] (Martin DUPONT)
+3.5h - Cours d'Algèbre [I415] (Martin DUPONT)
+4.0h - Cours d'Algèbre [I415] (Martin DUPONT)
 demi-journée 2 :::::::::::::::
 0.5h -
 1.0h -
