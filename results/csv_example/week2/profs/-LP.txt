@@ -34,15 +34,15 @@ demi-journée 7 :::::::::::::::
 3h -
 4h -
 demi-journée 8 :::::::::::::::
-1h -
-2h -
+1h - TP - R6.VCOD.5 [C204] (BUT3 VCOD)
+2h - TP - R6.VCOD.5 [C204] (BUT3 VCOD)
 3h -
 4h -
 demi-journée 9 :::::::::::::::
 1h -
 2h -
-3h - TP - R6.VCOD.5 [A109] (BUT3 VCOD)
-4h - TP - R6.VCOD.5 [A109] (BUT3 VCOD)
+3h -
+4h -
 demi-journée 10 :::::::::::::::
 1h -
 2h -

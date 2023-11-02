@@ -1,50 +1,50 @@
 demi-journée 1 :::::::::::::::
-1h - TD - R6.03 [A110] ( EA)
-2h - TD - R6.03 [A110] ( EA)
-3h - TD - R6.VCOD.5 [A118] ( FD)
-4h - TD - R6.VCOD.5 [A118] ( FD)
+1h - TD - R6.03 [C204] ( EA)
+2h - TD - R6.03 [C204] ( EA)
+3h - TP - R6.01 [A119] ( SP)
+4h - TP - R6.01 [A119] ( SP)
 demi-journée 2 :::::::::::::::
-1h - TD - R6.VCOD.5 [C204] ( FD)
-2h - TD - R6.VCOD.5 [C204] ( FD)
-3h - TP - R6.VCOD.5 [C202] ( FD)
-4h - TP - R6.VCOD.5 [C202] ( FD)
+1h - TD - R6.VCOD.5 [A119] ( FD)
+2h - TD - R6.VCOD.5 [A119] ( FD)
+3h - TP - R6.VCOD.5 [A118] ( FD)
+4h - TP - R6.VCOD.5 [A118] ( FD)
 demi-journée 3 :::::::::::::::
-1h - CM - R6.VCOD.6 [A118] ( AC)
-2h - CM - R6.VCOD.6 [A118] ( AC)
+1h - CM - R6.VCOD.6 [C202] ( AC)
+2h - CM - R6.VCOD.6 [C202] ( AC)
 3h - CM - R6.VCOD.6 [A119] ( AC)
 4h - CM - R6.VCOD.6 [A119] ( AC)
 demi-journée 4 :::::::::::::::
-1h - CM - R6.VCOD.6 [A119] ( AC)
-2h - CM - R6.VCOD.6 [A119] ( AC)
-3h - CM - R6.VCOD.6 [C202] ( AC)
-4h - CM - R6.VCOD.6 [C202] ( AC)
+1h - CM - R6.VCOD.6 [A118] ( AC)
+2h - CM - R6.VCOD.6 [A118] ( AC)
+3h - CM - R6.VCOD.6 [A118] ( AC)
+4h - CM - R6.VCOD.6 [A118] ( AC)
 demi-journée 5 :::::::::::::::
-1h - TP - R6.01 [A017] ( SP)
-2h - TP - R6.01 [A017] ( SP)
-3h - TD - R6.01 [A110] ( SP)
-4h -
+1h - TP - R6.01 [A118] ( SP)
+2h - TP - R6.01 [A118] ( SP)
+3h - TP - SAE6-VCOD.1 [C202] ( PDS)
+4h - TP - SAE6-VCOD.1 [C202] ( PDS)
 demi-journée 6 :::::::::::::::
-1h - TD - SAE6-VCOD.1 [A118] ( PDS)
-2h - TD - SAE6-VCOD.1 [A118] ( PDS)
-3h - encad - SAE6-VCOD.1 [A109] ( PDS)
-4h - encad - SAE6-VCOD.1 [A109] ( PDS)
+1h - encad - SAE6-VCOD.1 [C202] ( PDS)
+2h - encad - SAE6-VCOD.1 [C202] ( PDS)
+3h - TD - SAE6-VCOD.1 [A118] ( PDS)
+4h - TD - SAE6-VCOD.1 [A118] ( PDS)
 demi-journée 7 :::::::::::::::
 1h -
 2h -
 3h -
 4h -
 demi-journée 8 :::::::::::::::
-1h - TP - SAE6-VCOD.1 [C202] ( PDS)
-2h - TP - SAE6-VCOD.1 [C202] ( PDS)
+1h - TP - R6.VCOD.5 [C204] ( LP)
+2h - TP - R6.VCOD.5 [C204] ( LP)
 3h - TP - SAE6-VCOD.1 [A119] ( IU)
 4h - TP - SAE6-VCOD.1 [A119] ( IU)
 demi-journée 9 :::::::::::::::
-1h - TP - R6.VCOD.5 [C202] ( FD)
-2h - TP - R6.VCOD.5 [C202] ( FD)
-3h - TP - R6.VCOD.5 [A109] ( LP)
-4h - TP - R6.VCOD.5 [A109] ( LP)
+1h - TD - R6.VCOD.5 [A110] ( FD)
+2h - TD - R6.VCOD.5 [A110] ( FD)
+3h - TP - R6.VCOD.5 [A118] ( FD)
+4h - TP - R6.VCOD.5 [A118] ( FD)
 demi-journée 10 :::::::::::::::
-1h - TD - R6.01 [A109] ( SP)
+1h -
 2h - TD - R6.01 [A109] ( SP)
-3h - TP - R6.01 [C204] ( SP)
-4h - TP - R6.01 [C204] ( SP)
+3h - TD - R6.01 [A109] ( SP)
+4h - TD - R6.01 [A110] ( SP)

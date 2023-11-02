@@ -1,28 +1,28 @@
 demi-journée 1 :::::::::::::::
-1h - TP - R4.VCOD.09 [C204] ( PDS)
-2h - TP - R4.VCOD.09 [C204] ( PDS)
-3h - encad - SAE4-2 [A110] ( SVP)
-4h - encad - SAE4-2 [A110] ( SVP)
+1h - encad - SAE4-2 [A109] ( SVP)
+2h - encad - SAE4-2 [A109] ( SVP)
+3h - TP - R4.VCOD.09 [A017] ( PDS)
+4h - TP - R4.VCOD.09 [A017] ( PDS)
 demi-journée 2 :::::::::::::::
-1h - TD - R4.02 [C202] ( SVP)
-2h - TD - R4.02 [C202] ( SVP)
-3h - TP - R4.VCOD.09 [A109] ( PDS)
-4h - TP - R4.VCOD.09 [A109] ( PDS)
+1h - TD - R4.02 [A017] ( SVP)
+2h - TD - R4.02 [A017] ( SVP)
+3h -
+4h -
 demi-journée 3 :::::::::::::::
-1h -
-2h -
-3h - TP - R4.02 [C202] ( SVP)
-4h - TP - R4.02 [C202] ( SVP)
+1h - encad - SAE4-VCOD 1 [B202] ( MK)
+2h - encad - SAE4-VCOD 1 [B202] ( MK)
+3h - TP - R4.02 [A017] ( SVP)
+4h - TP - R4.02 [A017] ( SVP)
 demi-journée 4 :::::::::::::::
-1h -
-2h -
-3h - encad - SAE4-VCOD 1 [B202] ( MK)
-4h - encad - SAE4-VCOD 1 [B202] ( MK)
+1h - TP - R4.VCOD.09 [A110] ( PDS)
+2h - TP - R4.VCOD.09 [A110] ( PDS)
+3h -
+4h -
 demi-journée 5 :::::::::::::::
-1h - encad - SAE4-VCOD 1 [A118] ( MK)
-2h - encad - SAE4-VCOD 1 [A118] ( MK)
-3h - TP - SAE4-VCOD 1 [A118] ( MK)
-4h - TD - SAE4-VCOD 1 [A017] ( MK)
+1h - TP - SAE4-VCOD 1 [A109] ( MK)
+2h - encad - SAE4-VCOD 1 [B202] ( MK)
+3h - encad - SAE4-VCOD 1 [B202] ( MK)
+4h - TD - SAE4-VCOD 1 [B202] ( MK)
 demi-journée 6 :::::::::::::::
 1h - TD - R4.06 [A119] ( CF)
 2h - TD - R4.06 [A119] ( CF)
@@ -36,15 +36,15 @@ demi-journée 7 :::::::::::::::
 demi-journée 8 :::::::::::::::
 1h - TD - SAE4-2 [A017] ( SVP)
 2h - TD - SAE4-2 [A017] ( SVP)
-3h -
-4h -
+3h - auto - SAE4-2 [A017]
+4h - auto - SAE4-2 [A017]
 demi-journée 9 :::::::::::::::
 1h -
-2h - auto - SAE4-2 [C204]
-3h - auto - SAE4-2 [C204]
-4h -
-demi-journée 10 :::::::::::::::
-1h - auto - SAE4-2 [C204]
-2h - auto - SAE4-2 [C204]
+2h -
 3h -
 4h -
+demi-journée 10 :::::::::::::::
+1h -
+2h -
+3h - auto - SAE4-2 [A118]
+4h - auto - SAE4-2 [A118]
