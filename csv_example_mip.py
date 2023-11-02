@@ -273,9 +273,9 @@ simple_print(demi_journees,profs,cours,salles,classes,afficher_profs,afficher_cl
 
 #Création format standardisé
 with open(fichier_cours) as csvfileread:
-    spamreader = csv.reader(csvfileread,delimiter=";")
+    spamreader = csv.reader(csvfileread,delimiter=";",newline='')
     with open("./results/csv_example/week"+str(week_number)+"/cours.csv", "w+") as csvfilewrite:
-        writer = csv.writer(csvfilewrite, delimiter=',')
+        writer = csv.writer(csvfilewrite, delimiter=';',newline='')
         rows = []
         for i,row in enumerate(spamreader):
             if i != 0:

@@ -1,0 +1,82 @@
+Année,Groupe,Type,Durée,Matière,Contenu,Enseignant,Type ens,Salle INFO,Evaluation,Charge,Date affectée,Créneau,Salles,ID
+BUT1,G1,TD,2,R2.01,gestion de projet et GANTT,AC,V,Vrai,Vrai,Faux,23/01/2024,AM-3a,A118,2§2.1
+BUT1,G2,TD,2,R2.01,gestion de projet et GANTT,AC,V,Vrai,Vrai,Faux,23/01/2024,AM-1a,A118,2§2.2
+BUT1,G1,TD,2,R2.01,"Power BI, ArcGIS,",IU,T,Vrai,Faux,Faux,25/01/2024,PM-3a,A119,2§2.3
+BUT1,G2,TD,2,R2.01,"Power BI, ArcGIS,",IU,T,Vrai,Faux,Faux,25/01/2024,AM-1a,A118,2§2.4
+BUT1,G1,TD,2,R2.02,,IU,T,Vrai,Faux,Faux,25/01/2024,AM-3a,A119,2§2.5
+BUT1,G2,TD,2,R2.02,,IU,T,Vrai,Faux,Faux,23/01/2024,PM-1a,A118,2§2.6
+BUT1,G1,TP,2,R2.03,,PDS,T,Vrai,Faux,Faux,22/01/2024,PM-3a,C204,2§2.7
+BUT1,G2,TP,2,R2.03,,PDS,T,Vrai,Faux,Faux,25/01/2024,AM-3a,C204,2§2.8
+BUT1,G1,TP,2,R2.07,,TS,T,Faux,Faux,Faux,22/01/2024,PM-1a,C204,2§2.9
+BUT1,G2,TP,2,R2.07,,TS,T,Faux,Faux,Faux,22/01/2024,AM-3a,C204,2§2.10
+BUT1,,CM,2,R2.08,,PDS,T,Faux,Faux,Faux,25/01/2024,PM-1a,A110,2§2.11
+BUT1,G1,TD,2,R2.09,,MAB,V,Faux,Faux,Faux,26/01/2024,AM-3a,A017,2§2.12
+BUT1,G2,TD,2,R2.09,,MAB,V,Faux,Faux,Faux,26/01/2024,AM-1a,A017,2§2.13
+BUT1,,CM,2,R2.10,,AC,V,Faux,Faux,Faux,23/01/2024,PM-3a,A110,2§2.14
+BUT1,G1,TP,2,R2.10,tableau,AG,V,Vrai,Faux,Faux,22/01/2024,AM-1a,C202,2§2.15
+BUT1,G2,TP,2,R2.10,tableau,AG,V,Vrai,Faux,Faux,22/01/2024,PM-3a,A119,2§2.18
+BUT1,G1,TP,2,R2.10,tableau,AG,V,Vrai,Faux,Faux,23/01/2024,AM-1a,A110,2§2.16
+BUT1,G2,TP,2,R2.10,tableau,AG,V,Vrai,Faux,Faux,23/01/2024,AM-3a,C204,2§2.19
+BUT1,G1,TP,2,R2.10,tableau,AG,V,Vrai,Faux,Faux,22/01/2024,AM-3a,A110,2§2.17
+BUT1,G2,TP,2,R2.10,tableau,AG,V,Vrai,Faux,Faux,22/01/2024,PM-1a,A118,2§2.20
+BUT1,G1,TD,2,R2.11,,CF,V,Faux,Faux,Faux,24/01/2024,PM-1a,A119,2§2.21
+BUT1,G2,TD,2,R2.11,,CF,V,Faux,Faux,Faux,24/01/2024,AM-3a,A119,2§2.22
+BUT1,G1,TD,2,R2.11,,AS,V,Faux,Faux,Faux,26/01/2024,AM-1a,A119,2§2.23
+BUT1,G2,TD,2,R2.11,,AS,V,Faux,Faux,Faux,26/01/2024,AM-3a,A119,2§2.24
+BUT2,,CM-co,2,R4.01,procédures  stockées,MK,T,Vrai,Faux,Faux,24/01/2024,AM-3a,A017,2§2.25
+BUT2,EMS,TP,2,R4.01,procédures  stockées,MK,T,Vrai,Faux,Faux,25/01/2024,AM-1a,B202,2§2.26
+BUT2,VCOD,TP,2,R4.01,procédures  stockées,MK,T,Vrai,Faux,Faux,24/01/2024,AM-1a,C202,2§2.44
+BUT2,,CM-co,2,R4.01,"tests, SE",IU,T,Vrai,Faux,Faux,23/01/2024,PM-3a,A017,2§2.27
+BUT2,,CM-co,2,R4.02,,SVP,T,Vrai,Faux,Faux,25/01/2024,PM-3a,A017,2§2.28
+BUT2,EMS,TD,2,R4.02,,SVP,T,Vrai,Faux,Faux,25/01/2024,PM-1a,A017,2§2.29
+BUT2,VCOD,TD,2,R4.02,,SVP,T,Vrai,Faux,Faux,22/01/2024,AM-3a,A109,2§2.45
+BUT2,EMS,TD,2,R4.02,,SVP,T,Vrai,Faux,Faux,25/01/2024,AM-3a,A109,2§2.30
+BUT2,VCOD,TD,2,R4.02,,SVP,T,Vrai,Faux,Faux,23/01/2024,AM-1a,A017,2§2.46
+BUT2,EMS,TD,2,R4.02,,SVP,T,Vrai,Faux,Faux,23/01/2024,AM-3a,A017,2§2.31
+BUT2,VCOD,TD,2,R4.02,,SVP,T,Vrai,Faux,Faux,25/01/2024,AM-1a,C202,2§2.47
+BUT2,,CM-co,2,SAE4-2 ,projet senso,SVP,T,Vrai,Faux,Faux,24/01/2024,PM-1a,A017,2§2.36
+BUT2,,CM-co,2,R4.05,,FA,V,Faux,Faux,Faux,23/01/2024,PM-1a,A110,2§2.32
+BUT2,EMS,TD,2,R4.05,,FA,V,Vrai,Faux,Faux,23/01/2024,AM-1a,C204,2§2.33
+BUT2,VCOD,TD,2,R4.05,,FA,V,Vrai,Faux,Faux,23/01/2024,AM-3a,A110,2§2.48
+BUT2,EMS,TD,2,R4.06,,CF,V,Faux,Faux,Faux,24/01/2024,AM-1a,A119,2§2.34
+BUT2,VCOD,TD,2,R4.06,,CF,V,Faux,Faux,Faux,24/01/2024,PM-3a,A119,2§2.49
+BUT2,EMS,CM,2,R4.EMS.08,,TS,T,Faux,Faux,Faux,22/01/2024,PM-3a,A118,2§2.35
+BUT2,EMS,CM,2,SAE4-EMS.1 ,,TS,T,Faux,Faux,Faux,22/01/2024,AM-1a,A110,2§2.37
+BUT2,EMS,TD,2,SAE4-EMS.1 ,,ATER,T,Faux,Faux,Faux,22/01/2024,AM-3a,A118,2§2.38
+BUT2,EMS,TD,2,SAE4-EMS.1 ,,ATER,T,Faux,Faux,Faux,22/01/2024,PM-1a,A109,2§2.39
+BUT2,EMS,TD,1,SAE4-EMS.1 ,,ATER,T,Faux,Faux,Faux,26/01/2024,PM-1a,A119,2§2.40
+BUT2,EMS,auto,2,SAE4-EMS.1 ,,ATER,T,Faux,Faux,Faux,26/01/2024,AM-1a,C202,2§2.42
+BUT2,EMS,encad,2,SAE4-EMS.1 ,,ATER,T,Faux,Faux,Faux,26/01/2024,PM-2a,A109,2§2.43
+BUT2,VCOD,CM,2,R4.VCOD.08,explication SIG projection,SP,T,Vrai,Faux,Faux,26/01/2024,PM-1a,C204,2§2.50
+BUT2,VCOD,CM,2,R4.VCOD.08,explication SIG projection,SP,T,Vrai,Faux,Faux,26/01/2024,PM-3a,A017,2§2.51
+BUT2,VCOD,CM,2,R4.VCOD.09,java script et application leaflet,PDS,T,Vrai,Faux,Faux,22/01/2024,PM-1a,C202,2§2.52
+BUT2,VCOD,TD,2,R4.VCOD.09,java script et application leaflet,PDS,T,Vrai,Faux,Faux,22/01/2024,AM-1a,A017,2§2.53
+BUT2,VCOD,CM,2,SAE4-VCOD 1,,MK,T,Vrai,Faux,Faux,25/01/2024,AM-3a,A118,2§2.54
+BUT2,VCOD,auto,2,SAE4-VCOD 1,,MK,T,Vrai,Faux,Faux,26/01/2024,AM-1a,C204,2§2.55
+BUT2,VCOD,auto,2,SAE4-VCOD 1,,MK,T,Vrai,Faux,Faux,22/01/2024,PM-3a,A017,2§2.56
+BUT3,EMS,TD,2,R6.03,,EA,V,Faux,Faux,Faux,22/01/2024,AM-3a,A017,2§2.57
+BUT3,VCOD,TD,2,R6.03,,EA,V,Faux,Faux,Faux,22/01/2024,AM-1a,A118,2§2.75
+BUT3,,CM-co,2,R6.04,,AC,V,Faux,Faux,Faux,23/01/2024,PM-1a,A017,2§2.58
+BUT3,EMS,CM,2,R6.EMS.5,ML sur du texte,MK,T,Vrai,Faux,Faux,23/01/2024,AM-3a,A119,2§2.59
+BUT3,EMS,TD,2,R6.EMS.6,qualité,FB,V,Faux,Faux,Faux,24/01/2024,AM-3a,A110,2§2.60
+BUT3,EMS,TD,2,R6.EMS.6,qualité,FB,V,Faux,Faux,Faux,25/01/2024,AM-3a,A110,2§2.61
+BUT3,EMS,TD,2,R6.EMS.6,qualité,FB,V,Faux,Faux,Faux,25/01/2024,PM-1a,A109,2§2.62
+BUT3,EMS,TD,2,R6.EMS.6,qualité,FB,V,Faux,Faux,Faux,24/01/2024,AM-1a,A110,2§2.63
+BUT3,EMS,TD,2,R6.EMS.6,qualité,FB,V,Faux,Faux,Faux,24/01/2024,PM-3a,A110,2§2.64
+BUT3,EMS,TD,2,R6.EMS.6,qualité,FB,V,Faux,Faux,Faux,25/01/2024,AM-1a,A110,2§2.65
+BUT3,EMS,TD,2,R6.EMS.6,qualité,FB,V,Faux,Faux,Faux,25/01/2024,PM-3a,A110,2§2.66
+BUT3,EMS,TD,2,R6.EMS.6,qualité,FB,V,Faux,Faux,Faux,24/01/2024,PM-1a,A110,2§2.67
+BUT3,EMS,encad,2,SAE6-EMS.1,etude de cas 1 ML,MK,T,Vrai,Faux,Faux,23/01/2024,AM-1a,B202,2§2.69
+BUT3,EMS,TD,2,SAE6-EMS.1,etude de cas 2 sur les avions ou borne éléctrique...,SVP,T,Vrai,Faux,Faux,22/01/2024,PM-3a,A109,2§2.70
+BUT3,EMS,TP,2,SAE6-EMS.1,etude de cas 2 sur les avions ou borne éléctrique...,SVP,T,Vrai,Faux,Faux,22/01/2024,AM-1a,A109,2§2.71
+BUT3,EMS,auto,2,SAE6-EMS.1,etude de cas 2 sur les avions ou borne éléctrique...,SVP,T,Vrai,Faux,Faux,26/01/2024,AM-1a,A109,2§2.73
+BUT3,EMS,encad,2,SAE6-EMS.1,etude de cas 2 sur les avions ou borne éléctrique...,SVP,T,Vrai,Faux,Faux,22/01/2024,PM-1a,A119,2§2.74
+BUT3,VCOD,TD,2,R6.VCOD.5,FME et applications serveurs et flux de données,LP,V,Vrai,Faux,Faux,26/01/2024,PM-1a,C202,2§2.76
+BUT3,VCOD,TD,2,R6.VCOD.5,FME et applications serveurs et flux de données,LP,V,Vrai,Faux,Faux,26/01/2024,AM-1a,A118,2§2.77
+BUT3,VCOD,TP,2,R6.VCOD.5,FME et applications serveurs et flux de données,LP,V,Vrai,Faux,Faux,26/01/2024,AM-3a,A118,2§2.78
+BUT3,VCOD,TP,2,R6.VCOD.5,FME et applications serveurs et flux de données,LP,V,Vrai,Faux,Faux,26/01/2024,PM-3a,A110,2§2.79
+BUT3,VCOD,TP,2,SAE6-VCOD.1,suite projet LP avec hébergement sur serveur de l'UPVD,PDS,T,Vrai,Faux,Faux,22/01/2024,AM-3a,A119,2§2.80
+BUT3,VCOD,encad,2,SAE6-VCOD.1,suite projet LP avec hébergement sur serveur de l'UPVD,PDS,T,Vrai,Faux,Faux,25/01/2024,AM-1a,A017,2§2.82
+BUT3,VCOD,TD,2,SAE6-VCOD.1,suite projet LP avec hébergement sur serveur de l'UPVD,IU,T,Vrai,Faux,Faux,23/01/2024,AM-3a,A109,2§2.83
+BUT3,VCOD,encad,2,SAE6-VCOD.1,suite projet LP avec hébergement sur serveur de l'UPVD,IU,T,Faux,Faux,Faux,23/01/2024,AM-1a,A119,2§2.85
+FIN,,,,,,,,,,,,,,
