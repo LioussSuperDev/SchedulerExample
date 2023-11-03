@@ -4,10 +4,10 @@ demi-journée 1 :::::::::::::::
 3h -
 4h -
 demi-journée 2 :::::::::::::::
-1h - TD - R6.VCOD.5 [A119] (BUT3 VCOD)
-2h - TD - R6.VCOD.5 [A119] (BUT3 VCOD)
-3h - TP - R6.VCOD.5 [A118] (BUT3 VCOD)
-4h - TP - R6.VCOD.5 [A118] (BUT3 VCOD)
+1h - TP - R6.VCOD.5 [] (BUT3 VCOD)
+2h - TP - R6.VCOD.5 [] (BUT3 VCOD)
+3h - TD - R6.VCOD.5 [] (BUT3 VCOD)
+4h - TD - R6.VCOD.5 [] (BUT3 VCOD)
 demi-journée 3 :::::::::::::::
 1h [100000000] -
 2h [100000000] -
@@ -39,10 +39,10 @@ demi-journée 8 :::::::::::::::
 3h [1000000] -
 4h [1000000] -
 demi-journée 9 :::::::::::::::
-1h [1000000] - TD - R6.VCOD.5 [A110] (BUT3 VCOD)
-2h [1000000] - TD - R6.VCOD.5 [A110] (BUT3 VCOD)
-3h [1000000] - TP - R6.VCOD.5 [A118] (BUT3 VCOD)
-4h [1000000] - TP - R6.VCOD.5 [A118] (BUT3 VCOD)
+1h [1000000] - TD - R6.VCOD.5 [] (BUT3 VCOD)
+2h [1000000] - TD - R6.VCOD.5 [] (BUT3 VCOD)
+3h [1000000] - TP - R6.VCOD.5 [] (BUT3 VCOD)
+4h [1000000] - TP - R6.VCOD.5 [] (BUT3 VCOD)
 demi-journée 10 :::::::::::::::
 1h [1000000] -
 2h [1000000] -

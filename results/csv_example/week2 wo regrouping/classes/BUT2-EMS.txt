@@ -1,0 +1,50 @@
+demi-journée 1 :::::::::::::::
+1h -
+2h -
+3h - encad - SAE4-EMS.1 [A110] ( TS)
+4h - encad - SAE4-EMS.1 [A110] ( TS)
+demi-journée 2 :::::::::::::::
+1h - TP - R4.02 [A110] ( SVP)
+2h - TP - R4.02 [A110] ( SVP)
+3h - TD - R4.02 [A017] ( SVP)
+4h - TD - R4.02 [A017] ( SVP)
+demi-journée 3 :::::::::::::::
+1h - TD - SAE4-2 [A109] ( SVP)
+2h - TD - SAE4-2 [A109] ( SVP)
+3h - TP - R4.EMS.08 [A119] ( TS)
+4h - TP - R4.EMS.08 [A119] ( TS)
+demi-journée 4 :::::::::::::::
+1h - encad - SAE4-EMS.1 [C202] ( TS)
+2h - encad - SAE4-EMS.1 [C202] ( TS)
+3h - auto - SAE4-EMS.1 [A017]
+4h - auto - SAE4-EMS.1 [A017]
+demi-journée 5 :::::::::::::::
+1h -
+2h -
+3h -
+4h -
+demi-journée 6 :::::::::::::::
+1h - encad - SAE4-2 [C204] ( SVP)
+2h - encad - SAE4-2 [C204] ( SVP)
+3h - TD - R4.06 [A119] ( CF)
+4h - TD - R4.06 [A119] ( CF)
+demi-journée 7 :::::::::::::::
+1h -
+2h -
+3h -
+4h -
+demi-journée 8 :::::::::::::::
+1h - auto - SAE4-2 [C202]
+2h - auto - SAE4-2 [C202]
+3h - auto - SAE4-EMS.1 [C204]
+4h - auto - SAE4-EMS.1 [C204]
+demi-journée 9 :::::::::::::::
+1h - auto - SAE4-EMS.1 [A109]
+2h - auto - SAE4-EMS.1 [A109]
+3h - auto - SAE4-2 [C204]
+4h - auto - SAE4-2 [C204]
+demi-journée 10 :::::::::::::::
+1h - TD - SAE4-EMS.1 [C202] ( TS)
+2h -
+3h - TD - R4.02 [C202] ( SVP)
+4h - TD - R4.02 [C202] ( SVP)

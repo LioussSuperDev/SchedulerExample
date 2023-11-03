@@ -2,8 +2,8 @@
 import numpy as np
 from time import time
 from mip import Model, MINIMIZE, CBC, INTEGER, OptimizationStatus, xsum
-
-def generate_milp(cours, creneaux, salles, classes, profs, demi_journees=None, verbose=False, penalite_cours_creneau_seul=1, penalite_journee_travaillee=10):
+import itertools
+def generate_milp(cours, creneaux, salles, classes, profs, demi_journees=None, verbose=False, penalite_cours_creneau_seul=1, penalite_journee_travaillee=10, contraintes_salles=True):
     if verbose:
         print("génération des variables")
     
@@ -40,11 +40,12 @@ def generate_milp(cours, creneaux, salles, classes, profs, demi_journees=None, v
             cours_commence_creneau[(co,cr)] = model.add_var(name="cours_commence_creneau("+str(co.numero)+","+str(cr.numero)+")",var_type=INTEGER,lb=0,ub=1)
             nb_var_commence += 1
     #cours_salle_creneau(co, sl, cr) = le cours est dans cette salle durant ce créneau
-    for sl in salles:
-        for cr in creneaux:
-            for co in cours:
-                cours_salle_creneau[(co,sl,cr)] = model.add_var(name="cours_salle_creneau("+str(co.numero)+","+str(sl.numero)+","+str(cr.numero)+")",var_type=INTEGER,lb=0,ub=1)
-                nb_var_salle_affec += 1
+    if contraintes_salles:
+        for sl in salles:
+            for cr in creneaux:
+                for co in cours:
+                    cours_salle_creneau[(co,sl,cr)] = model.add_var(name="cours_salle_creneau("+str(co.numero)+","+str(sl.numero)+","+str(cr.numero)+")",var_type=INTEGER,lb=0,ub=1)
+                    nb_var_salle_affec += 1
 
     nb_var = nb_var_cours_creneau+nb_var_cours_salle+nb_var_commence+nb_var_salle_affec
 
@@ -75,13 +76,23 @@ def generate_milp(cours, creneaux, salles, classes, profs, demi_journees=None, v
         nb_var += nb_var_cours_journee
 
 
-    # 1] Pour tout cours co : somme [salle sl tq cours_doit_salle(co, sl)] >= 1
-    if verbose:
-        print("génération contrainte 1")
+    # 0] Pour tout prof pr, journée j, nb_mini_de_cours(pr)*cours_journee(pr,j) - somme [cours co de pr, créneau cr dans j] cours_commence_creneau(co, cr) <= 0
+    for pr in profs:
+        nb_heure_cours_prof_total = 0
+        for duree in [co.duree for co in cours if co.prof is pr]:
+            nb_heure_cours_prof_total += duree
+        for j_idx,j in enumerate(journees):
+            model += min(pr.nb_heures_cours_mini_par_jour,nb_heure_cours_prof_total) * cours_journee[(pr,j_idx)] - xsum(cours_commence_creneau[(co, cr)]*co.duree for (co,cr) in itertools.product([co for co in cours if co.prof is pr],[cr for dj in j for cr in dj[1]])) <= 0
 
-    for co in cours:
-        if len(co.contraintes_salle) > 0:
-            model += xsum(cours_salle[(co,sl)] for sl in co.contraintes_salle) >= 1
+    # 1] Pour tout cours co : somme [salle sl tq cours_doit_salle(co, sl)] >= 1
+    
+    if contraintes_salles:
+        if verbose:
+            print("génération contrainte 1")
+
+        for co in cours:
+            if len(co.contraintes_salle) > 0:
+                model += xsum(cours_salle[(co,sl)] for sl in co.contraintes_salle) >= 1
  
     # 2] Pour tout cours co, tout créneau cr : si cours_pas_creneau(co, cr) = 1 alors cours_créneau(co, cr) <= 0
     if verbose:
@@ -97,8 +108,11 @@ def generate_milp(cours, creneaux, salles, classes, profs, demi_journees=None, v
         model += xsum(cours_creneau[(co,cr)] for cr in creneaux) == co.duree
 
     # 4] Pour toute salle sl, creneau cr, somme [co dans COURS] cours_salle_creneau(co,sl,cr) <= 1
-    if verbose:
-        print("génération contrainte 4")
+    
+    if contraintes_salles:
+        if verbose:
+            print("génération contrainte 4")
+    
         for sl in salles:
             for cr in creneaux:
                 model += xsum(cours_salle_creneau[(co,sl,cr)] for co in cours) <= 1
@@ -139,10 +153,11 @@ def generate_milp(cours, creneaux, salles, classes, profs, demi_journees=None, v
 
 
     # 8] Pour tout cours co : (somme [sl les SALLES] cours_salle(co, sl)) = 1
-    if verbose:
-        print("génération contrainte 8")
-    for co in cours:
-        model += xsum(cours_salle[(co,sl)] for sl in salles) == 1
+    if contraintes_salles:
+        if verbose:
+            print("génération contrainte 8")
+        for co in cours:
+            model += xsum(cours_salle[(co,sl)] for sl in salles) == 1
 
     # 9] Pour chaque cours co1,co2 qui sont mutex, et tout créneau cr : cours_creneau(co1, cr) + cours_creneau(co2, cr) <= 1
     if verbose:
@@ -161,21 +176,26 @@ def generate_milp(cours, creneaux, salles, classes, profs, demi_journees=None, v
             model += xsum(cours_creneau[(co,cr)] for cr in creneaux if not cr in co.contrainte_dans_creneaux) <= 0
 
     # 11] Pour tout cours co, toute salle sl : cours_salle(co, sl)*taille(classe(co)) <= taille(sl)
-    if verbose:
-        print("génération contrainte 11")
-    for co in cours:
-        for sl in salles:
-            if (not np.isinf(sl.effectifs)) and co.classe.effectifs > 0:
-                model += co.classe.effectifs * cours_salle[(co,sl)] <= sl.effectifs
+        
+    if contraintes_salles:
+        if verbose:
+            print("génération contrainte 11")
+    
+        for co in cours:
+            for sl in salles:
+                if (not np.isinf(sl.effectifs)) and co.classe.effectifs > 0:
+                    model += co.classe.effectifs * cours_salle[(co,sl)] <= sl.effectifs
 
     # 12] cours_salle_creneau(co, sl, cr) doit être 1 si jamais il y a le cours co dans le créneau cr dans la salle sl
     # pour tout cours co, salle sl, créneau cr, cours_creneau(co, cr) + cours_salle(co, sl) - cours_salle_creneau(co, sl, cr) <= 1 (cours_creneau(co, cr) et cours_salle(co, sl) => cours_salle_creneau(co, sl, cr))
-    if verbose:
-        print("génération contrainte 12")
-    for co in cours:
-        for cr in creneaux:
-            for sl in salles:
-                model += cours_creneau[(co,cr)] + cours_salle[(co,sl)] - cours_salle_creneau[(co,sl,cr)] <= 1
+    if contraintes_salles:
+        if verbose:
+            print("génération contrainte 12")
+    
+        for co in cours:
+            for cr in creneaux:
+                for sl in salles:
+                    model += cours_creneau[(co,cr)] + cours_salle[(co,sl)] - cours_salle_creneau[(co,sl,cr)] <= 1
 
     # 13a] Pour toutes les journées j, pour tous les profs pr, pour tous les créneaux cr dans j, tous les cours co dans COURS du prof, cours_creneau(co, cr) - cours_journee(pr, j) <= 0
     if demi_journees != None:
@@ -282,9 +302,9 @@ def refresh_objects_with_result(model, cours, creneaux, salles, cours_creneau, c
 
 
 
-def build_compute_plne(cours, creneaux, salles, classes, profs, demi_journees=None, penalite_cours_creneau_seul=1, penalite_journee_travaillee=10, verbose=True, max_time=None):
+def build_compute_plne(cours, creneaux, salles, classes, profs, demi_journees=None, penalite_cours_creneau_seul=1, penalite_journee_travaillee=10, verbose=True, max_time=None, contraintes_salles=True):
     t1 = time()
-    model,cours_creneau,cours_salle,cours_commence_creneau,cours_salle_creneau,creneau_seul,cours_journee,journees = generate_milp(cours, creneaux, salles, classes, profs, demi_journees=demi_journees, penalite_cours_creneau_seul=penalite_cours_creneau_seul, penalite_journee_travaillee=penalite_journee_travaillee, verbose=verbose)
+    model,cours_creneau,cours_salle,cours_commence_creneau,cours_salle_creneau,creneau_seul,cours_journee,journees = generate_milp(cours, creneaux, salles, classes, profs, demi_journees=demi_journees, penalite_cours_creneau_seul=penalite_cours_creneau_seul, penalite_journee_travaillee=penalite_journee_travaillee, verbose=verbose, contraintes_salles=contraintes_salles)
     t2 = time()
     if verbose:
         print(str(int(t2-t1)),"secondes écoulées pour la génération des contraintes")

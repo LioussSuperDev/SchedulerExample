@@ -30,9 +30,9 @@ demi-journée 6 :::::::::::::::
 4h -
 demi-journée 7 :::::::::::::::
 1h -
-2h - CM-co - Réunion [A110]
-3h - CM-co - Réunion [A110]
-4h - CM-co - Réunion [A110]
+2h - CM-co - Réunion []
+3h - CM-co - Réunion []
+4h - CM-co - Réunion []
 demi-journée 8 :::::::::::::::
 1h -
 2h -

@@ -1,0 +1,50 @@
+demi-journée 1 :::::::::::::::
+1h [x] -
+2h [x] -
+3h [x] -
+4h [x] -
+demi-journée 2 :::::::::::::::
+1h [x] -
+2h [x] -
+3h [x] -
+4h [x] -
+demi-journée 3 :::::::::::::::
+1h - CM - R6.VCOD.6 [C204] (BUT3 VCOD)
+2h - CM - R6.VCOD.6 [C204] (BUT3 VCOD)
+3h - CM - R6.VCOD.6 [A118] (BUT3 VCOD)
+4h - CM - R6.VCOD.6 [A118] (BUT3 VCOD)
+demi-journée 4 :::::::::::::::
+1h - CM - R6.VCOD.6 [A119] (BUT3 VCOD)
+2h - CM - R6.VCOD.6 [A119] (BUT3 VCOD)
+3h - CM - R6.VCOD.6 [C202] (BUT3 VCOD)
+4h - CM - R6.VCOD.6 [C202] (BUT3 VCOD)
+demi-journée 5 :::::::::::::::
+1h [100000000] -
+2h [100000000] -
+3h [100000000] -
+4h [100000000] -
+demi-journée 6 :::::::::::::::
+1h [1000000] -
+2h [1000000] -
+3h [1000000] -
+4h [1000000] -
+demi-journée 7 :::::::::::::::
+1h [x] -
+2h [x] -
+3h [x] -
+4h [x] -
+demi-journée 8 :::::::::::::::
+1h [x] -
+2h [x] -
+3h [x] -
+4h [x] -
+demi-journée 9 :::::::::::::::
+1h [x] -
+2h [x] -
+3h [x] -
+4h [x] -
+demi-journée 10 :::::::::::::::
+1h [x] -
+2h [x] -
+3h [x] -
+4h [x] -

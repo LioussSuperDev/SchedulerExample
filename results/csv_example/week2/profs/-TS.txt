@@ -1,21 +1,21 @@
 demi-journée 1 :::::::::::::::
 1h -
-2h - TD - SAE4-EMS.1 [C202] (BUT2 EMS)
-3h - TD - R2.07 [C204] (BUT1 G1)
-4h - TD - R2.07 [C204] (BUT1 G1)
-demi-journée 2 :::::::::::::::
-1h - encad - SAE4-EMS.1 [C204] (BUT2 EMS)
-2h - encad - SAE4-EMS.1 [C204] (BUT2 EMS)
-3h - TD - R2.07 [C204] (BUT1 G2)
-4h - TD - R2.07 [C204] (BUT1 G2)
-demi-journée 3 :::::::::::::::
-1h -
 2h -
-3h - encad - SAE4-EMS.1 [A109] (BUT2 EMS)
-4h - encad - SAE4-EMS.1 [A109] (BUT2 EMS)
+3h - encad - SAE4-EMS.1 [] (BUT2 EMS)
+4h - encad - SAE4-EMS.1 [] (BUT2 EMS)
+demi-journée 2 :::::::::::::::
+1h - TD - SAE4-EMS.1 [] (BUT2 EMS)
+2h - TP - R4.EMS.08 [] (BUT2 EMS)
+3h - TP - R4.EMS.08 [] (BUT2 EMS)
+4h -
+demi-journée 3 :::::::::::::::
+1h - TD - R2.07 [] (BUT1 G2)
+2h - TD - R2.07 [] (BUT1 G2)
+3h - encad - SAE4-EMS.1 [] (BUT2 EMS)
+4h - encad - SAE4-EMS.1 [] (BUT2 EMS)
 demi-journée 4 :::::::::::::::
-1h - TP - R4.EMS.08 [A109] (BUT2 EMS)
-2h - TP - R4.EMS.08 [A109] (BUT2 EMS)
+1h - TD - R2.07 [] (BUT1 G1)
+2h - TD - R2.07 [] (BUT1 G1)
 3h -
 4h -
 demi-journée 5 :::::::::::::::

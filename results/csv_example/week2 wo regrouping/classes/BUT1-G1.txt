@@ -1,0 +1,50 @@
+demi-journée 1 :::::::::::::::
+1h - TD - R2.02 [A119] ( IU)
+2h - TD - R2.02 [A119] ( IU)
+3h -
+4h -
+demi-journée 2 :::::::::::::::
+1h -
+2h -
+3h - TD - R2.01 [A118] ( IU)
+4h - TD - R2.01 [A118] ( IU)
+demi-journée 3 :::::::::::::::
+1h -
+2h -
+3h -
+4h -
+demi-journée 4 :::::::::::::::
+1h -
+2h -
+3h - TD - R2.07 [A118] ( TS)
+4h - TD - R2.07 [A118] ( TS)
+demi-journée 5 :::::::::::::::
+1h - TD - R2.11 [A119] ( CF)
+2h - TD - R2.11 [A119] ( CF)
+3h -
+4h -
+demi-journée 6 :::::::::::::::
+1h -
+2h -
+3h - TD - R2.03 [C204] ( PDS)
+4h - TD - R2.03 [C204] ( PDS)
+demi-journée 7 :::::::::::::::
+1h -
+2h -
+3h -
+4h -
+demi-journée 8 :::::::::::::::
+1h -
+2h -
+3h -
+4h -
+demi-journée 9 :::::::::::::::
+1h - TD - R2.11 [A119] ( AS)
+2h - TD - R2.11 [A119] ( AS)
+3h - TP - R2.09 [A017] ( MAB)
+4h - TP - R2.09 [A017] ( MAB)
+demi-journée 10 :::::::::::::::
+1h -
+2h -
+3h -
+4h -

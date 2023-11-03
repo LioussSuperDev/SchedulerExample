@@ -30,9 +30,9 @@ demi-journée 6 :::::::::::::::
 4h -
 demi-journée 7 :::::::::::::::
 1h -
-2h - CM - Réunion (BUT1 )
-3h - CM - Réunion (BUT1 )
-4h - CM - Réunion (BUT1 )
+2h -
+3h -
+4h -
 demi-journée 8 :::::::::::::::
 1h -
 2h -

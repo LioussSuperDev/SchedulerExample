@@ -1,0 +1,50 @@
+demi-journée 1 :::::::::::::::
+1h [100000000] -
+2h [100000000] -
+3h [100000000] -
+4h [100000000] -
+demi-journée 2 :::::::::::::::
+1h [100000000] -
+2h [100000000] -
+3h [1000000] -
+4h [1000000] -
+demi-journée 3 :::::::::::::::
+1h - encad - SAE4-VCOD 1 [B202] (BUT2 VCOD)
+2h - encad - SAE4-VCOD 1 [B202] (BUT2 VCOD)
+3h - TD - R6.EMS.5 [A109] (BUT3 EMS)
+4h - TD - R6.EMS.5 [A109] (BUT3 EMS)
+demi-journée 4 :::::::::::::::
+1h [100000000] -
+2h [100000000] -
+3h [1000000] -
+4h [1000000] - TP - SAE4-VCOD 1 [A119] (BUT2 VCOD)
+demi-journée 5 :::::::::::::::
+1h - CM - R6.EMS.5 [C204] (BUT3 EMS)
+2h - TD - SAE6-EMS.1 [A109] (BUT3 EMS)
+3h - TD - SAE6-EMS.1 [A109] (BUT3 EMS)
+4h - TP - R6.EMS.5 [C202] (BUT3 EMS)
+demi-journée 6 :::::::::::::::
+1h [100000000] -
+2h [100000000] -
+3h [1000000] -
+4h [1000000] -
+demi-journée 7 :::::::::::::::
+1h - TD - SAE4-VCOD 1 [A017] (BUT2 VCOD)
+2h -
+3h -
+4h -
+demi-journée 8 :::::::::::::::
+1h [100000000] -
+2h [100000000] -
+3h [1000000] - encad - SAE4-VCOD 1 [B202] (BUT2 VCOD)
+4h [1000000] - encad - SAE4-VCOD 1 [B202] (BUT2 VCOD)
+demi-journée 9 :::::::::::::::
+1h [x] -
+2h [x] -
+3h [x] -
+4h [x] -
+demi-journée 10 :::::::::::::::
+1h [x] -
+2h [x] -
+3h [x] -
+4h [x] -

@@ -29,13 +29,15 @@ class Classe:
 
 #définition des salles
 class Salle:
-    def __init__(self, batiment, etage, salle, effectifs=np.inf):
+    def __init__(self, batiment, etage, salle, type, dispo, effectifs=np.inf):
         self.batiment = batiment
         self.etage = etage
         self.salle = salle
         self.numero = -1
         self.effectifs = effectifs
         self.penalite_salle = 0
+        self.type = type
+        self.dispo = dispo
 
 #définition des cours
 class Cours:
@@ -67,7 +69,7 @@ class Professeur:
         self.contraintes_pas_cours = [] #Contraintes des créneaux durant lesquelles ce prof ne peut pas venir
         self.contraintes_pref_pas_cours = {} #Dictionnaire (Contraintes des créneaux durant lesquelles ce prof ne veut pas venir => pénalité)
         self.bonus_salle = {} #Dictionnaire (Salle dans lequel le prof a cours => bonus)
-
+        self.nb_heures_cours_mini_par_jour = 1
 
 #Affichage simple après execution de la PLNE
 def simple_print(demi_journees, profs, cours, salles, classes, afficher_profs, afficher_classes, afficher_salles, save_folder=None, scale=0.5):
@@ -100,10 +102,14 @@ def simple_print(demi_journees, profs, cours, salles, classes, afficher_profs, a
                                 continue
                             if cr in co.organisation.creneaux:
                                 found = True
-                                if cr in prof.contraintes_pref_pas_cours:
-                                    print(str((cr_n+1)*scale)+"h ["+str(prof.contraintes_pref_pas_cours[cr])+"] -",co.nom,"["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"]","("+co.classe.niveau+" "+co.classe.spe+")")
+                                if co.organisation.salle:
+                                    num_salle = co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)
                                 else:
-                                    print(str((cr_n+1)*scale)+"h -",co.nom,"["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"] ("+co.classe.niveau+" "+co.classe.spe+")")
+                                    num_salle = ""
+                                if cr in prof.contraintes_pref_pas_cours:
+                                    print(str((cr_n+1)*scale)+"h ["+str(prof.contraintes_pref_pas_cours[cr])+"] -",co.nom,"["+num_salle+"]","("+co.classe.niveau+" "+co.classe.spe+")")
+                                else:
+                                    print(str((cr_n+1)*scale)+"h -",co.nom,"["+num_salle+"] ("+co.classe.niveau+" "+co.classe.spe+")")
                         if cr in prof.contraintes_pas_cours:
                             print(str((cr_n+1)*scale)+"h [x] -")
                         elif cr in prof.contraintes_pref_pas_cours and not found:
@@ -123,10 +129,14 @@ def simple_print(demi_journees, profs, cours, salles, classes, afficher_profs, a
                                     continue
                                 if cr in co.organisation.creneaux:
                                     found = True
-                                    if cr in prof.contraintes_pref_pas_cours:
-                                        f.write(str((cr_n+1)*scale)+"h ["+str(prof.contraintes_pref_pas_cours[cr])+"] - "+co.nom+" ["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"] ("+co.classe.niveau+" "+co.classe.spe+")\n")
+                                    if co.organisation.salle:
+                                        num_salle = co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)
                                     else:
-                                        f.write(str((cr_n+1)*scale)+"h - "+co.nom+" ["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"] ("+co.classe.niveau+" "+co.classe.spe+")\n")
+                                        num_salle = ""
+                                    if cr in prof.contraintes_pref_pas_cours:
+                                        f.write(str((cr_n+1)*scale)+"h ["+str(prof.contraintes_pref_pas_cours[cr])+"] - "+co.nom+" ["+num_salle+"] ("+co.classe.niveau+" "+co.classe.spe+")\n")
+                                    else:
+                                        f.write(str((cr_n+1)*scale)+"h - "+co.nom+" ["+num_salle+"] ("+co.classe.niveau+" "+co.classe.spe+")\n")
                             if cr in prof.contraintes_pas_cours:
                                 f.write(str((cr_n+1)*scale)+"h [x] -\n")
                             elif cr in prof.contraintes_pref_pas_cours and not found:
@@ -153,10 +163,14 @@ def simple_print(demi_journees, profs, cours, salles, classes, afficher_profs, a
                                 continue
                             if cr in co.organisation.creneaux:
                                 found = True
-                                if co.prof != None:
-                                    print(str((cr_n+1)*scale)+"h -",co.nom,"["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"] ("+co.prof.prenom,co.prof.nom+")")
+                                if co.organisation.salle:
+                                    num_salle = co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)
                                 else:
-                                    print(str((cr_n+1)*scale)+"h -",co.nom,"["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"]")
+                                    num_salle = ""
+                                if co.prof != None:
+                                    print(str((cr_n+1)*scale)+"h -",co.nom,"["+num_salle+"] ("+co.prof.prenom,co.prof.nom+")")
+                                else:
+                                    print(str((cr_n+1)*scale)+"h -",co.nom,"["+num_salle+"]")
                         if not found:
                             print(str((cr_n+1)*scale)+"h -")
 
@@ -172,11 +186,14 @@ def simple_print(demi_journees, profs, cours, salles, classes, afficher_profs, a
                                     continue
                                 if cr in co.organisation.creneaux:
                                     found = True
-
-                                    if co.prof != None:
-                                        f.write(str((cr_n+1)*scale)+"h - "+co.nom+" ["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"] ("+co.prof.prenom+" "+co.prof.nom+")\n")
+                                    if co.organisation.salle:
+                                        num_salle = co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)
                                     else:
-                                        f.write(str((cr_n+1)*scale)+"h - "+co.nom+" ["+co.organisation.salle.batiment+str(co.organisation.salle.etage)+str(co.organisation.salle.salle)+"]\n")
+                                        num_salle = ""
+                                    if co.prof != None:
+                                        f.write(str((cr_n+1)*scale)+"h - "+co.nom+" ["+num_salle+"] ("+co.prof.prenom+" "+co.prof.nom+")\n")
+                                    else:
+                                        f.write(str((cr_n+1)*scale)+"h - "+co.nom+" ["+num_salle+"]\n")
                             if not found:
                                 f.write(str((cr_n+1)*scale)+"h -\n")
 

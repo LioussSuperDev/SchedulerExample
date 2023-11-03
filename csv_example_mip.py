@@ -10,6 +10,8 @@ from datetime import datetime as dtt,timedelta
 ######################################################
 ######################################################
 
+contraintes_salles = False #Assigne des salles (augmente de beaucoup le temps de calcul)
+
 duree_demi_journee = 4
 nombre_demi_journees = 10
 
@@ -24,7 +26,7 @@ penalite_cours_creneau_seul = 1
 penalite_journee_travaillee = 20
 
 week_number = 2
-date_lundi = "22/01/2024"
+date_lundi = "29/01/2024"
 
 fichier_contraintes = "./exemples/week"+str(week_number)+"/contraintes.csv"
 fichier_cours = "./exemples/week"+str(week_number)+"/cours.csv"
@@ -58,7 +60,7 @@ def date_to_creneaux(date, creneau, demi_journees, duree):
 def creneau_to_date(monday_date_string, creneau):
     day = (dtt.strptime(monday_date_string, "%d/%m/%Y") + timedelta(days=creneau.numero//8)).strftime("%d/%m/%Y")
     cr = "PM-" if creneau.numero%8 >= 4 else "AM-"
-    cr += str((creneau.numero%4)+1)+"a"
+    cr += str((creneau.numero%8)+1)+"a"
     return day,cr
 
 
@@ -89,6 +91,7 @@ for dj in demi_journees:
         cr.numero = i
         i += 1
 print(creneau_to_date(date_lundi,creneaux[10]))
+
 ##############################################################
 # REMPLISSAGE DES PROFS ######################################
 ##############################################################
@@ -102,11 +105,14 @@ with open(fichier_contraintes) as csvfile:
             continue
 
         prof = Professeur(row[0],"")
-        for i in range(1,len(row)-1):
+
+        prof.nb_heures_cours_mini_par_jour = int(row[1])
+
+        for i in range(2,len(row)-1):
             # creneau_index = int(((i-1)*2)%8)
             # dj_index = ((i-1)*2)//8
-            creneau_index = int((i-1)%4)
-            dj_index = (i-1)//4
+            creneau_index = int((i-2)%4)
+            dj_index = (i-2)//4
             if row[i] == "0":
                 prof.contraintes_pas_cours.append(demi_journees[dj_index][creneau_index])
                 # prof.contraintes_pas_cours.append(demi_journees[dj_index][creneau_index+1])
@@ -211,12 +217,13 @@ with open(fichier_salles) as csvfile:
         type_salle = row[4]
         is_info = (row[2] == "info")
 
-        salle = Salle("","",nom,effectifs)
+        salle = Salle("","",nom,effectifs,row[2],type_salle)
 
         #Contraintes salles info
         for c in cours:
-            if "info" in c.tags:
+            if "info" in c.tags == is_info:
                 c.contraintes_salle.append(salle)
+
 
         #Contraintes salles lointaines
         if "Odeum" in nom:
@@ -263,7 +270,7 @@ print("taille profs :",len(profs))
 print("taille cours :",len(cours))
 print("taille salles :",len(salles))
 print("taille creneaux :",len(creneaux))
-res = build_compute_plne(cours, creneaux, salles, classes, profs, demi_journees=demi_journees, penalite_cours_creneau_seul=penalite_cours_creneau_seul, penalite_journee_travaillee=penalite_journee_travaillee, verbose=True, max_time=max_time)
+res = build_compute_plne(cours, creneaux, salles, classes, profs, demi_journees=demi_journees, penalite_cours_creneau_seul=penalite_cours_creneau_seul, penalite_journee_travaillee=penalite_journee_travaillee, verbose=True, max_time=max_time, contraintes_salles=contraintes_salles)
 
 ################################# AFFICHAGE ####################################################################################################################################################
 
@@ -283,14 +290,22 @@ with open(fichier_cours) as csvfileread:
             if i != 0:
                 for cour in cours:
                     if cour.tags["_id"] == row[-1]:
-                        sl = cour.organisation.salle
                         creneau = None
                         for cr in cour.organisation.creneaux:
                             if creneau == None or cr.numero < creneau.numero:
                                 creneau = cr
-                        row[-2] = sl.batiment+str(sl.etage)+str(sl.salle)
+                        sl = cour.organisation.salle
+                        if sl != None:
+                            if sl.dispo!="pleine":
+                                comment="{!}"
+                            else:
+                                comment=""
+                            if row[-2] == "":
+                                row[-2] = str(sl.salle)+" ("+str(sl.type)+":"+str(sl.effectifs)+") "+comment
                         date,creneau = creneau_to_date(date_lundi, creneau)
-                        row[-3] = creneau
-                        row[-4] = date
+                        if row[-3] == "":
+                            row[-3] = creneau
+                        if row[-4] == "":
+                            row[-4] = date
 
             writer.writerow(row)

@@ -19,13 +19,13 @@ demi-journée 4 :::::::::::::::
 3h [1000000] -
 4h [1000000] -
 demi-journée 5 :::::::::::::::
-1h - TD - R6.EMS.6 [A110] (BUT3 EMS)
-2h - TD - R6.EMS.6 [A110] (BUT3 EMS)
+1h -
+2h -
 3h - TD - R6.EMS.6 [A110] (BUT3 EMS)
 4h - TD - R6.EMS.6 [A110] (BUT3 EMS)
 demi-journée 6 :::::::::::::::
-1h -
-2h -
+1h - TD - R6.EMS.6 [A110] (BUT3 EMS)
+2h - TD - R6.EMS.6 [A110] (BUT3 EMS)
 3h -
 4h -
 demi-journée 7 :::::::::::::::
