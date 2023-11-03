@@ -30,10 +30,11 @@ def generate_milp(cours, creneaux, salles, classes, profs, demi_journees=None, v
             cours_creneau[(co,cr)] = model.add_var(name="cours_creneau("+str(co.numero)+","+str(cr.numero)+")",var_type=INTEGER,lb=0,ub=1)
             nb_var_cours_creneau += 1
     #cours_salle(co, sl) signifie que le cours co a lieu dans la salle sl
-    for co in cours:
-        for sl in salles:
-            cours_salle[(co,sl)] = model.add_var(name="cours_salle("+str(co.numero)+","+str(sl.numero)+")",var_type=INTEGER,lb=0,ub=1)
-            nb_var_cours_salle += 1
+    if contraintes_salles:
+        for co in cours:
+            for sl in salles:
+                cours_salle[(co,sl)] = model.add_var(name="cours_salle("+str(co.numero)+","+str(sl.numero)+")",var_type=INTEGER,lb=0,ub=1)
+                nb_var_cours_salle += 1
     #cours_commence_créneau(co, cr) signifie que le cours co a lieu durant le créneau cr
     for co in cours:
         for cr in creneaux:
@@ -250,16 +251,18 @@ def generate_milp(cours, creneaux, salles, classes, profs, demi_journees=None, v
                 objective_coef.append((co.prof.contraintes_pref_pas_cours[cr],cours_creneau[(co,cr)]))
 
     #B] pénalité cours dans mauvaise salle
-    for co in cours:
-        for sl in salles:
-            objective_coef.append((sl.penalite_salle,cours_salle[(co,sl)]))
+    if contraintes_salles:
+        for co in cours:
+            for sl in salles:
+                objective_coef.append((sl.penalite_salle,cours_salle[(co,sl)]))
 
     #C] bonus si prof a cours dans une salle qu'il aime
     #pénalité
-    for co in cours:
-        if co.prof != None:
-            for sl in co.prof.bonus_salle:
-                objective_coef.append((-co.prof.bonus_salle[sl],cours_salle[(co,sl)]))
+    if contraintes_salles:
+        for co in cours:
+            if co.prof != None:
+                for sl in co.prof.bonus_salle:
+                    objective_coef.append((-co.prof.bonus_salle[sl],cours_salle[(co,sl)]))
 
     #D] 1] pénalités pour les créneaux seuls 2] pénalité du nombre de journées travaillées par les profs
     if demi_journees != None:
@@ -295,20 +298,20 @@ def refresh_objects_with_result(model, cours, creneaux, salles, cours_creneau, c
     #Affectations cours-salles
     for co in cours:
         for sl in salles:
-            if cours_salle[(co,sl)].xi(best_k) > 0.5:
+            if (co,sl) in cours_salle and cours_salle[(co,sl)].xi(best_k) > 0.5:
                 co.organisation.salle = sl
             i += 1
 
 
 
 
-def build_compute_plne(cours, creneaux, salles, classes, profs, demi_journees=None, penalite_cours_creneau_seul=1, penalite_journee_travaillee=10, verbose=True, max_time=None, contraintes_salles=True):
+def build_compute_plne(cours, creneaux, salles, classes, profs, demi_journees=None, penalite_cours_creneau_seul=1, penalite_journee_travaillee=10, verbose=True, max_time=None, contraintes_salles=True, mip_preprocess=False):
     t1 = time()
     model,cours_creneau,cours_salle,cours_commence_creneau,cours_salle_creneau,creneau_seul,cours_journee,journees = generate_milp(cours, creneaux, salles, classes, profs, demi_journees=demi_journees, penalite_cours_creneau_seul=penalite_cours_creneau_seul, penalite_journee_travaillee=penalite_journee_travaillee, verbose=verbose, contraintes_salles=contraintes_salles)
     t2 = time()
     if verbose:
         print(str(int(t2-t1)),"secondes écoulées pour la génération des contraintes")
-    status = compute_plne(model,verbose=verbose,max_time=max_time)
+    status = compute_plne(model,verbose=verbose,max_time=max_time,mip_preprocess=mip_preprocess)
     print("Status :",status)
     t3 = time()
     if verbose:
@@ -319,10 +322,12 @@ def build_compute_plne(cours, creneaux, salles, classes, profs, demi_journees=No
     return model
 
 
-def compute_plne(model, max_time=None, verbose=True):
+def compute_plne(model, max_time=None, verbose=True, mip_preprocess=True):
     
     model.emphasis = 3
-    model.preprocess = 0
+    if not mip_preprocess:
+        model.preprocess = 0
+    
     if max_time == None:
         status = model.optimize()
     else:

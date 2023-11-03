@@ -11,6 +11,7 @@ from datetime import datetime as dtt,timedelta
 ######################################################
 
 contraintes_salles = False #Assigne des salles (augmente de beaucoup le temps de calcul)
+mip_preprocess = True #Active le preprocessing du solver mip; peut accélérer (ou parfois ralentir) le calcul
 
 duree_demi_journee = 4
 nombre_demi_journees = 10
@@ -213,8 +214,8 @@ with open(fichier_salles) as csvfile:
         if row_n == 0 or row[0] == "":
             continue
         nom = row[1]
-        effectifs = int(row[3])
-        type_salle = row[4]
+        effectifs = row[4]
+        type_salle = int(row[3])
         is_info = (row[2] == "info")
 
         salle = Salle("","",nom,effectifs,row[2],type_salle)
@@ -270,7 +271,7 @@ print("taille profs :",len(profs))
 print("taille cours :",len(cours))
 print("taille salles :",len(salles))
 print("taille creneaux :",len(creneaux))
-res = build_compute_plne(cours, creneaux, salles, classes, profs, demi_journees=demi_journees, penalite_cours_creneau_seul=penalite_cours_creneau_seul, penalite_journee_travaillee=penalite_journee_travaillee, verbose=True, max_time=max_time, contraintes_salles=contraintes_salles)
+res = build_compute_plne(cours, creneaux, salles, classes, profs, demi_journees=demi_journees, penalite_cours_creneau_seul=penalite_cours_creneau_seul, penalite_journee_travaillee=penalite_journee_travaillee, verbose=True, max_time=max_time, contraintes_salles=contraintes_salles, mip_preprocess=mip_preprocess)
 
 ################################# AFFICHAGE ####################################################################################################################################################
 
@@ -295,7 +296,7 @@ with open(fichier_cours) as csvfileread:
                             if creneau == None or cr.numero < creneau.numero:
                                 creneau = cr
                         sl = cour.organisation.salle
-                        if sl != None:
+                        if sl != None and contraintes_salles:
                             if sl.dispo!="pleine":
                                 comment="{!}"
                             else:
