@@ -1,31 +1,31 @@
 demi-journée 1 :::::::::::::::
-1h - TD - SAE4-2 [] ( SVP)
-2h - TD - SAE4-2 [] ( SVP)
-3h - TD - R4.02 [] ( SVP)
-4h - TD - R4.02 [] ( SVP)
-demi-journée 2 :::::::::::::::
-1h - TP - R4.02 [] ( SVP)
-2h - TP - R4.02 [] ( SVP)
-3h - TD - R4.02 [] ( SVP)
-4h - TD - R4.02 [] ( SVP)
-demi-journée 3 :::::::::::::::
-1h - TP - SAE4-VCOD 1 [] ( MK)
-2h - TD - SAE4-VCOD 1 [] ( MK)
-3h -
-4h -
-demi-journée 4 :::::::::::::::
-1h - TP - R4.VCOD.09 [] ( PDS)
-2h - TP - R4.VCOD.09 [] ( PDS)
-3h - TP - R4.VCOD.09 [] ( PDS)
-4h - TP - R4.VCOD.09 [] ( PDS)
-demi-journée 5 :::::::::::::::
-1h - TD - R4.06 [] ( CF)
-2h - TD - R4.06 [] ( CF)
-3h - encad - SAE4-VCOD 1 [] ( MK)
-4h - encad - SAE4-VCOD 1 [] ( MK)
-demi-journée 6 :::::::::::::::
 1h -
 2h -
+3h -
+4h -
+demi-journée 2 :::::::::::::::
+1h - TP - R4.VCOD.09 [] ( PDS)
+2h - TP - R4.VCOD.09 [] ( PDS)
+3h - encad - SAE4-2 [] ( SVP)
+4h - encad - SAE4-2 [] ( SVP)
+demi-journée 3 :::::::::::::::
+1h - TD - R4.02 [] ( SVP)
+2h - TD - R4.02 [] ( SVP)
+3h - TD - R4.02 [] ( SVP)
+4h - TD - R4.02 [] ( SVP)
+demi-journée 4 :::::::::::::::
+1h -
+2h -
+3h - TP - SAE4-VCOD 1 [] ( MK)
+4h -
+demi-journée 5 :::::::::::::::
+1h - encad - SAE4-VCOD 1 [] ( MK)
+2h - encad - SAE4-VCOD 1 [] ( MK)
+3h -
+4h - TD - SAE4-VCOD 1 [] ( MK)
+demi-journée 6 :::::::::::::::
+1h - TD - R4.06 [] ( CF)
+2h - TD - R4.06 [] ( CF)
 3h - encad - SAE4-VCOD 1 [] ( MK)
 4h - encad - SAE4-VCOD 1 [] ( MK)
 demi-journée 7 :::::::::::::::
@@ -34,17 +34,17 @@ demi-journée 7 :::::::::::::::
 3h -
 4h -
 demi-journée 8 :::::::::::::::
-1h -
-2h -
-3h - encad - SAE4-2 [] ( SVP)
-4h - encad - SAE4-2 [] ( SVP)
+1h - TD - SAE4-2 [] ( SVP)
+2h - TD - SAE4-2 [] ( SVP)
+3h - TP - R4.VCOD.09 [] ( PDS)
+4h - TP - R4.VCOD.09 [] ( PDS)
 demi-journée 9 :::::::::::::::
-1h -
-2h -
+1h - auto - SAE4-2 []
+2h - auto - SAE4-2 []
 3h - auto - SAE4-2 []
 4h - auto - SAE4-2 []
 demi-journée 10 :::::::::::::::
-1h - auto - SAE4-2 []
-2h - auto - SAE4-2 []
+1h - TP - R4.02 [] ( SVP)
+2h - TP - R4.02 [] ( SVP)
 3h -
 4h -

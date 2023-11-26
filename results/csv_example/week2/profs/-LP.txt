@@ -39,10 +39,10 @@ demi-journée 8 :::::::::::::::
 3h -
 4h -
 demi-journée 9 :::::::::::::::
-1h -
-2h -
-3h - TP - R6.VCOD.5 [] (BUT3 VCOD)
-4h - TP - R6.VCOD.5 [] (BUT3 VCOD)
+1h - TP - R6.VCOD.5 [] (BUT3 VCOD)
+2h - TP - R6.VCOD.5 [] (BUT3 VCOD)
+3h -
+4h -
 demi-journée 10 :::::::::::::::
 1h -
 2h -

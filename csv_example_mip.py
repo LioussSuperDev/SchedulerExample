@@ -27,8 +27,8 @@ bonus_prof_salle = 1
 penalite_cours_creneau_seul = 1
 penalite_journee_travaillee = 20
 
-week_number = 2
-date_lundi = "29/01/2024"
+week_number = 1
+date_lundi = "22/01/2024"
 
 fichier_contraintes = "./exemples/week"+str(week_number)+"/contraintes.csv"
 fichier_cours = "./exemples/week"+str(week_number)+"/cours.csv"

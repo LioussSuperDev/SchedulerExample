@@ -1,50 +1,50 @@
 demi-journée 1 :::::::::::::::
-1h - auto - SAE4-2 []
-2h - auto - SAE4-2 []
+1h - TP - R4.02 [] ( SVP)
+2h - TP - R4.02 [] ( SVP)
 3h -
-4h - TD - SAE4-EMS.1 [] ( TS)
+4h -
 demi-journée 2 :::::::::::::::
-1h - encad - SAE4-EMS.1 [] ( TS)
-2h - encad - SAE4-EMS.1 [] ( TS)
+1h - TD - SAE4-2 [] ( SVP)
+2h - TD - SAE4-2 [] ( SVP)
 3h -
 4h -
 demi-journée 3 :::::::::::::::
-1h - TD - R4.02 [] ( SVP)
-2h - TD - R4.02 [] ( SVP)
-3h -
-4h -
-demi-journée 4 :::::::::::::::
-1h - TP - R4.EMS.08 [] ( TS)
+1h -
 2h - TP - R4.EMS.08 [] ( TS)
-3h - encad - SAE4-EMS.1 [] ( TS)
-4h - encad - SAE4-EMS.1 [] ( TS)
+3h - TP - R4.EMS.08 [] ( TS)
+4h - TD - SAE4-EMS.1 [] ( TS)
+demi-journée 4 :::::::::::::::
+1h - encad - SAE4-EMS.1 [] ( TS)
+2h - encad - SAE4-EMS.1 [] ( TS)
+3h - auto - SAE4-EMS.1 []
+4h - auto - SAE4-EMS.1 []
 demi-journée 5 :::::::::::::::
-1h - TD - SAE4-2 [] ( SVP)
-2h - TD - SAE4-2 [] ( SVP)
+1h - TD - R4.06 [] ( CF)
+2h - TD - R4.06 [] ( CF)
 3h - TD - R4.02 [] ( SVP)
 4h - TD - R4.02 [] ( SVP)
 demi-journée 6 :::::::::::::::
-1h -
-2h -
-3h - TD - R4.06 [] ( CF)
-4h - TD - R4.06 [] ( CF)
+1h - TD - R4.02 [] ( SVP)
+2h - TD - R4.02 [] ( SVP)
+3h - encad - SAE4-2 [] ( SVP)
+4h - encad - SAE4-2 [] ( SVP)
 demi-journée 7 :::::::::::::::
 1h -
 2h -
 3h -
 4h -
 demi-journée 8 :::::::::::::::
-1h - TP - R4.02 [] ( SVP)
-2h - TP - R4.02 [] ( SVP)
+1h - auto - SAE4-EMS.1 []
+2h - auto - SAE4-EMS.1 []
+3h - encad - SAE4-EMS.1 [] ( TS)
+4h - encad - SAE4-EMS.1 [] ( TS)
+demi-journée 9 :::::::::::::::
+1h - auto - SAE4-2 []
+2h - auto - SAE4-2 []
 3h - auto - SAE4-EMS.1 []
 4h - auto - SAE4-EMS.1 []
-demi-journée 9 :::::::::::::::
-1h - auto - SAE4-EMS.1 []
-2h - auto - SAE4-EMS.1 []
-3h - auto - SAE4-2 []
-4h - auto - SAE4-2 []
 demi-journée 10 :::::::::::::::
-1h - auto - SAE4-EMS.1 []
-2h - auto - SAE4-EMS.1 []
-3h - encad - SAE4-2 [] ( SVP)
-4h - encad - SAE4-2 [] ( SVP)
+1h - auto - SAE4-2 []
+2h - auto - SAE4-2 []
+3h -
+4h -

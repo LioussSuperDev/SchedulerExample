@@ -121,13 +121,19 @@ def generate_milp(cours, creneaux, salles, classes, profs, demi_journees=None, v
     # 5] Pour chaque cours co1,co2 qui ont le même prof, et tout créneau cr : cours_creneau(co1, cr) + cours_creneau(co2, cr) <= 1
     if verbose:
         print("génération contrainte 5")
-    c_done = []
-    for co1 in cours:
-        c_done.append(co1)
-        for co2 in cours:
-            if (co1.prof != None) and (co2.prof != None) and (not co2 in c_done) and co1.prof is co2.prof:
-                for cr in creneaux:
-                    model += cours_creneau[(co1,cr)] + cours_creneau[(co2,cr)] <= 1
+    # c_done = []
+    # for co1 in cours:
+    #     c_done.append(co1)
+    #     for co2 in cours:
+    #         if (co1.prof != None) and (co2.prof != None) and (not co2 in c_done) and co1.prof is co2.prof:
+    #             for cr in creneaux:
+    #                 model += cours_creneau[(co1,cr)] + cours_creneau[(co2,cr)] <= 1
+
+    #Nouvelle version :
+    #Pour tout les créneaux cr et les profs pr, la somme des cours de pr sur le créneau cr <= 1
+    for cr in creneaux:
+        for pr in profs:
+            model += xsum(cours_creneau[(co,cr)] for co in cours if co.prof is pr) <= 1
         
 
     # 6.a] pour tout cours co, créneau cr,
@@ -158,7 +164,7 @@ def generate_milp(cours, creneaux, salles, classes, profs, demi_journees=None, v
         if verbose:
             print("génération contrainte 8")
         for co in cours:
-            model += xsum(cours_salle[(co,sl)] for sl in salles) == 1
+            model += xsum(cours_salle[(co,sl)] for sl in salles) >= 1
 
     # 9] Pour chaque cours co1,co2 qui sont mutex, et tout créneau cr : cours_creneau(co1, cr) + cours_creneau(co2, cr) <= 1
     if verbose:
@@ -211,7 +217,7 @@ def generate_milp(cours, creneaux, salles, classes, profs, demi_journees=None, v
                                 model += cours_creneau[(co,cr)] - cours_journee[(pr,i)] <= 0
 
 
-    # 13b] Pour tous les profs pr, pour tous les cours co de pr, pour tous les créneaux, (somme[co1 dans COURS de p] cours_creneau(co1,cr-1)) + (somme[co1 dans COURS de p] cours_creneau(co1,cr+duree(co))) + cours_seul(co,cr) >= 1
+    # 13b] Pour tous les profs pr, pour tous les cours co de pr, pour tous les créneaux, (somme[co1 dans COURS de pr] cours_creneau(co1,cr-1)) + (somme[co1 dans COURS de pr] cours_creneau(co1,cr+duree(co))) + cours_seul(co,cr) >= 1
 
     if penalite_cours_creneau_seul != 0 and demi_journees != None:
         if verbose:
