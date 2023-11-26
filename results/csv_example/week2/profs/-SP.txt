@@ -1,13 +1,13 @@
 demi-journée 1 :::::::::::::::
-1h - TP - R6.01 [] (BUT3 VCOD)
-2h - TP - R6.01 [] (BUT3 VCOD)
-3h - TD - R6.01 [] (BUT3 EMS)
-4h - TD - R6.01 [] (BUT3 EMS)
+1h - TP - R6.01 [] (BUT3 EMS)
+2h - TP - R6.01 [] (BUT3 EMS)
+3h - TP - R6.01 [] (BUT3 VCOD)
+4h - TP - R6.01 [] (BUT3 VCOD)
 demi-journée 2 :::::::::::::::
 1h - TP - R6.01 [] (BUT3 EMS)
 2h - TP - R6.01 [] (BUT3 EMS)
-3h - TP - R6.01 [] (BUT3 EMS)
-4h - TP - R6.01 [] (BUT3 EMS)
+3h - TD - R6.01 [] (BUT3 EMS)
+4h - TD - R6.01 [] (BUT3 EMS)
 demi-journée 3 :::::::::::::::
 1h [1000000] -
 2h [1000000] -
@@ -24,19 +24,19 @@ demi-journée 5 :::::::::::::::
 3h [1000000] -
 4h [1000000] -
 demi-journée 6 :::::::::::::::
-1h [1000000] - TD - R6.01 [] (BUT3 VCOD)
-2h [1000000] - TD - R6.01 [] (BUT3 VCOD)
-3h [1000000] - TP - R6.01 [] (BUT3 EMS)
-4h [1000000] - TP - R6.01 [] (BUT3 EMS)
+1h [1000000] -
+2h [1000000] -
+3h [1000000] -
+4h [1000000] -
 demi-journée 7 :::::::::::::::
-1h [100000000] -
+1h [100000000] - TD - R6.01 [] (BUT3 VCOD)
 2h [100000000] -
 3h [100000000] -
 4h [100000000] -
 demi-journée 8 :::::::::::::::
-1h [100000000] -
-2h [100000000] -
-3h [100000000] -
+1h [100000000] - TD - R6.01 [] (BUT3 EMS)
+2h [100000000] - TP - R6.01 [] (BUT3 EMS)
+3h [100000000] - TP - R6.01 [] (BUT3 EMS)
 4h [100000000] -
 demi-journée 9 :::::::::::::::
 1h [x] -
@@ -44,7 +44,7 @@ demi-journée 9 :::::::::::::::
 3h [x] -
 4h [x] -
 demi-journée 10 :::::::::::::::
-1h - TD - R6.01 [] (BUT3 VCOD)
-2h - TD - R6.01 [] (BUT3 EMS)
-3h - TP - R6.01 [] (BUT3 VCOD)
-4h - TP - R6.01 [] (BUT3 VCOD)
+1h - TP - R6.01 [] (BUT3 VCOD)
+2h - TP - R6.01 [] (BUT3 VCOD)
+3h - TD - R6.01 [] (BUT3 VCOD)
+4h - TD - R6.01 [] (BUT3 VCOD)

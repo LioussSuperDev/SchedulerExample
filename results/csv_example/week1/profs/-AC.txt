@@ -9,15 +9,15 @@ demi-journée 2 :::::::::::::::
 3h [x] -
 4h [x] -
 demi-journée 3 :::::::::::::::
-1h - TD - R2.01 [A118] (BUT1 G2)
-2h - TD - R2.01 [A118] (BUT1 G2)
-3h - TD - R2.01 [A118] (BUT1 G1)
-4h - TD - R2.01 [A118] (BUT1 G1)
+1h - TD - R2.01 [] (BUT1 G2)
+2h - TD - R2.01 [] (BUT1 G2)
+3h - TD - R2.01 [] (BUT1 G1)
+4h - TD - R2.01 [] (BUT1 G1)
 demi-journée 4 :::::::::::::::
-1h - CM-co - R6.04 [A017] (BUT3 )
-2h - CM-co - R6.04 [A017] (BUT3 )
-3h - CM - R2.10 [A110] (BUT1 )
-4h - CM - R2.10 [A110] (BUT1 )
+1h - CM-co - R6.04 [] (BUT3 )
+2h - CM-co - R6.04 [] (BUT3 )
+3h - CM - R2.10 [] (BUT1 )
+4h - CM - R2.10 [] (BUT1 )
 demi-journée 5 :::::::::::::::
 1h [100000000] -
 2h [100000000] -

@@ -9,10 +9,10 @@ demi-journée 2 :::::::::::::::
 3h -
 4h -
 demi-journée 3 :::::::::::::::
-1h - CM-co - R4.02 [] ( SVP)
-2h - CM-co - R4.02 [] ( SVP)
-3h -
-4h -
+1h -
+2h -
+3h - CM-co - R4.02 [] ( SVP)
+4h - CM-co - R4.02 [] ( SVP)
 demi-journée 4 :::::::::::::::
 1h -
 2h -
@@ -24,8 +24,8 @@ demi-journée 5 :::::::::::::::
 3h -
 4h -
 demi-journée 6 :::::::::::::::
-1h -
-2h -
+1h - CM-co - SAE4-2 [] ( SVP)
+2h - CM-co - SAE4-2 [] ( SVP)
 3h -
 4h -
 demi-journée 7 :::::::::::::::
@@ -36,8 +36,8 @@ demi-journée 7 :::::::::::::::
 demi-journée 8 :::::::::::::::
 1h -
 2h -
-3h - CM-co - SAE4-2 [] ( SVP)
-4h - CM-co - SAE4-2 [] ( SVP)
+3h -
+4h -
 demi-journée 9 :::::::::::::::
 1h -
 2h -

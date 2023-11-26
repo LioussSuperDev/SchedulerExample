@@ -1,50 +1,50 @@
 demi-journée 1 :::::::::::::::
-1h - CM - SAE4-EMS.1 [A110] ( TS)
-2h - CM - SAE4-EMS.1 [A110] ( TS)
-3h - TD - SAE4-EMS.1 [A118] ( ATER)
-4h - TD - SAE4-EMS.1 [A118] ( ATER)
+1h - TD - SAE4-EMS.1 [] ( ATER)
+2h - TD - SAE4-EMS.1 [] ( ATER)
+3h - TD - SAE4-EMS.1 [] ( ATER)
+4h - TD - SAE4-EMS.1 [] ( ATER)
 demi-journée 2 :::::::::::::::
-1h - TD - SAE4-EMS.1 [A109] ( ATER)
-2h - TD - SAE4-EMS.1 [A109] ( ATER)
-3h - CM - R4.EMS.08 [A118] ( TS)
-4h - CM - R4.EMS.08 [A118] ( TS)
+1h - TD - SAE4-EMS.1 [] ( ATER)
+2h - encad - SAE4-EMS.1 [] ( ATER)
+3h - encad - SAE4-EMS.1 [] ( ATER)
+4h -
 demi-journée 3 :::::::::::::::
-1h - TD - R4.05 [C204] ( FA)
-2h - TD - R4.05 [C204] ( FA)
-3h - TD - R4.02 [A017] ( SVP)
-4h - TD - R4.02 [A017] ( SVP)
+1h - TD - R4.02 [] ( SVP)
+2h - TD - R4.02 [] ( SVP)
+3h - TD - R4.02 [] ( SVP)
+4h - TD - R4.02 [] ( SVP)
 demi-journée 4 :::::::::::::::
-1h -
-2h -
+1h - TD - R4.05 [] ( FA)
+2h - TD - R4.05 [] ( FA)
 3h -
 4h -
 demi-journée 5 :::::::::::::::
-1h - TD - R4.06 [A119] ( CF)
-2h - TD - R4.06 [A119] ( CF)
-3h -
-4h -
+1h -
+2h -
+3h - TP - R4.01 [] ( MK)
+4h - TP - R4.01 [] ( MK)
 demi-journée 6 :::::::::::::::
+1h - TD - R4.02 [] ( SVP)
+2h - TD - R4.02 [] ( SVP)
+3h - TD - R4.06 [] ( CF)
+4h - TD - R4.06 [] ( CF)
+demi-journée 7 :::::::::::::::
 1h -
 2h -
 3h -
 4h -
-demi-journée 7 :::::::::::::::
-1h - TP - R4.01 [B202] ( MK)
-2h - TP - R4.01 [B202] ( MK)
-3h - TD - R4.02 [A109] ( SVP)
-4h - TD - R4.02 [A109] ( SVP)
 demi-journée 8 :::::::::::::::
-1h - TD - R4.02 [A017] ( SVP)
-2h - TD - R4.02 [A017] ( SVP)
-3h -
-4h -
+1h -
+2h -
+3h - CM - R4.EMS.08 [] ( TS)
+4h - CM - R4.EMS.08 [] ( TS)
 demi-journée 9 :::::::::::::::
-1h - auto - SAE4-EMS.1 [C202]
-2h - auto - SAE4-EMS.1 [C202]
+1h -
+2h -
 3h -
 4h -
 demi-journée 10 :::::::::::::::
-1h - TD - SAE4-EMS.1 [A119] ( ATER)
-2h - encad - SAE4-EMS.1 [A109] ( ATER)
-3h - encad - SAE4-EMS.1 [A109] ( ATER)
-4h -
+1h - CM - SAE4-EMS.1 [] ( TS)
+2h - CM - SAE4-EMS.1 [] ( TS)
+3h - auto - SAE4-EMS.1 []
+4h - auto - SAE4-EMS.1 []

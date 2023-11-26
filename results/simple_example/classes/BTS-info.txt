@@ -1,8 +1,8 @@
 demi-journée 1 :::::::::::::::
-0.5h - Cours de Théâtre [I416] (Will SMITH)
-1.0h - Cours de Théâtre [I416] (Will SMITH)
-1.5h - Cours de Théâtre [I416] (Will SMITH)
-2.0h - Cours de Théâtre [I416] (Will SMITH)
+0.5h - Cours de Théâtre [] (Will SMITH)
+1.0h - Cours de Théâtre [] (Will SMITH)
+1.5h - Cours de Théâtre [] (Will SMITH)
+2.0h - Cours de Théâtre [] (Will SMITH)
 2.5h -
 3.0h -
 3.5h -
@@ -17,11 +17,11 @@ demi-journée 2 :::::::::::::::
 3.5h -
 4.0h -
 demi-journée 3 :::::::::::::::
-0.5h - Cours de Musique [I416] (Frank SINATRA)
-1.0h - Cours de Musique [I416] (Frank SINATRA)
-1.5h - Cours de Musique [I416] (Frank SINATRA)
-2.0h - Cours de Musique [I416] (Frank SINATRA)
-2.5h -
-3.0h - Cours de Maths [I417] (Jésus CHRIST)
-3.5h - Cours de Maths [I417] (Jésus CHRIST)
+0.5h - Cours de Musique [] (Frank SINATRA)
+1.0h - Cours de Musique [] (Frank SINATRA)
+1.5h - Cours de Musique [] (Frank SINATRA)
+2.0h - Cours de Musique [] (Frank SINATRA)
+2.5h - Cours de Maths [] (Jésus CHRIST)
+3.0h - Cours de Maths [] (Jésus CHRIST)
+3.5h -
 4.0h -

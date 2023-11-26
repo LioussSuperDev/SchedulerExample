@@ -19,15 +19,15 @@ demi-journée 4 :::::::::::::::
 3h -
 4h -
 demi-journée 5 :::::::::::::::
-1h -
-2h -
-3h -
-4h -
+1h - TP - R6.VCOD.5 [] (BUT3 VCOD)
+2h - TP - R6.VCOD.5 [] (BUT3 VCOD)
+3h - TD - R6.VCOD.5 [] (BUT3 VCOD)
+4h - TD - R6.VCOD.5 [] (BUT3 VCOD)
 demi-journée 6 :::::::::::::::
-1h -
-2h -
-3h -
-4h -
+1h - TP - R6.VCOD.5 [] (BUT3 VCOD)
+2h - TP - R6.VCOD.5 [] (BUT3 VCOD)
+3h - TD - R6.VCOD.5 [] (BUT3 VCOD)
+4h - TD - R6.VCOD.5 [] (BUT3 VCOD)
 demi-journée 7 :::::::::::::::
 1h -
 2h -
@@ -39,12 +39,12 @@ demi-journée 8 :::::::::::::::
 3h -
 4h -
 demi-journée 9 :::::::::::::::
-1h - TD - R6.VCOD.5 [A118] (BUT3 VCOD)
-2h - TD - R6.VCOD.5 [A118] (BUT3 VCOD)
-3h - TP - R6.VCOD.5 [A118] (BUT3 VCOD)
-4h - TP - R6.VCOD.5 [A118] (BUT3 VCOD)
+1h -
+2h -
+3h -
+4h -
 demi-journée 10 :::::::::::::::
-1h - TD - R6.VCOD.5 [C202] (BUT3 VCOD)
-2h - TD - R6.VCOD.5 [C202] (BUT3 VCOD)
-3h - TP - R6.VCOD.5 [A110] (BUT3 VCOD)
-4h - TP - R6.VCOD.5 [A110] (BUT3 VCOD)
+1h -
+2h -
+3h -
+4h -

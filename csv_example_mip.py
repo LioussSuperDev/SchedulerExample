@@ -3,6 +3,7 @@ from toolbox import Professeur,Classe,Salle,Cours,Creneau,simple_print
 from core_mip import build_compute_plne
 import math
 from datetime import datetime as dtt,timedelta
+import numpy as np
 
 ######################################################
 ######################################################
@@ -34,7 +35,7 @@ fichier_cours = "./exemples/week"+str(week_number)+"/cours.csv"
 fichier_salles = "./exemples/week"+str(week_number)+"/salles.csv"
 fichier_effectifs = "./exemples/week"+str(week_number)+"/effectifs.csv"
 
-max_time = 600 #Temps à attendre avant de couper le solver après avoir trouvé une première solution
+max_time = 3600 #Temps à attendre avant de couper le solver après avoir trouvé une première solution
 
 ######################################################
 ######################################################
@@ -98,7 +99,6 @@ print(creneau_to_date(date_lundi,creneaux[10]))
 ##############################################################
 
 profs = {}
-
 with open(fichier_contraintes) as csvfile:
     spamreader = csv.reader(csvfile,delimiter=";")
     for row_n,row in enumerate(spamreader):
@@ -108,21 +108,15 @@ with open(fichier_contraintes) as csvfile:
         prof = Professeur(row[0],"")
 
         prof.nb_heures_cours_mini_par_jour = int(row[1])
-
         for i in range(2,len(row)-1):
-            # creneau_index = int(((i-1)*2)%8)
-            # dj_index = ((i-1)*2)//8
             creneau_index = int((i-2)%4)
             dj_index = (i-2)//4
-            if row[i] == "0":
+            if row[i] == "0" or (np.isinf(penalite_prof_1) and row[i] == "1"):
                 prof.contraintes_pas_cours.append(demi_journees[dj_index][creneau_index])
-                # prof.contraintes_pas_cours.append(demi_journees[dj_index][creneau_index+1])
             elif row[i] == "1":
                 prof.contraintes_pref_pas_cours[demi_journees[dj_index][creneau_index]] = penalite_prof_1
-                # prof.contraintes_pref_pas_cours[demi_journees[dj_index][creneau_index+1]] = penalite_prof_1
             elif row[i] == "2":
                 prof.contraintes_pref_pas_cours[demi_journees[dj_index][creneau_index]] = penalite_prof_2
-                # prof.contraintes_pref_pas_cours[demi_journees[dj_index][creneau_index+1]] = penalite_prof_2
         profs[prof.nom] = prof
 
 
@@ -170,7 +164,6 @@ with open(fichier_cours) as csvfile:
         annee = row[0]
         groupe = row[1]
         type_m = row[2]
-        # duree = int(row[3])*2
         duree = int(math.ceil(float(row[3])))
         matiere = row[4].strip()
         contenu = row[5]
@@ -190,7 +183,7 @@ with open(fichier_cours) as csvfile:
             real_prof = None
         else:
             real_prof = profs[prof]
-        
+
         c = Cours(type_m+" - "+matiere,real_prof,groupes[groupe_id],duree)
 
         if date != "" and creneau != "":
@@ -207,47 +200,47 @@ with open(fichier_cours) as csvfile:
 ################################################################
 
 salles = []
+if contraintes_salles:
+    with open(fichier_salles) as csvfile:
+        spamreader = csv.reader(csvfile,delimiter=";")
+        for row_n,row in enumerate(spamreader):
+            if row_n == 0 or row[0] == "":
+                continue
+            nom = row[1]
+            effectifs = row[4]
+            type_salle = int(row[3])
+            is_info = (row[2] == "info")
 
-with open(fichier_salles) as csvfile:
-    spamreader = csv.reader(csvfile,delimiter=";")
-    for row_n,row in enumerate(spamreader):
-        if row_n == 0 or row[0] == "":
-            continue
-        nom = row[1]
-        effectifs = row[4]
-        type_salle = int(row[3])
-        is_info = (row[2] == "info")
+            salle = Salle("","",nom,effectifs,row[2],type_salle)
 
-        salle = Salle("","",nom,effectifs,row[2],type_salle)
-
-        #Contraintes salles info
-        for c in cours:
-            if "info" in c.tags == is_info:
-                c.contraintes_salle.append(salle)
+            #Contraintes salles info
+            for c in cours:
+                if "info" in c.tags == is_info:
+                    c.contraintes_salle.append(salle)
 
 
-        #Contraintes salles lointaines
-        if "Odeum" in nom:
-            salle.penalite_salle += penalite_salle_eval
-        elif type_salle != "pleine":
-            salle.penalite_salle += penalite_salle_partagee
-        
-        #Préférences des profs
-        if row[5] != "":
-            prof_pref_salle = row[5].split(",")
-            for prof in prof_pref_salle:
-                profs[prof].bonus_salle[salle] = bonus_prof_salle
-        
-        #Nécessité matière
-        if row[6] != "":
-            matiere_imposee_salle = row[6].split(",")
-            for matiere in matiere_imposee_salle:
-                m_name = matiere.split("=")[0]
-                for c in cours:
-                    if c.tags["matiere"] == m_name:
-                        c.contraintes_salle.append(salle)
+            #Contraintes salles lointaines
+            if "Odeum" in nom:
+                salle.penalite_salle += penalite_salle_eval
+            elif type_salle != "pleine":
+                salle.penalite_salle += penalite_salle_partagee
+            
+            #Préférences des profs
+            if row[5] != "":
+                prof_pref_salle = row[5].split(",")
+                for prof in prof_pref_salle:
+                    profs[prof].bonus_salle[salle] = bonus_prof_salle
+            
+            #Nécessité matière
+            if row[6] != "":
+                matiere_imposee_salle = row[6].split(",")
+                for matiere in matiere_imposee_salle:
+                    m_name = matiere.split("=")[0]
+                    for c in cours:
+                        if c.tags["matiere"] == m_name:
+                            c.contraintes_salle.append(salle)
 
-        salles.append(salle)
+            salles.append(salle)
 
 ################################################################
 # STANDARDISATION ##############################################
@@ -261,15 +254,17 @@ for i,prof in enumerate(profs):
     prof.numero = i
 for i,cour in enumerate(cours):
     cour.numero = i
-for i,salle in enumerate(salles):
-    salle.numero = i
+if contraintes_salles:
+    for i,salle in enumerate(salles):
+        salle.numero = i
 
 #Génération des matrices pour la PLNE à partir de la modélisation
 ################################## CONVERSION EN MATRICES / EXECUTION DE LA PLNE / ON ACTUALISE NOS OBJETS AVEC LE RESULTAT ####################################################################
 print("taille groupes :",len(classes))
 print("taille profs :",len(profs))
 print("taille cours :",len(cours))
-print("taille salles :",len(salles))
+if contraintes_salles:
+    print("taille salles :",len(salles))
 print("taille creneaux :",len(creneaux))
 res = build_compute_plne(cours, creneaux, salles, classes, profs, demi_journees=demi_journees, penalite_cours_creneau_seul=penalite_cours_creneau_seul, penalite_journee_travaillee=penalite_journee_travaillee, verbose=True, max_time=max_time, contraintes_salles=contraintes_salles, mip_preprocess=mip_preprocess)
 

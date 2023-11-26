@@ -39,10 +39,10 @@ demi-journée 8 :::::::::::::::
 3h [x] -
 4h [x] -
 demi-journée 9 :::::::::::::::
-1h - TP - R2.09 [A017] (BUT1 G1)
-2h - TP - R2.09 [A017] (BUT1 G1)
-3h - TP - R2.09 [A017] (BUT1 G2)
-4h - TP - R2.09 [A017] (BUT1 G2)
+1h - TP - R2.09 [] (BUT1 G1)
+2h - TP - R2.09 [] (BUT1 G1)
+3h - TP - R2.09 [] (BUT1 G2)
+4h - TP - R2.09 [] (BUT1 G2)
 demi-journée 10 :::::::::::::::
 1h [x] -
 2h [x] -

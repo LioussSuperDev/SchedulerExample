@@ -101,7 +101,7 @@ for i,cr in enumerate(cours):
 #Génération des matrices pour la PLNE à partir de la modélisation
 ################################## CONVERSION EN MATRICES / EXECUTION DE LA PLNE / ON ACTUALISE NOS OBJETS AVEC LE RESULTAT ####################################################################
 
-res = build_compute_plne(cours, creneaux, salles, classes, profs, demi_journees=demi_journees, penalite_cours_creneau_seul=1, max_time=200)
+res = build_compute_plne(cours, creneaux, salles, classes, profs, demi_journees=demi_journees, penalite_cours_creneau_seul=1, max_time=200, contraintes_salles=False)
 
 ################################# AFFICHAGE ####################################################################################################################################################
 

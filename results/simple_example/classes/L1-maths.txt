@@ -1,19 +1,19 @@
 demi-journée 1 :::::::::::::::
-0.5h - Cours de Stats [I417] (Martin DUPONT)
-1.0h - Cours de Stats [I417] (Martin DUPONT)
-1.5h - Cours de Stats [I417] (Martin DUPONT)
-2.0h - Cours de Stats [I417] (Martin DUPONT)
+0.5h - Cours de Stats [] (Martin DUPONT)
+1.0h - Cours de Stats [] (Martin DUPONT)
+1.5h - Cours de Stats [] (Martin DUPONT)
+2.0h - Cours de Stats [] (Martin DUPONT)
 2.5h -
 3.0h -
 3.5h -
 4.0h -
 demi-journée 2 :::::::::::::::
-0.5h - Cours d'Algèbre [I416] (Martin DUPONT)
-1.0h - Cours d'Algèbre [I416] (Martin DUPONT)
-1.5h - Cours d'Algèbre [I416] (Martin DUPONT)
-2.0h - Cours d'Algèbre [I416] (Martin DUPONT)
-2.5h - Cours d'Algèbre [I416] (Martin DUPONT)
-3.0h - Cours d'Algèbre [I416] (Martin DUPONT)
+0.5h - Cours d'Algèbre [] (Martin DUPONT)
+1.0h - Cours d'Algèbre [] (Martin DUPONT)
+1.5h - Cours d'Algèbre [] (Martin DUPONT)
+2.0h - Cours d'Algèbre [] (Martin DUPONT)
+2.5h - Cours d'Algèbre [] (Martin DUPONT)
+3.0h - Cours d'Algèbre [] (Martin DUPONT)
 3.5h -
 4.0h -
 demi-journée 3 :::::::::::::::
@@ -21,7 +21,7 @@ demi-journée 3 :::::::::::::::
 1.0h -
 1.5h -
 2.0h -
-2.5h -
-3.0h - Cours de Musique [I416] (Frank SINATRA)
-3.5h - Cours de Musique [I416] (Frank SINATRA)
+2.5h - Cours de Musique [] (Frank SINATRA)
+3.0h - Cours de Musique [] (Frank SINATRA)
+3.5h -
 4.0h -

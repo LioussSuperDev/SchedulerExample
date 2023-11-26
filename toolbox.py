@@ -29,7 +29,7 @@ class Classe:
 
 #définition des salles
 class Salle:
-    def __init__(self, batiment, etage, salle, type, dispo, effectifs=np.inf):
+    def __init__(self, batiment, etage, salle, type="", dispo="", effectifs=np.inf):
         self.batiment = batiment
         self.etage = etage
         self.salle = salle
