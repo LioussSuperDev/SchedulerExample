@@ -1,13 +1,13 @@
 demi-journée 1 :::::::::::::::
-1h - TP - R6.01 [] ( SP)
-2h - TP - R6.01 [] ( SP)
-3h - TD - R6.03 [] ( EA)
-4h - TD - R6.03 [] ( EA)
+1h - TD - R6.03 [] ( EA)
+2h - TD - R6.03 [] ( EA)
+3h - TP - R6.01 [] ( SP)
+4h - TP - R6.01 [] ( SP)
 demi-journée 2 :::::::::::::::
 1h - TD - R6.VCOD.5 [] ( FD)
 2h - TD - R6.VCOD.5 [] ( FD)
-3h - TD - R6.VCOD.5 [] ( FD)
-4h - TD - R6.VCOD.5 [] ( FD)
+3h - TP - R6.VCOD.5 [] ( FD)
+4h - TP - R6.VCOD.5 [] ( FD)
 demi-journée 3 :::::::::::::::
 1h - CM - R6.VCOD.6 [] ( AC)
 2h - CM - R6.VCOD.6 [] ( AC)
@@ -19,32 +19,32 @@ demi-journée 4 :::::::::::::::
 3h - CM - R6.VCOD.6 [] ( AC)
 4h - CM - R6.VCOD.6 [] ( AC)
 demi-journée 5 :::::::::::::::
-1h - TP - SAE6-VCOD.1 [] ( PDS)
-2h - TP - SAE6-VCOD.1 [] ( PDS)
-3h - TP - R6.01 [] ( SP)
-4h - TP - R6.01 [] ( SP)
+1h - TP - R6.VCOD.5 [] ( FD)
+2h - TP - R6.VCOD.5 [] ( FD)
+3h - TP - SAE6-VCOD.1 [] ( PDS)
+4h - TP - SAE6-VCOD.1 [] ( PDS)
 demi-journée 6 :::::::::::::::
-1h - TD - R6.01 [] ( SP)
-2h - TD - R6.01 [] ( SP)
-3h - encad - SAE6-VCOD.1 [] ( PDS)
-4h - encad - SAE6-VCOD.1 [] ( PDS)
+1h - encad - SAE6-VCOD.1 [] ( PDS)
+2h - encad - SAE6-VCOD.1 [] ( PDS)
+3h - TD - R6.VCOD.5 [] ( FD)
+4h - TD - R6.VCOD.5 [] ( FD)
 demi-journée 7 :::::::::::::::
-1h -
+1h - TD - R6.01 [] ( SP)
 2h -
 3h -
 4h -
 demi-journée 8 :::::::::::::::
-1h - TD - SAE6-VCOD.1 [] ( PDS)
-2h - TD - SAE6-VCOD.1 [] ( PDS)
-3h - TP - SAE6-VCOD.1 [] ( IU)
-4h - TP - SAE6-VCOD.1 [] ( IU)
+1h - TP - SAE6-VCOD.1 [] ( IU)
+2h - TP - SAE6-VCOD.1 [] ( IU)
+3h - TD - SAE6-VCOD.1 [] ( PDS)
+4h - TD - SAE6-VCOD.1 [] ( PDS)
 demi-journée 9 :::::::::::::::
-1h - TP - R6.VCOD.5 [] ( LP)
-2h - TP - R6.VCOD.5 [] ( LP)
-3h - TP - R6.VCOD.5 [] ( FD)
-4h - TP - R6.VCOD.5 [] ( FD)
+1h -
+2h -
+3h - TP - R6.VCOD.5 [] ( LP)
+4h - TP - R6.VCOD.5 [] ( LP)
 demi-journée 10 :::::::::::::::
-1h - TP - R6.VCOD.5 [] ( FD)
-2h - TP - R6.VCOD.5 [] ( FD)
-3h -
+1h - TP - R6.01 [] ( SP)
+2h - TP - R6.01 [] ( SP)
+3h - TD - R6.01 [] ( SP)
 4h - TD - R6.01 [] ( SP)

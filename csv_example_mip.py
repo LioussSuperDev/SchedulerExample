@@ -17,8 +17,8 @@ mip_preprocess = True #Active le preprocessing du solver mip; peut accélérer (
 duree_demi_journee = 4
 nombre_demi_journees = 10
 
-penalite_prof_1 = 100000000
-penalite_prof_2 = 1000000
+penalite_prof_1 = 1000000
+penalite_prof_2 = 100000000
 
 penalite_salle_partagee = 1
 penalite_salle_eval = 100
@@ -111,7 +111,7 @@ with open(fichier_contraintes) as csvfile:
         for i in range(2,len(row)-1):
             creneau_index = int((i-2)%4)
             dj_index = (i-2)//4
-            if row[i] == "0" or (np.isinf(penalite_prof_1) and row[i] == "1"):
+            if row[i] == "0":
                 prof.contraintes_pas_cours.append(demi_journees[dj_index][creneau_index])
             elif row[i] == "1":
                 prof.contraintes_pref_pas_cours[demi_journees[dj_index][creneau_index]] = penalite_prof_1
